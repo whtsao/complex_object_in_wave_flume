@@ -258,7 +258,7 @@ body.setMass(mb1)
 # set inertia
 # can also be set with:
 # body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
-ib1 = mb1*(body_w1**2+(body_h1+body_h2)**2)/12. 
+ib1 = mb1*(body_w1**2+body_h1**2)/12. 
 body.setInertiaXX(np.array([1., 1., ib1]))
 # record values
 body.setRecordValues(all_values=True)

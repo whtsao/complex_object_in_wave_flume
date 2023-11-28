@@ -25,6 +25,6 @@ cp $SLURM_SUBMIT_DIR/petsc.options.superlu_dist .
 cp $SLURM_SUBMIT_DIR/*.py .
 cp $SLURM_SUBMIT_DIR/*.sh .
 
-srun parun --TwoPhaseFlow ship.py -F -l 5 -C "he=0.1"
+srun parun --TwoPhaseFlow ship.py -F -l 5 -C "he=0.4"
 
 exit 0

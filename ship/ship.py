@@ -143,19 +143,18 @@ spacing = 1.
 body_w1 = 5.
 body_h1 = 0.5
 
-body_w2 = 5.
-body_h2 = 0.5
+#body_w2 = 5.
+#body_h2 = 0.5
+#gap = 0.5
 
-gap = 0.5
-
-#  --------w1--------       ---------w2------
-#  |                |       |               |
-#  |                h1=link=|               h2
-#  --------w1--------       ---------w2------
+#  --------w1--------
+#  |                |
+#  |                h1
+#  --------w1--------
 
 thob = 400.
 mb1 = thob*body_w1*body_h1
-mb2 = thob*body_w2*body_h2
+#mb2 = thob*body_w2*body_h2
 
 #by = rho_0*0.5*(body_w1+body_w2)*body_h2
 #if mb1 < by:
@@ -165,14 +164,14 @@ mb2 = thob*body_w2*body_h2
 #    yst = (mb1-by)/rho_0/body_w1+body_h2
 
 yst1 = mb1/body_h1/body_w1/rho_0
-yst2 = mb2/body_h2/body_w2/rho_0
+#yst2 = mb2/body_h2/body_w2/rho_0
 ic_angle = (opts.ic_angle/180.)*math.pi
 
 
 # Set the link between panels
 
-ki = 1000.
-ci = 0.
+#ki = 1000.
+#ci = 0.
 
 # TANK
 tank = st.Tank2D(domain, dim=(water_length, 2.*water_level))
@@ -197,16 +196,16 @@ caisson1.translate(np.array([wavelength, water_level])) # initial motion is gett
 
 
 # PANEL 2
-caisson2 = st.Rectangle(domain, dim=(body_w2, body_h2), coords=(0., 0.))
+#caisson2 = st.Rectangle(domain, dim=(body_w2, body_h2), coords=(0., 0.))
 # set barycenter in middle of caisson
-caisson2.setBarycenter([0., 0.])
+#caisson2.setBarycenter([0., 0.])
 # caisson is considered a hole in the mesh
-caisson2.setHoles([[0., 0.]])
+#caisson2.setHoles([[0., 0.]])
 # 2 following lines only for py2gmsh
-caisson2.holes_ind = np.array([0])
-tank.setChildShape(caisson2, 0)
+#caisson2.holes_ind = np.array([0])
+#tank.setChildShape(caisson2, 0)
 # translate caisson to middle of the tank
-caisson2.translate(np.array([wavelength+0.5*body_w1+gap+0.5*body_w2, water_level]))
+#caisson2.translate(np.array([wavelength+0.5*body_w1+gap+0.5*body_w2, water_level]))
 #caisson2.rotate(rot = ic_angle)
 
 
@@ -258,52 +257,52 @@ body.setMass(mb1)
 # set inertia
 # can also be set with:
 # body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
-ib1 = mb1*(body_w1**2+(body_h1+body_h2)**2)/12. 
+ib1 = mb1*(body_w1**2+body_h1**2)/12. 
 body.setInertiaXX(np.array([1., 1., ib1]))
 # record values
 body.setRecordValues(all_values=True)
 
 # create attached body
-body = fsi.ProtChBody(system=system)
+#body = fsi.ProtChBody(system=system)
 # give it a name
-body.setName(b'my_body2')
+#body.setName(b'my_body2')
 # attach shape: this automatically adds a body at the barycenter of the caisson shape
-body.attachShape(caisson2)
+#body.attachShape(caisson2)
 # set 2D width (for force calculation)
-body.setWidth2D(1.)
+#body.setWidth2D(1.)
 # access chrono object
-chbody = body.getChronoObject()
+#chbody = body.getChronoObject()
 # impose constraints
-chbody.SetBodyFixed(fixed)
-free_x = np.array([1., 1., 0.]) # translational
-free_r = np.array([0., 0., 1.]) # rotational
-body.setConstraints(free_x=free_x, free_r=free_r)
+#chbody.SetBodyFixed(fixed)
+#free_x = np.array([1., 1., 0.]) # translational
+#free_r = np.array([0., 0., 1.]) # rotational
+#body.setConstraints(free_x=free_x, free_r=free_r)
 # access pychrono ChBody
 # set mass
 # can also be set with:
 # body.ChBody.SetMass(14.5)
-body.setMass(mb2)
+#body.setMass(mb2)
 # set inertia
 # can also be set with:
 # body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
-ib2 = mb2*(body_w2**2+body_h2**2)/12.
-body.setInertiaXX(np.array([1., 1., ib2]))
+#ib2 = mb2*(body_w2**2+body_h2**2)/12.
+#body.setInertiaXX(np.array([1., 1., ib2]))
 # record values
-body.setRecordValues(all_values=True)
+#body.setRecordValues(all_values=True)
 
 # SPRING 1 (link two panels)
-TSDA1 = pychrono.ChLinkTSDA()
-body1_point = pychrono.ChVectorD(wavelength+0.5*body_w1,water_level,0.0)
-body2_point = pychrono.ChVectorD(wavelength+0.5*body_w1+gap,water_level,0.0)
+#TSDA1 = pychrono.ChLinkTSDA()
+#body1_point = pychrono.ChVectorD(wavelength+0.5*body_w1,water_level,0.0)
+#body2_point = pychrono.ChVectorD(wavelength+0.5*body_w1+gap,water_level,0.0)
 
-TSDA1.Initialize(system.subcomponents[0].ChBody,
-                                    system.subcomponents[1].ChBody,
-                                    False, body1_point, body2_point, auto_rest_length=True)
+#TSDA1.Initialize(system.subcomponents[0].ChBody,
+#                                    system.subcomponents[1].ChBody,
+#                                    False, body1_point, body2_point, auto_rest_length=True)
 #o_spring_force_functor = spring_function()
 #TSDA.RegisterForceFunctor(o_spring_force_functor)
-TSDA1.SetSpringCoefficient(ki)
-TSDA1.SetDampingCoefficient(ci)
-system.ChSystem.Add(TSDA1)
+#TSDA1.SetSpringCoefficient(ki)
+#TSDA1.SetDampingCoefficient(ci)
+#system.ChSystem.Add(TSDA1)
 
 
 # MOORING
@@ -482,8 +481,8 @@ if opts.mooring:
 # set no-slip conditions on caisson
 for tag, bc in caisson1.BC.items():
     bc.setNoSlip()
-for tag, bc in caisson2.BC.items():
-    bc.setNoSlip()
+#for tag, bc in caisson2.BC.items():
+#    bc.setNoSlip()
 
 # TANK
 
