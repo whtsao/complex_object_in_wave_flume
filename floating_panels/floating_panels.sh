@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -n 64
-#SBATCH -t 00:30:00
+#SBATCH -t 01:00:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
 #SBATCH -o o.out

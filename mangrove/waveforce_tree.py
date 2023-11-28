@@ -17,7 +17,7 @@ opts= Context.Options([
     ("Hm",0.2,"Wave height"),
     ("Tp",1.85,"Peak wave period"),
     ("wave_type",'Monochromatic',"runs simulation with time series waves"),
-    ("filename",'inp_HD_TR4.csv',"name for csv file"),
+    ("filename",'test.csv',"name for csv file"),
     ("embed_structure",True,"Embed structure using a signed distance function"),
     ("density",'LD',"Change density of embedded forest")
     ])
@@ -66,7 +66,7 @@ if opts.wave_type=='Monochromatic':
 elif opts.wave_type=='Time':
     wave = wt.TimeSeries(timeSeriesFile=opts.filename, # e.g.= "Timeseries.txt",
                          skiprows=0,
-                         timeSeriesPosition=np.array([0.,0.,0.]),
+                         timeSeriesPosition=np.array([0.62,0.,0.]),
                          depth=water_level,
                          N=100,          #number of frequency bins
                          mwl=water_level,        #mean water level
@@ -228,11 +228,11 @@ tank.BC['x-'].setUnsteadyTwoPhaseVelocityInlet(wave,
 
 tank.setGenerationZones(flags=2,
                    epsFact_porous=wavelength*0.5,
-                   center=[-wavelength*0.5,0.5*1.83,zmax*0.5],
+                   center=[-0.5*wavelength,0.5*1.83,zmax*0.5],
                    orientation=[1,0,0],
                    waves=wave,
                    dragAlpha=dragAlpha,
-                   vert_axis=1,
+                   vert_axis=2,
                    porosity=1.,
                    smoothing=smoothing)
 
@@ -246,7 +246,7 @@ tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),)
 #pressure_gauge_locations= ((1.43, 0.15, 0.07), (1.75, 0.15, 0.07),(2.07,0.15,0.07),(2.39,0.15,0.07))
 #tank.attachPointGauges('twp', gauges=((('p',), pressure_gauge_locations),), fileName='pressure_gaugeArray.csv')
 
-#velocity_gauge_locations=((1.0,0.5*1.83,0.9*water_level), (2.0,0.5*1.83,0.9*water_level),(3.0,0.5*1.83,0.9*water_level),(4.0,0.5*1.83,0.9*water_level))
+#velocity_gauge_locations=((32.24, -1.4,1.25), (43.09, -1.43, 1.40),(43.09,-1.43,1.55),(43.09,-1.43,1.72),(43.09,-1.43,1.86),(57.83,-1.41,1.38))
 #tank.attachPointGauges('twp', gauges=((('u','v','w'), velocity_gauge_locations),), fileName='velocity_gaugeArray.csv')
 
 #  ___       _ _   _       _    ____                _ _ _   _

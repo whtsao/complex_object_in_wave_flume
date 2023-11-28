@@ -309,8 +309,6 @@ system.ChSystem.Add(TSDA1)
 # MOORING
 
 if opts.mooring:
-    # variables
-    lx = 2.
     # length
     L = (water_level**2+(wavelength-0.5*body_w1)**2)**0.5 # m
     # submerged weight
