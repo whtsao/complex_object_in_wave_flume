@@ -56,6 +56,9 @@ opts= Context.Options([
     ("mooring",True,"True if the mooring lines are attached"),
     ("collision",False,"True if the mooring lines is collision body"),
     ("ic_angle",0.,"Initial pitch angle of the floating platform (deg)"),
+    ("bodybool1",True,"add floating body if True"),
+    ("bodybool2",True,"add floating body if True"),
+    ("linkbool",True,"add floating body if True"),
     ])
 
 # general options
@@ -171,7 +174,7 @@ ic_angle = (opts.ic_angle/180.)*math.pi
 
 # Set the link between panels
 
-ki = 1000.
+ki = 10000.
 ci = 0.
 
 # TANK
@@ -182,32 +185,33 @@ tank = st.Tank2D(domain, dim=(water_length, 2.*water_level))
 # absorption zone: 2 wavelengths
 tank.setSponge(x_n=wavelength, x_p=wavelength)
 
-# PANEL 1
-caisson1 = st.Rectangle(domain, dim=(body_w1, body_h1), coords=(0., 0.))
-# set barycenter in middle of caisson
-caisson1.setBarycenter([0., 0.])
-# caisson is considered a hole in the mesh
-caisson1.setHoles([[0., 0.]])
-# 2 following lines only for py2gmsh
-caisson1.holes_ind = np.array([0])
-tank.setChildShape(caisson1, 0)
-# translate caisson to middle of the tank
-caisson1.translate(np.array([wavelength, water_level])) # initial motion is getting down
-#caisson1.rotate(rot = ic_angle)
+if opts.bodybool1:
+    # PANEL 1
+    caisson1 = st.Rectangle(domain, dim=(body_w1, body_h1), coords=(0., 0.))
+    # set barycenter in middle of caisson
+    caisson1.setBarycenter([0., 0.])
+    # caisson is considered a hole in the mesh
+    caisson1.setHoles([[0., 0.]])
+    # 2 following lines only for py2gmsh
+    caisson1.holes_ind = np.array([0])
+    tank.setChildShape(caisson1, 0)
+    # translate caisson to middle of the tank
+    caisson1.translate(np.array([wavelength, water_level])) # initial motion is getting down
+    #caisson1.rotate(rot = ic_angle)
 
-
-# PANEL 2
-caisson2 = st.Rectangle(domain, dim=(body_w2, body_h2), coords=(0., 0.))
-# set barycenter in middle of caisson
-caisson2.setBarycenter([0., 0.])
-# caisson is considered a hole in the mesh
-caisson2.setHoles([[0., 0.]])
-# 2 following lines only for py2gmsh
-caisson2.holes_ind = np.array([0])
-tank.setChildShape(caisson2, 0)
-# translate caisson to middle of the tank
-caisson2.translate(np.array([wavelength+0.5*body_w1+gap+0.5*body_w2, water_level]))
-#caisson2.rotate(rot = ic_angle)
+if opts.bodybool2:
+    # PANEL 2
+    caisson2 = st.Rectangle(domain, dim=(body_w2, body_h2), coords=(0., 0.))
+    # set barycenter in middle of caisson
+    caisson2.setBarycenter([0., 0.])
+    # caisson is considered a hole in the mesh
+    caisson2.setHoles([[0., 0.]])
+    # 2 following lines only for py2gmsh
+    caisson2.holes_ind = np.array([0])
+    tank.setChildShape(caisson2, 0)
+    # translate caisson to middle of the tank
+    caisson2.translate(np.array([wavelength+0.5*body_w1+gap+0.5*body_w2, water_level]))
+    #caisson2.rotate(rot = ic_angle)
 
 
 #   ____ _
@@ -233,81 +237,78 @@ system.setTimeStep(1e-4)
 solver = pychrono.ChSolverMINRES()
 chsystem.SetSolver(solver)
 
-# BODY
+# FLOATING PANEL 1
+if opts.bodybool1:
+    # create floating body
+    body = fsi.ProtChBody(system=system)
+    # give it a name
+    body.setName(b'my_body1')
+    # attach shape: this automatically adds a body at the barycenter of the caisson shape
+    body.attachShape(caisson1)
+    # set 2D width (for force calculation)
+    body.setWidth2D(1.)
+    # access chrono object
+    chbody = body.getChronoObject()
+    # impose constraints
+    chbody.SetBodyFixed(fixed)
+    free_x = np.array([1., 1., 0.]) # translational
+    free_r = np.array([0., 0., 1.]) # rotational
+    body.setConstraints(free_x=free_x, free_r=free_r)
+    # access pychrono ChBody
+    # set mass
+    # body.ChBody.SetMass(14.5)
+    body.setMass(mb1)
+    # set inertia
+    # body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
+    ib1 = mb1*(body_w1**2+body_h1**2)/12. 
+    body.setInertiaXX(np.array([1., 1., ib1]))
+    # record values
+    body.setRecordValues(all_values=True)
 
-# create floating body
-body = fsi.ProtChBody(system=system)
-# give it a name
-body.setName(b'my_body1')
-# attach shape: this automatically adds a body at the barycenter of the caisson shape
-body.attachShape(caisson1)
-# set 2D width (for force calculation)
-body.setWidth2D(1.)
-# access chrono object
-chbody = body.getChronoObject()
-# impose constraints
-chbody.SetBodyFixed(fixed)
-free_x = np.array([1., 1., 0.]) # translational
-free_r = np.array([0., 0., 1.]) # rotational
-body.setConstraints(free_x=free_x, free_r=free_r)
-# access pychrono ChBody
-# set mass
-# can also be set with:
-# body.ChBody.SetMass(14.5)
-body.setMass(mb1)
-# set inertia
-# can also be set with:
-# body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
-ib1 = mb1*(body_w1**2+body_h1**2)/12. 
-body.setInertiaXX(np.array([1., 1., ib1]))
-# record values
-body.setRecordValues(all_values=True)
+# FLOATING PANEL 2
+if opts.bodybool2:
+    # create attached body
+    body = fsi.ProtChBody(system=system)
+    # give it a name
+    body.setName(b'my_body2')
+    # attach shape: this automatically adds a body at the barycenter of the caisson shape
+    body.attachShape(caisson2)
+    # set 2D width (for force calculation)
+    body.setWidth2D(1.)
+    # access chrono object
+    chbody = body.getChronoObject()
+    # impose constraints
+    chbody.SetBodyFixed(fixed)
+    free_x = np.array([1., 1., 0.]) # translational
+    free_r = np.array([0., 0., 1.]) # rotational
+    body.setConstraints(free_x=free_x, free_r=free_r)
+    # access pychrono ChBody
+    # set mass
+    # body.ChBody.SetMass(14.5)
+    body.setMass(mb2)
+    # set inertia
+    # body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
+    ib2 = mb2*(body_w2**2+body_h2**2)/12.
+    body.setInertiaXX(np.array([1., 1., ib2]))
+    # record values
+    body.setRecordValues(all_values=True)
 
-# create attached body
-body = fsi.ProtChBody(system=system)
-# give it a name
-body.setName(b'my_body2')
-# attach shape: this automatically adds a body at the barycenter of the caisson shape
-body.attachShape(caisson2)
-# set 2D width (for force calculation)
-body.setWidth2D(1.)
-# access chrono object
-chbody = body.getChronoObject()
-# impose constraints
-chbody.SetBodyFixed(fixed)
-free_x = np.array([1., 1., 0.]) # translational
-free_r = np.array([0., 0., 1.]) # rotational
-body.setConstraints(free_x=free_x, free_r=free_r)
-# access pychrono ChBody
-# set mass
-# can also be set with:
-# body.ChBody.SetMass(14.5)
-body.setMass(mb2)
-# set inertia
-# can also be set with:
-# body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
-ib2 = mb2*(body_w2**2+body_h2**2)/12.
-body.setInertiaXX(np.array([1., 1., ib2]))
-# record values
-body.setRecordValues(all_values=True)
-
-# SPRING 1 (link two panels)
-TSDA1 = pychrono.ChLinkTSDA()
-body1_point = pychrono.ChVectorD(wavelength+0.5*body_w1,water_level,0.0)
-body2_point = pychrono.ChVectorD(wavelength+0.5*body_w1+gap,water_level,0.0)
-
-TSDA1.Initialize(system.subcomponents[0].ChBody,
+# LINK (connect two panels)
+if opts.linkbool:
+    TSDA1 = pychrono.ChLinkTSDA()
+    body1_point = pychrono.ChVectorD(wavelength+0.5*body_w1,water_level,0.0)
+    body2_point = pychrono.ChVectorD(wavelength+0.5*body_w1+gap,water_level,0.0)
+    TSDA1.Initialize(system.subcomponents[0].ChBody,
                                     system.subcomponents[1].ChBody,
                                     False, body1_point, body2_point, auto_rest_length=True)
-#o_spring_force_functor = spring_function()
-#TSDA.RegisterForceFunctor(o_spring_force_functor)
-TSDA1.SetSpringCoefficient(ki)
-TSDA1.SetDampingCoefficient(ci)
-system.ChSystem.Add(TSDA1)
+    #o_spring_force_functor = spring_function()
+    #TSDA.RegisterForceFunctor(o_spring_force_functor)
+    TSDA1.SetSpringCoefficient(ki)
+    TSDA1.SetDampingCoefficient(ci)
+    system.ChSystem.Add(TSDA1)
 
 
 # MOORING
-
 if opts.mooring:
     # length
     L = (water_level**2+(wavelength-0.5*body_w1)**2)**0.5 # m
@@ -480,10 +481,13 @@ if opts.mooring:
 # CAISSON
 
 # set no-slip conditions on caisson
-for tag, bc in caisson1.BC.items():
-    bc.setNoSlip()
-for tag, bc in caisson2.BC.items():
-    bc.setNoSlip()
+if opts.bodybool1:
+    for tag, bc in caisson1.BC.items():
+        bc.setNoSlip()
+
+if opts.bodybool2:
+    for tag, bc in caisson2.BC.items():
+        bc.setNoSlip()
 
 # TANK
 

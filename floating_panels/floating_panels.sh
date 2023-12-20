@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 1
 #SBATCH -n 64
-#SBATCH -t 01:00:00
+#SBATCH -t 00:20:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
 #SBATCH -o o.out
@@ -25,6 +25,8 @@ cp $SLURM_SUBMIT_DIR/petsc.options.superlu_dist .
 cp $SLURM_SUBMIT_DIR/*.py .
 cp $SLURM_SUBMIT_DIR/*.sh .
 
-srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1"
+srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.2" # all on
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.2 bodybool2=False linkbool=False" # only one panel
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.2 linkbool=False" # two panels unconnected
 
 exit 0
