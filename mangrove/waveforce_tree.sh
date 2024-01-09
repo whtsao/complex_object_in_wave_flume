@@ -1,10 +1,10 @@
 #!/bin/bash
 #SBATCH -N 4
 #SBATCH -n 256
-#SBATCH -t 72:00:00
+#SBATCH -t 00:30:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
-#SBATCH -J waveforce_tree
+#SBATCH -J ship_from_tree
 #SBATCH -o o.out
 #SBATCH -e e.err
 #load proteus module and ensure proteus's python is in path
@@ -19,11 +19,12 @@ export MV2_HOMOGENEOUS_CLUSTER=1
 mkdir -p $WORK/$SLURM_JOB_NAME.$SLURM_JOBID 
 cd "$SLURM_SUBMIT_DIR"
 cp setup.py $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
-#cp mangrove.pyx $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
-cp mangrove_2.pyx $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
+#cp mangrove_1.pyx $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
+cp mangrove.pyx $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cp waveforce_tree.py $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cp waveforce_tree.sh $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
+cp *.stl $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 python setup.py build_ext -i
-srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.04"
+srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.1"
 exit 0

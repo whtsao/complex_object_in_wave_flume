@@ -122,27 +122,27 @@ boundaryTags = {'y-' : 1,
 
 slope1=0.35
 zmax=2.
-
+halfw=5.
 top = 1.0
 
-vertices=[[0.0,0.0,0.0],#0
-         [2.5,0.0,0.0],#1
-         [4.1, 0.0,0.0], #2
-         [7.0, 0.0,0.0],#3
-         [9.0, 0.0,slope1],#4
-         [9.0, 0.0,zmax],#5
-         [0.0, 0.0,zmax],#6
-         [-wavelength,0.0,zmax],#7
-         [-wavelength,0.0,0.0],#8
-         [0.0,1.83,0.0],#9
-         [2.5,1.83,0.0],#10
-         [4.1, 1.83,0.0], #11
-         [7.0, 1.83,0.0],#12
-         [9.0, 1.83,slope1],#13
-         [9.0, 1.83,zmax],#14
-         [0.0, 1.83,zmax],#15
-         [-wavelength,1.83,zmax],#16
-         [-wavelength,1.83,0.0],]#17
+vertices=[[0.0, -halfw,0.0],#0
+         [2.5, -halfw,0.0],#1
+         [4.1, -halfw,0.0], #2
+         [7.0, -halfw,0.0],#3
+         [9.0, -halfw,slope1],#4
+         [9.0, -halfw,zmax],#5
+         [0.0, -halfw,zmax],#6
+         [-wavelength, -halfw,zmax],#7
+         [-wavelength, -halfw,0.0],#8
+         [0.0, halfw,0.0],#9
+         [2.5, halfw,0.0],#10
+         [4.1, halfw,0.0], #11
+         [7.0, halfw,0.0],#12
+         [9.0, halfw,slope1],#13
+         [9.0, halfw,zmax],#14
+         [0.0, halfw,zmax],#15
+         [-wavelength, halfw,zmax],#16
+         [-wavelength, halfw,0.0],]#17
 
 vertexFlags=np.array([6, 6, 6, 6, 6, 6,
                       5,
@@ -370,7 +370,9 @@ comm = Comm.get()
 pyximport.install(setup_args={"include_dirs":np.get_include()})
 #,
 #                  reload_support=True)
-from mangrove import sdf_vectorized
+
+#from mangrove import sdf_vectorized
+from mangrove import sdf_vectorized_stl
 
 def particle_vel(t, x):
     return (0.0,0.0,0.0)
@@ -386,7 +388,8 @@ if opts.embed_structure:
     #y_c=[0.0625,0.0625,0.0625,0.2375,0.2375,0.15,0.15,0.15]
     #r=[0.04445,0.04445,0.04445,0.04445,0.04445,0.05715,0.05715,0.05715]
 
-    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
+#    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
+    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
     m['flow'].p.coefficients.particle_velocityList = [particle_vel]
     m['flow'].p.coefficients.use_ball_as_particle=0
     m['flow'].p.coefficients.nParticles=1
