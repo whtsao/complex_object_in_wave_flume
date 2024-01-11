@@ -371,8 +371,8 @@ pyximport.install(setup_args={"include_dirs":np.get_include()})
 #,
 #                  reload_support=True)
 
-#from mangrove import sdf_vectorized
-from mangrove import sdf_vectorized_stl
+from mangrove import sdf_vectorized
+#from mangrove import sdf_vectorized_stl
 
 def particle_vel(t, x):
     return (0.0,0.0,0.0)
@@ -388,8 +388,8 @@ if opts.embed_structure:
     #y_c=[0.0625,0.0625,0.0625,0.2375,0.2375,0.15,0.15,0.15]
     #r=[0.04445,0.04445,0.04445,0.04445,0.04445,0.05715,0.05715,0.05715]
 
-#    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
-    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
+    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
+#    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
     m['flow'].p.coefficients.particle_velocityList = [particle_vel]
     m['flow'].p.coefficients.use_ball_as_particle=0
     m['flow'].p.coefficients.nParticles=1

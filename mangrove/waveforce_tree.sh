@@ -4,7 +4,7 @@
 #SBATCH -t 00:30:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
-#SBATCH -J ship_from_tree
+#SBATCH -J mangrove_T1
 #SBATCH -o o.out
 #SBATCH -e e.err
 #load proteus module and ensure proteus's python is in path

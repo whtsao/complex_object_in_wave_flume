@@ -1,0 +1,22 @@
+/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/setuptools/config/__init__.py:28: SetuptoolsDeprecationWarning: As setuptools moves its configuration towards `pyproject.toml`,
+`setuptools.config.parse_configuration` became deprecated.
+
+For the time being, you can use the `setuptools.config.setupcfg` module
+to access a backward compatible API, but this module is provisional
+and might be removed in the future.
+
+  warnings.warn(dedent(msg), SetuptoolsDeprecationWarning)
+In file included from /project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from mangrove.c:698:
+/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+mangrove.c: In function '__pyx_pf_8mangrove_2sdf_vectorized_stl.constprop':
+mangrove.c:9205:17: warning: '__pyx_v_se' may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 9205 |     __pyx_t_4 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 245, __pyx_L1_error)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+WARNING: Error in initializing MVAPICH2 ptmalloc library.Continuing without InfiniBand registration cache support.
+USER WARNING: In order to avoid a segmentation fault, you need to have supplied the 'f' flag to the triangleOptions input.
+USER WARNING: In order to avoid an edge assertion error, you need to have supplied the 'ee' flag to the triangleOptions input.
