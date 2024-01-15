@@ -18,7 +18,7 @@ opts= Context.Options([
     ("Tp",1.85,"Peak wave period"),
     ("wave_type",'Monochromatic',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
-    ("embed_structure",True,"Embed structure using a signed distance function"),
+    ("embed_structure",False,"Embed structure using a signed distance function"),
     ("density",'LD',"Change density of embedded forest")
     ])
 
@@ -317,8 +317,6 @@ domain.writePoly("mesh")
 domain.writeAsymptote("mesh")
 
 
-
-
 #  _   _                           _
 # | \ | |_   _ _ __ ___   ___ _ __(_) ___ ___
 # |  \| | | | | '_ ` _ \ / _ \ '__| |/ __/ __|
@@ -337,14 +335,12 @@ myTpFlowProblem.domain=domain
 myTpFlowProblem.SystemPhysics.initialConditions=initialConditions
 myTpFlowProblem.outputStepping=outputStepping
 
-
-
 myTpFlowProblem.SystemNumerics.cfl=0.33
 myTpFlowProblem.SystemNumerics.useSuperlu=False
 
 myTpFlowProblem.SystemPhysics.setDefaults()
 myTpFlowProblem.SystemPhysics.useDefaultModels()
-myTpFlowProblem.SystemPhysics.gravity = np.array([0.0,0.0,-9.8])
+myTpFlowProblem.SystemPhysics.gravity = np.array([0.0,0.0,-9.81])
 
 m = myTpFlowProblem.SystemPhysics.modelDict
 # ADD RELAXATION ZONES TO AUXILIARY VARIABLES
@@ -361,6 +357,7 @@ m['mcorr'].p.initialConditions['phiCorr'] = zero()
 m['mcorr'].OptDB.setValue('mcorr_ksp_type', 'fgmres')
 m['flow'].auxiliaryVariables = domain.auxiliaryVariables['twp']
 m['vof'].auxiliaryVariables = domain.auxiliaryVariables['vof']
+m['flow'].p.coefficients.projection_direction = np.array([1.0, 0.0, 0.0])
 
 # Add immersed solid
 import pyximport;
@@ -371,8 +368,8 @@ pyximport.install(setup_args={"include_dirs":np.get_include()})
 #,
 #                  reload_support=True)
 
-from mangrove import sdf_vectorized
-#from mangrove import sdf_vectorized_stl
+#from mangrove import sdf_vectorized
+from mangrove import sdf_vectorized_stl
 
 def particle_vel(t, x):
     return (0.0,0.0,0.0)
@@ -388,8 +385,8 @@ if opts.embed_structure:
     #y_c=[0.0625,0.0625,0.0625,0.2375,0.2375,0.15,0.15,0.15]
     #r=[0.04445,0.04445,0.04445,0.04445,0.04445,0.05715,0.05715,0.05715]
 
-    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
-#    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
+#    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
+    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
     m['flow'].p.coefficients.particle_velocityList = [particle_vel]
     m['flow'].p.coefficients.use_ball_as_particle=0
     m['flow'].p.coefficients.nParticles=1
