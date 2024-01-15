@@ -122,24 +122,25 @@ boundaryTags = {'y-' : 1,
 
 slope1=0.35
 zmax=2.
-halfw=5.
+halfw=3.
+tank_l=10.
 top = 1.0
 
 vertices=[[0.0, -halfw,0.0],#0
          [2.5, -halfw,0.0],#1
          [4.1, -halfw,0.0], #2
-         [7.0, -halfw,0.0],#3
-         [9.0, -halfw,slope1],#4
-         [9.0, -halfw,zmax],#5
+         [tank_l, -halfw,0.0],#3
+         [tank_l+2., -halfw,slope1],#4
+         [tank_l+2., -halfw,zmax],#5
          [0.0, -halfw,zmax],#6
          [-wavelength, -halfw,zmax],#7
          [-wavelength, -halfw,0.0],#8
          [0.0, halfw,0.0],#9
          [2.5, halfw,0.0],#10
          [4.1, halfw,0.0], #11
-         [7.0, halfw,0.0],#12
-         [9.0, halfw,slope1],#13
-         [9.0, halfw,zmax],#14
+         [tank_l, halfw,0.0],#12
+         [tank_l+2., halfw,slope1],#13
+         [tank_l+2., halfw,zmax],#14
          [0.0, halfw,zmax],#15
          [-wavelength, halfw,zmax],#16
          [-wavelength, halfw,0.0],]#17
@@ -228,7 +229,7 @@ tank.BC['x-'].setUnsteadyTwoPhaseVelocityInlet(wave,
 
 tank.setGenerationZones(flags=2,
                    epsFact_porous=wavelength*0.5,
-                   center=[-0.5*wavelength,0.5*1.83,zmax*0.5],
+                   center=[-0.5*wavelength,0.,zmax*0.5],
                    orientation=[1,0,0],
                    waves=wave,
                    dragAlpha=dragAlpha,
@@ -345,7 +346,6 @@ myTpFlowProblem.SystemPhysics.gravity = np.array([0.0,0.0,-9.81])
 m = myTpFlowProblem.SystemPhysics.modelDict
 # ADD RELAXATION ZONES TO AUXILIARY VARIABLES
 
-
 m['flow'].p.initialConditions['p'] = P_IC()
 m['flow'].p.initialConditions['u'] = zero()
 m['flow'].p.initialConditions['v'] = zero()
@@ -375,16 +375,6 @@ def particle_vel(t, x):
     return (0.0,0.0,0.0)
 
 if opts.embed_structure:
-    #HD Case
-    #x_c=[2.76,3.04,3.32,3.6,3.88,2.76,3.04,3.32,3.6,3.88,2.62,2.9,3.18,3.46,3.74,4.02]
-    #y_c=[0.0625,0.0625,0.0625,0.0625,0.0625,0.2375,0.2375,0.2375,0.2375,0.2375,0.15,0.15,0.15,0.15,0.15,0.15]
-    #r=[0.04445,0.04445,0.04445,0.04445,0.04445,0.04445,0.04445,0.04445,0.04445,0.04445,0.05715,0.05715,0.05715,0.05715,0.05715,0.05715]
-    #
-    #LD Case
-    #x_c=[2.76,3.32,3.88,3.04,3.6,2.62,3.18,3.74]
-    #y_c=[0.0625,0.0625,0.0625,0.2375,0.2375,0.15,0.15,0.15]
-    #r=[0.04445,0.04445,0.04445,0.04445,0.04445,0.05715,0.05715,0.05715]
-
 #    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
     m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
     m['flow'].p.coefficients.particle_velocityList = [particle_vel]
@@ -404,7 +394,6 @@ if opts.embed_structure:
     m['vof'].n.tolFac=0.0
     m['vof'].p.coefficients.FCT=False
     m['vof'].p.coefficients.STABILIZATION_TYPE=0
-
     m['mcorr'].p.coefficients.checkMass=True
     m['mcorr'].n.l_atol_res=1.0e-8
     m['mcorr'].n.nl_atol_res=1.0e-6
