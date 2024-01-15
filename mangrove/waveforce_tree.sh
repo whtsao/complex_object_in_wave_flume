@@ -27,6 +27,6 @@ cp *.stl $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 
 python setup.py build_ext -i
-srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.4"
+srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.2"
 
 exit 0

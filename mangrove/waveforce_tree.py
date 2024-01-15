@@ -18,7 +18,7 @@ opts= Context.Options([
     ("Tp",1.85,"Peak wave period"),
     ("wave_type",'Monochromatic',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
-    ("embed_structure",False,"Embed structure using a signed distance function"),
+    ("embed_structure",True,"Embed structure using a signed distance function"),
     ("density",'LD',"Change density of embedded forest")
     ])
 
