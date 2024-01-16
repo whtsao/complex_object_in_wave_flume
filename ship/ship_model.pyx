@@ -144,6 +144,7 @@ def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
                         for T in edge_tris_dict[triangle_edges[i,j]]:
                             print(triangles[T])
                     triangle_neighbors[i,j] = k
+
     from scipy.spatial import KDTree
     tree = KDTree(nodes)
     cdef int nphi = phi.shape[0]
@@ -242,3 +243,6 @@ def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
             if np.dot(normal_average, x[i] - nodes[nN]) < 0.0:
                 s = -1.0
         phi[i] *= s
+
+    for i in range(nphi):
+        phi[i] = -phi[i]

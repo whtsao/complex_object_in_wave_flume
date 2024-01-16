@@ -27,6 +27,6 @@ cp *.stl $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 
 python setup.py build_ext -i
-srun parun --TwoPhaseFlow ship.py -F -l 5 -C "he=0.04"
+srun parun --TwoPhaseFlow ship.py -F -l 5 -C "he=0.1"
 
 exit 0

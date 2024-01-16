@@ -81,10 +81,7 @@ def sdf_vectorized(double t, np.ndarray x,
                     G = sqrt((R*dir_x - X_0)**2 + (R*dir_y - Y_0)**2 + (A*R**2 + B - Z_0)**2) - Dr/ratio;
                     phi[i] = min(phi[i], G)
                 
-
-#stl_file = "cos_scaled_CS_2.stl"
 stl_file = "lidar_tree_2.stl"
-
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
 def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
@@ -145,6 +142,7 @@ def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
                         for T in edge_tris_dict[triangle_edges[i,j]]:
                             print(triangles[T])
                     triangle_neighbors[i,j] = k
+
     from scipy.spatial import KDTree
     tree = KDTree(nodes)
     cdef int nphi = phi.shape[0]
@@ -243,3 +241,6 @@ def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
             if np.dot(normal_average, x[i] - nodes[nN]) < 0.0:
                 s = -1.0
         phi[i] *= s
+
+    for i in range(nphi):
+        phi[i] = -phi[i]

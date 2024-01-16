@@ -16,7 +16,9 @@ opts= Context.Options([
     ("mwl",1.03,"still water depth"),
     ("Hm",0.2,"Wave height"),
     ("Tp",1.85,"Peak wave period"),
-    ("wave_type",'Monochromatic',"runs simulation with time series waves"),
+    ("Uc",2.,"velocity of steady current"),
+    ("Tramp",1.,"ramp time for steady current"),
+    ("wave_type",'Current',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
     ("embed_structure",True,"Embed structure using a signed distance function"),
     ("density",'LD',"Change density of embedded forest")
@@ -53,6 +55,8 @@ water_level = opts.mwl
 wave_period = opts.Tp
 wave_height = opts.Hm
 wave_direction = np.array([1., 0., 0.])
+Uc = opts.Uc
+Tramp = opts.Tramp
 
 #Monochromatic or Random
 if opts.wave_type=='Monochromatic':
@@ -62,7 +66,7 @@ if opts.wave_type=='Monochromatic':
                                  depth=water_level,
                                  g=g,waveDir=wave_direction,
                                  waveType='Linear',Nf=8)
-
+wavelength = wave.wavelength
 elif opts.wave_type=='Time':
     wave = wt.TimeSeries(timeSeriesFile=opts.filename, # e.g.= "Timeseries.txt",
                          skiprows=0,
@@ -75,17 +79,20 @@ elif opts.wave_type=='Time':
                          cutoffTotal = 0.01,
                          rec_direct = True,
                          window_params = None)
-
-else:
+wavelength = wave.wavelength
+elif opts.wave_type=='Random':
     wave = wt.RandomWaves(Tp=wave_period,
                           Hs=wave_height,
                           mwl=water_level,depth=water_level,
                           g=g,waveDir=wave_direction,
                           spectName='JONSWAP',N=300,bandFactor=2.5)
-
-
 wavelength = wave.wavelength
 
+elif opts.wave_type=='Current':
+    wave = wt.SteadyCurrent(U=Uc,
+                            mwl=water_level,
+                            rampTime=Tramp)
+    wavelength = 1.
 
 
 #  ____                        _
