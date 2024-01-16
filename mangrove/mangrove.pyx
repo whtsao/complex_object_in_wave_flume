@@ -89,7 +89,6 @@ stl_file = "lidar_tree_2.stl"
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
 def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
     cdef int i,j,k,ntri
-#    with open(stl_file,'rb') as f: # for reading ship stl
     with open(stl_file,'r') as f: # for reading lidar tree stl
         lines = f.readlines()
     ntri = (len(lines)-2)//7

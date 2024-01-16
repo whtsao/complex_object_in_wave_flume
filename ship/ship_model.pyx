@@ -88,7 +88,7 @@ stl_file = "cos_scaled_CS_2.stl"
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
 def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
     cdef int i,j,k,ntri
-    with open(stl_file,'rb') as f: # for reading ship stl
+    with open(stl_file,'r') as f: # for reading ship stl
         lines = f.readlines()
     ntri = (len(lines)-2)//7
     cdef np.ndarray [np.float64_t, ndim=2] normals = np.zeros((ntri,3),np.float64)
