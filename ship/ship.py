@@ -13,7 +13,7 @@ opts= Context.Options([
     ("gauges", True, "Collect data for validation"),
     ("cfl",0.33,"Desired CFL restriction"),
     ("he",0.02,"Max mesh element diameter"),
-    ("mwl",1.03,"still water depth"),
+    ("mwl",0.1,"still water depth"),
     ("Hm",0.2,"Wave height"),
     ("Tp",1.85,"Peak wave period"),
     ("Uc",2.,"velocity of steady current"),
@@ -21,7 +21,6 @@ opts= Context.Options([
     ("wave_type",'Current',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
     ("embed_structure",True,"Embed structure using a signed distance function"),
-    ("density",'LD',"Change density of embedded forest")
     ])
 
 
@@ -127,26 +126,26 @@ boundaryTags = {'y-' : 1,
                 'sponge':7,
                }
 
-slope1=0.35
-zmax=0.6
+slope1=0.1
+zmax=0.4
 halfw=0.15
 tank_l=5.
 
 vertices=[[0.0, -halfw,0.0],#0
-         [2.5, -halfw,0.0],#1
-         [4.1, -halfw,0.0], #2
+         [2.0, -halfw,0.0],#1
+         [4.0, -halfw,0.0], #2
          [tank_l, -halfw,0.0],#3
-         [tank_l+2., -halfw,slope1],#4
-         [tank_l+2., -halfw,zmax],#5
+         [tank_l+1., -halfw,slope1],#4
+         [tank_l+1., -halfw,zmax],#5
          [0.0, -halfw,zmax],#6
          [-wavelength, -halfw,zmax],#7
          [-wavelength, -halfw,0.0],#8
          [0.0, halfw,0.0],#9
-         [2.5, halfw,0.0],#10
-         [4.1, halfw,0.0], #11
+         [2.0, halfw,0.0],#10
+         [4.0, halfw,0.0], #11
          [tank_l, halfw,0.0],#12
-         [tank_l+2., halfw,slope1],#13
-         [tank_l+2., halfw,zmax],#14
+         [tank_l+1., halfw,slope1],#13
+         [tank_l+1., halfw,zmax],#14
          [0.0, halfw,zmax],#15
          [-wavelength, halfw,zmax],#16
          [-wavelength, halfw,0.0],]#17

@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -N 4
-#SBATCH -n 256
+#SBATCH -N 16
+#SBATCH -n 1024
 #SBATCH -t 01:00:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
@@ -27,6 +27,6 @@ cp *.stl $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 
 python setup.py build_ext -i
-srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.2"
+srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.06"
 
 exit 0
