@@ -122,42 +122,69 @@ boundaryTags = {'y-' : 1,
                 'x-' : 4,
                 'z+' : 5,
                 'z-' : 6,
+                'sponge':7,
                }
 
+slope1=0.1
 zmax=0.4
 halfw=0.15
 tank_l=5.
 
 vertices=[[0.0, -halfw,0.0],#0
-         [tank_l, -halfw,0.0],#1
-         [tank_l, -halfw,zmax],#2
-         [0.0, -halfw,zmax],#3
-         [0.0, halfw,0.0],#4
-         [tank_l, halfw,0.0],#5
-         [tank_l, halfw,zmax],#6
-         [0.0, halfw,zmax],]#7
+         [2.0, -halfw,0.0],#1
+         [4.0, -halfw,0.0], #2
+         [tank_l, -halfw,0.0],#3
+         [tank_l+1., -halfw,slope1],#4
+         [tank_l+1., -halfw,zmax],#5
+         [0.0, -halfw,zmax],#6
+         [-wavelength, -halfw,zmax],#7
+         [-wavelength, -halfw,0.0],#8
+         [0.0, halfw,0.0],#9
+         [2.0, halfw,0.0],#10
+         [4.0, halfw,0.0], #11
+         [tank_l, halfw,0.0],#12
+         [tank_l+1., halfw,slope1],#13
+         [tank_l+1., halfw,zmax],#14
+         [0.0, halfw,zmax],#15
+         [-wavelength, halfw,zmax],#16
+         [-wavelength, halfw,0.0],]#17
 
-vertexFlags=np.array([1,1,1,1,
-                      3,3,3,3])
-
-facets=[[[0,1,2,3]], # y-
-        [[4,5,6,7]], # y+
-        [[7,6,2,3]], # z+
-        [[4,5,1,0]], # z-
-        [[1,5,6,2]], # x+
-        [[0,4,7,3]],] # x-
-
-facetFlags=np.array([1, # y-
-                     3, # y+
-                     5, # z+
-                     6, # z-
-                     2, # x+
-                     4,]) # x-
+vertexFlags=np.array([6, 6, 6, 6, 6, 6,
+                      5,
+                      4, 4,
+                      6, 6, 6, 6, 6, 6,
+                      5,
+                      4, 4,])
 
 
-regions = [[ 0.1, 0.,0.1],]
+facets=[[[0,1,2,3,4,5,6]],#right
+        [[9,10,11,12,13,14,15]],#left
+        [[6,5,14,15]],#top
+        [[0,1,10,9]],#bottom
+        [[1,2,11,10]],
+        [[2,3,12,11]],
+        [[3,4,13,12]],
+        [[4,5,14,13]],#back
+        [[7,8,17,16]],#inflow--internal if sponge layer, switched to zero for internal
+        [[0,9,15,6]], #sponge
+        [[8,0,6,7]],
+        [[8,0,9,17]],
+        [[9,17,16,15]],
+        [[6,15,16,7]],]
 
-regionFlags=np.array([1])
+facetFlags=np.array([6,6,# right and left
+                     5,#top
+                     6,6,6,6,#bottom
+                     6,#back
+                     0,#inflow/internal
+                     7,#sponge
+                     6,6,6,5,])
+
+
+regions = [[ 0.1, 0.,0.1],
+           [-0.1, 0.,0.1],]
+
+regionFlags=np.array([1,2])
 
 # TANK
 
@@ -194,25 +221,25 @@ tank.BC['y-'].setFreeSlip()
 tank.BC['y+'].setFreeSlip()
 
 # non material boundaries for sponge interface
-#tank.BC['sponge'].setNonMaterial()
+tank.BC['sponge'].setNonMaterial()
 
 # WAVE AND RELAXATION ZONES
 
-#smoothing = he*1.5
-#dragAlpha = 5*2*np.pi/wave_period/(1.004e-6)
-#tank.BC['x-'].setUnsteadyTwoPhaseVelocityInlet(wave,
-#                                               smoothing=smoothing,
-#                                               vert_axis=1)
+smoothing = he*1.5
+dragAlpha = 5*2*np.pi/wave_period/(1.004e-6)
+tank.BC['x-'].setUnsteadyTwoPhaseVelocityInlet(wave,
+                                               smoothing=smoothing,
+                                               vert_axis=1)
 
-#tank.setGenerationZones(flags=2,
-#                   epsFact_porous=wavelength*0.5,
-#                   center=[-0.5*wavelength,0.,zmax*0.5],
-#                   orientation=[1,0,0],
-#                   waves=wave,
-#                   dragAlpha=dragAlpha,
-#                   vert_axis=2,
-#                   porosity=1.,
-#                   smoothing=smoothing)
+tank.setGenerationZones(flags=2,
+                   epsFact_porous=wavelength*0.5,
+                   center=[-0.5*wavelength,0.,zmax*0.5],
+                   orientation=[1,0,0],
+                   waves=wave,
+                   dragAlpha=dragAlpha,
+                   vert_axis=2,
+                   porosity=1.,
+                   smoothing=smoothing)
 
 column_gauge_locations=[((0.01,0.,0.),(0.01,0.,zmax)),
                         ((1.0,0.,0.),(1.0,0.,zmax)),
