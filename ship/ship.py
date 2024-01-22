@@ -14,13 +14,13 @@ opts= Context.Options([
     ("cfl",0.33,"Desired CFL restriction"),
     ("he",0.02,"Max mesh element diameter"),
     ("mwl",0.1,"still water depth"),
-    ("Hm",0.2,"Wave height"),
+    ("Hm",0.02,"Wave height"),
     ("Tp",1.85,"Peak wave period"),
     ("Uc",2.,"velocity of steady current"),
     ("Tramp",1.,"ramp time for steady current"),
-    ("wave_type",'Current',"runs simulation with time series waves"),
+    ("wave_type",'Monochromatic',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
-    ("embed_structure",True,"Embed structure using a signed distance function"),
+    ("embed_structure",False,"Embed structure using a signed distance function"),
     ])
 
 
@@ -65,7 +65,7 @@ if opts.wave_type=='Monochromatic':
                                  depth=water_level,
                                  g=g,waveDir=wave_direction,
                                  waveType='Linear',Nf=8)
-wavelength = wave.wavelength
+    wavelength = wave.wavelength
 elif opts.wave_type=='Time':
     wave = wt.TimeSeries(timeSeriesFile=opts.filename, # e.g.= "Timeseries.txt",
                          skiprows=0,
@@ -78,21 +78,19 @@ elif opts.wave_type=='Time':
                          cutoffTotal = 0.01,
                          rec_direct = True,
                          window_params = None)
-wavelength = wave.wavelength
+    wavelength = wave.wavelength
 elif opts.wave_type=='Random':
     wave = wt.RandomWaves(Tp=wave_period,
                           Hs=wave_height,
                           mwl=water_level,depth=water_level,
                           g=g,waveDir=wave_direction,
                           spectName='JONSWAP',N=300,bandFactor=2.5)
-wavelength = wave.wavelength
-
+    wavelength = wave.wavelength
 elif opts.wave_type=='Current':
     wave = wt.SteadyCurrent(U=Uc,
                             mwl=water_level,
                             rampTime=Tramp)
     wavelength = 1.
-
 
 #  ____                        _
 # |  _ \  ___  _ __ ___   __ _(_)_ __

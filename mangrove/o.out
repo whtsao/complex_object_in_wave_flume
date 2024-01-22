@@ -1,4 +1,4 @@
-Wed Jan 17 08:17:54 CST 2024
+Wed Jan 17 11:39:29 CST 2024
 ERROR: Unable to locate a modulefile for ' '
 running build_ext
 cythoning mangrove.pyx to mangrove.c
@@ -9,7 +9,7 @@ creating build
 creating build/temp.linux-x86_64-3.10
 INFO: compile options: '-I/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include -I/project/cekees/cekees/proteus/fct/include/python3.10 -c'
 INFO: gcc: mangrove.c
-INFO: gcc -pthread -shared -L/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -L/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -L/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -L/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -L/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -L/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -L/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -L/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -L/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -L/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath,/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib build/temp.linux-x86_64-3.10/mangrove.o -L/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib -o /ddnA/work/whtsao/lidar_mangrove.193039/mangrove.cpython-310-x86_64-linux-gnu.so
+INFO: gcc -pthread -shared -L/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -L/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -L/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -L/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -L/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -L/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -L/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -L/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -L/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -L/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath,/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib build/temp.linux-x86_64-3.10/mangrove.o -L/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib -o /ddnA/work/whtsao/lidar_mangrove.193217/mangrove.cpython-310-x86_64-linux-gnu.so
 Opening mesh.poly.
   Initializing memorypools.
   tetrahedron per block: 8188.
@@ -23,11 +23,11 @@ Delaunizing vertices...
   Permuting vertices.
   Sorting vertices.
   Incrementally inserting vertices.
-Delaunay seconds:  0.000232
+Delaunay seconds:  0.000236
   Point sorting seconds:  6e-06
 Creating surface mesh ...
   34 (27) subfaces (segments).
-Surface mesh seconds:  9.8e-05
+Surface mesh seconds:  9.7e-05
 Recovering boundaries...
   Creating the segment-endpoints map.
   Found 27 segments.
@@ -35,15 +35,15 @@ Recovering boundaries...
   27 (0) segments are recovered (missing).
   Recovering facets.
   34 (0) subfaces are recovered (missing).
-Boundary recovery seconds:  0.000182
-  Segment recovery seconds:  3.4e-05
-  Facet recovery seconds:  0.000148
+Boundary recovery seconds:  0.00018
+  Segment recovery seconds:  3.3e-05
+  Facet recovery seconds:  0.000147
 Removing exterior tetrahedra ...
 Spreading region attributes.
   Found 2 subdomains.
-Exterior tets removal seconds:  1.8e-05
+Exterior tets removal seconds:  1.9e-05
 Recovering Delaunayness...
-Delaunay recovery seconds:  8.4e-05
+Delaunay recovery seconds:  8.5e-05
 Refining mesh...
   Min radius-edge ratio = 12.
   Min dihedral   angle  = 3.5.
@@ -101,19 +101,19 @@ Refining mesh...
   384282 insertions, added 350034 points, 25264972 tetrahedra in queue.
   Added 1651218 (2420,122611,1526187) Steiner points.
   Added 7 (0,2,5) Steiner points.
-Refinement seconds:  35.3689
+Refinement seconds:  35.814
 Smoothing vertices...
   Smooth criterion   = 3
   Smooth iterations  = 7
   Smooth relax-alpha = 0.3
-Mesh smoothing seconds:  151.3
+Mesh smoothing seconds:  153.474
 Improving mesh...
   Target maximum aspect ratio = 1000.
   Target maximum dihedral angle = 177.
   Maximum flip level   = 3.
   Number of iterations = 3.
   Removed 563 edges/faces.
-Mesh improvement seconds:  2.80191
+Mesh improvement seconds:  2.81851
 
 Writing mesh.1.node.
 Writing mesh.1.ele.
@@ -121,8 +121,8 @@ Writing mesh.1.face.
 Writing mesh.1.edge.
 Writing mesh.1.neigh.
 
-Output seconds:  32.2203
-Total running seconds:  221.692
+Output seconds:  32.4573
+Total running seconds:  224.564
 
 Statistics:
 
@@ -198,31 +198,31 @@ Memory usage statistics:
 
 Max nNodes_subdomain 1613 nNodes_global 1651367
 Done allocating MPIAdj
-Max memory usage per core 0.347234GB
+Max memory usage per core 0.34775GB
 Done applying partition
-Max memory usage per core 0.374383GB
+Max memory usage per core 0.3736GB
 ==================out of core old2new is correct!====================
 Done with masks
-Max memory usage per core 0.379974GB
+Max memory usage per core 0.379949GB
 Done marking elements
-Max memory usage per core 0.381469GB
+Max memory usage per core 0.381182GB
 Done allocating element numbering new2old/old2new
-Max memory usage per core 0.461398GB
+Max memory usage per core 0.461054GB
 Done reading element boundaries
-Max memory usage per core 0.467509GB
+Max memory usage per core 0.467194GB
 Allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.633569GB
+Max memory usage per core 0.633647GB
 Done allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.554639GB
+Max memory usage per core 0.554623GB
 Done reading edges
-Max memory usage per core 0.554963GB
+Max memory usage per core 0.554951GB
 Setting edgeNumering old2new/new2old
-Max memory usage per core 0.653926GB
+Max memory usage per core 0.654451GB
 Done allocating edgeNumering old2new/new2old
-Max memory usage per core 0.607678GB
+Max memory usage per core 0.608117GB
 Done reading vertices
-Max memory usage per core 0.568472GB
+Max memory usage per core 0.569045GB
 Done with material types
-Max memory usage per core 0.409035GB
+Max memory usage per core 0.408666GB
 Done with partitioning!
-Max memory usage per core 0.409457GB
+Max memory usage per core 0.409051GB

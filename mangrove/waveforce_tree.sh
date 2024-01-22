@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 16
 #SBATCH -n 1024
-#SBATCH -t 01:00:00
+#SBATCH -t 72:00:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
 #SBATCH -J lidar_mangrove
