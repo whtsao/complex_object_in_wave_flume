@@ -25,78 +25,6 @@ Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
 Traceback (most recent call last):
@@ -108,73 +36,21 @@ Traceback (most recent call last):
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
 Traceback (most recent call last):
@@ -191,8 +67,128 @@ Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
@@ -203,74 +199,78 @@ Traceback (most recent call last):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
-    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
-AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 377, in <module>
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
     if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
 AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
-srun: error: mike040: tasks 0-63: Exited with exit code 1
+    if isinstance(contextObject,proteus.TwoPhaseFlow.TwoPhaseFlowProblem.TwoPhaseFlowProblem):
+AttributeError: module 'proteus' has no attribute 'TwoPhaseFlow'
+srun: error: mike102: tasks 0-63: Exited with exit code 1

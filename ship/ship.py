@@ -20,7 +20,7 @@ opts= Context.Options([
     ("Tramp",1.,"ramp time for steady current"),
     ("wave_type",'Monochromatic',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
-    ("embed_structure",False,"Embed structure using a signed distance function"),
+    ("embed_structure",False,"Embed structure using a signed distance function")
     ])
 
 
@@ -87,10 +87,10 @@ elif opts.wave_type=='Random':
                           spectName='JONSWAP',N=300,bandFactor=2.5)
     wavelength = wave.wavelength
 elif opts.wave_type=='Current':
-    wave = wt.SteadyCurrent(U=Uc,
-                            mwl=water_level,
-                            rampTime=Tramp)
-    wavelength = 1.
+#    wave = wt.SteadyCurrent(U=Uc,
+#                            mwl=water_level,
+#                            rampTime=Tramp)
+#    wavelength = 1.
 
 #  ____                        _
 # |  _ \  ___  _ __ ___   __ _(_)_ __
