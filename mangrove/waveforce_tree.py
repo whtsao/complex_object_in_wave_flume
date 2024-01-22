@@ -177,8 +177,8 @@ facetFlags=np.array([6,6,# right and left
                      6,6,6,5,])
 
 
-regions = [[ 0.1, 0.1,0.1],
-           [-0.1, 0.1,0.1],]
+regions = [[ 0.1, 0.,0.1],
+           [-0.1, 0.,0.1],]
 
 regionFlags=np.array([1,2])
 
@@ -237,10 +237,10 @@ tank.setGenerationZones(flags=2,
                    porosity=1.,
                    smoothing=smoothing)
 
-column_gauge_locations=[((0.01,0.5*1.83,0.),(0.01,0.5*1.83,zmax)),
-                        ((2.0,0.5*1.83,0.),(2.0,0.5*1.83,zmax)),
-			((4.0,0.5*1.83,0.),(4.0,0.5*1.83,zmax)),
-			((6.0,0.5*1.83,0.),(6.0,0.5*1.83,zmax))]
+column_gauge_locations=[((0.01,0.,0.),(0.01,0.,zmax)),
+                        ((2.0,0.,0.),(2.0,0.,zmax)),
+			((4.0,0.,0.),(4.0,0.,zmax)),
+			((6.0,0.,0.),(6.0,0.,zmax))]
 
 
 tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),),fileName='column_gauges.csv')

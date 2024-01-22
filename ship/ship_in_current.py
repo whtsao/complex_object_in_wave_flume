@@ -87,10 +87,10 @@ elif opts.wave_type=='Random':
                           spectName='JONSWAP',N=300,bandFactor=2.5)
     wavelength = wave.wavelength
 elif opts.wave_type=='Current':
-#    wave = wt.SteadyCurrent(U=Uc,
-#                            mwl=water_level,
-#                            rampTime=Tramp)
-#    wavelength = 1.
+    wave = wt.SteadyCurrent(U=Uc,
+                            mwl=water_level,
+                            rampTime=Tramp)
+    wavelength = 1.
 
 #  ____                        _
 # |  _ \  ___  _ __ ___   __ _(_)_ __
@@ -180,8 +180,8 @@ facetFlags=np.array([6,6,# right and left
                      6,6,6,5,])
 
 
-regions = [[ 0.1, 0.1,0.1],
-           [-0.1, 0.1,0.1],]
+regions = [[ 0.1, 0.,0.1],
+           [-0.1, 0.,0.1],]
 
 regionFlags=np.array([1,2])
 
@@ -240,10 +240,10 @@ tank.setGenerationZones(flags=2,
                    porosity=1.,
                    smoothing=smoothing)
 
-column_gauge_locations=[((0.01,0.5*1.83,0.),(0.01,0.5*1.83,zmax)),
-                        ((2.0,0.5*1.83,0.),(2.0,0.5*1.83,zmax)),
-			((4.0,0.5*1.83,0.),(4.0,0.5*1.83,zmax)),
-			((6.0,0.5*1.83,0.),(6.0,0.5*1.83,zmax))]
+column_gauge_locations=[((0.01,0.,0.),(0.01,0.,zmax)),
+                        ((2.0,0.,0.),(2.0,0.,zmax)),
+			((4.0,0.,0.),(4.0,0.,zmax)),
+			((6.0,0.,0.),(6.0,0.,zmax))]
 
 
 tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),),fileName='column_gauges.csv')
@@ -371,8 +371,8 @@ pyximport.install(setup_args={"include_dirs":np.get_include()})
 #,
 #                  reload_support=True)
 
-#from ship_model import sdf_vectorized
-from ship_model import sdf_vectorized_stl
+#from ship import sdf_vectorized
+from ship import sdf_vectorized_stl
 
 def particle_vel(t, x):
     return (0.0,0.0,0.0)
