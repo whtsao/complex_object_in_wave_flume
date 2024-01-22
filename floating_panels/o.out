@@ -1,8 +1,4 @@
-Wed Nov 29 11:49:52 CST 2023
-Autoloading gcc/11.2.0
-
-Loading proteus/fct/gcc-11.2.0
-  Loading requirement: gcc/11.2.0
+Sun Jan 21 19:14:59 CST 2024
 # Wave
 
 # Printing input data here to check
@@ -36,100 +32,36 @@ Touch key to continue
 
 
 Finished
-Max nNodes_subdomain 71 nNodes_global 4538
+Max nNodes_subdomain 95 nNodes_global 4538
 Done allocating MPIAdj
-Max memory usage per core 0.264901GB
+Max memory usage per core 0.181125GB
 Done applying partition
-Max memory usage per core 0.265748GB
+Max memory usage per core 0.181535GB
 ==================out of core old2new is correct!====================
 Done with masks
-Max memory usage per core 0.266564GB
+Max memory usage per core 0.181883GB
 Done marking elements
-Max memory usage per core 0.26694GB
+Max memory usage per core 0.182071GB
 Done allocating element numbering new2old/old2new
-Max memory usage per core 0.26694GB
+Max memory usage per core 0.18212GB
 Done reading element boundaries
-Max memory usage per core 0.26694GB
+Max memory usage per core 0.182166GB
 Allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.267551GB
+Max memory usage per core 0.182387GB
 Done allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.267833GB
+Max memory usage per core 0.182485GB
 Done reading edges
-Max memory usage per core 0.268378GB
+Max memory usage per core 0.182497GB
 Setting edgeNumering old2new/new2old
-Max memory usage per core 0.268628GB
+Max memory usage per core 0.18251GB
 Done allocating edgeNumering old2new/new2old
-Max memory usage per core 0.268906GB
+Max memory usage per core 0.182596GB
 Done reading vertices
-Max memory usage per core 0.269165GB
+Max memory usage per core 0.182596GB
 Done with material types
-Max memory usage per core 0.269418GB
+Max memory usage per core 0.182604GB
 Done with partitioning!
-Max memory usage per core 0.269976GB
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
-0
-1
-2
-3
+Max memory usage per core 0.182751GB
 0
 1
 2
