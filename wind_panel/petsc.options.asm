@@ -1,0 +1,1 @@
+-rans2p_ksp_type gmres -rans2p_pc_type asm -rans2p_pc_asm_type basic -rans2p_ksp_max_it 2000 -rans2p_ksp_gmres_modifiedgramschmidt 1 -rans2p_ksp_gmres_restart 300 -rans2p_sub_ksp_type preonly -rans2p_sub_pc_type lu -rans2p_sub_pc_factor_mat_solver_type superlu

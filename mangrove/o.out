@@ -1,4 +1,4 @@
-Wed Jan 24 08:55:42 CST 2024
+Wed Jan 24 11:12:06 CST 2024
 ERROR: Unable to locate a modulefile for ' '
 running build_ext
 cythoning mangrove.pyx to mangrove.c
@@ -9,7 +9,7 @@ creating build
 creating build/temp.linux-x86_64-3.10
 INFO: compile options: '-I/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include -I/project/cekees/cekees/proteus/fct/include/python3.10 -c'
 INFO: gcc: mangrove.c
-INFO: gcc -pthread -shared -L/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -L/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -L/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -L/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -L/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -L/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -L/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -L/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -L/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -L/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath,/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib build/temp.linux-x86_64-3.10/mangrove.o -L/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib -o /ddnA/work/whtsao/lidar_mangrove.195586/mangrove.cpython-310-x86_64-linux-gnu.so
+INFO: gcc -pthread -shared -L/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -L/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -L/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -L/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -L/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -L/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -L/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -L/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -L/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -L/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath,/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib build/temp.linux-x86_64-3.10/mangrove.o -L/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib -o /ddnA/work/whtsao/lidar_mangrove.195597/mangrove.cpython-310-x86_64-linux-gnu.so
 Opening mesh.poly.
   Initializing memorypools.
   tetrahedron per block: 8188.
@@ -23,11 +23,11 @@ Delaunizing vertices...
   Permuting vertices.
   Sorting vertices.
   Incrementally inserting vertices.
-Delaunay seconds:  0.00023
+Delaunay seconds:  0.000226
   Point sorting seconds:  6e-06
 Creating surface mesh ...
   34 (27) subfaces (segments).
-Surface mesh seconds:  9.3e-05
+Surface mesh seconds:  9.5e-05
 Recovering boundaries...
   Creating the segment-endpoints map.
   Found 27 segments.
@@ -35,21 +35,21 @@ Recovering boundaries...
   27 (0) segments are recovered (missing).
   Recovering facets.
   34 (0) subfaces are recovered (missing).
-Boundary recovery seconds:  0.000181
-  Segment recovery seconds:  3.4e-05
-  Facet recovery seconds:  0.000147
+Boundary recovery seconds:  0.000178
+  Segment recovery seconds:  3.3e-05
+  Facet recovery seconds:  0.000145
 Removing exterior tetrahedra ...
 Spreading region attributes.
   Found 2 subdomains.
-Exterior tets removal seconds:  1.9e-05
+Exterior tets removal seconds:  4.1e-05
 Recovering Delaunayness...
-Delaunay recovery seconds:  0.000101
+Delaunay recovery seconds:  0.0001
 Refining mesh...
   Min radius-edge ratio = 12.
   Min dihedral   angle  = 3.5.
-  Max tet volume  = 0.000166667.
+  Max tet volume  = 3.6e-05.
   Creating the segment_info_list.
-  min_dihedral angle = 90 degree, at segment [1,7]
+  min_dihedral angle = 90 degree, at segment [15,6]
   min face angle = 90 degree, at vertex 6
   Creating the facet vertices map.
   Found 12 facets. Max facet idx(3), size(8)
@@ -57,39 +57,44 @@ Refining mesh...
   Splitting encroached subsegments.
   Added 6 Steiner points.
   Splitting encroached and bad quality subfaces.
-  Added 0 (0,0) Steiner points.
+  Added 4 (4,0) Steiner points.
   Splitting bad quality tets.
-  23 insertions, added 18 points, 153 tetrahedra in queue.
-  7 insertions, added 4 points, 221 tetrahedra in queue.
-  9 insertions, added 7 points, 350 tetrahedra in queue.
-  12 insertions, added 6 points, 437 tetrahedra in queue.
-  16 insertions, added 7 points, 540 tetrahedra in queue.
-  22 insertions, added 15 points, 735 tetrahedra in queue.
-  29 insertions, added 14 points, 922 tetrahedra in queue.
-  39 insertions, added 17 points, 1173 tetrahedra in queue.
-  52 insertions, added 24 points, 1454 tetrahedra in queue.
-  69 insertions, added 33 points, 1947 tetrahedra in queue.
-  92 insertions, added 47 points, 2649 tetrahedra in queue.
-  123 insertions, added 60 points, 3513 tetrahedra in queue.
-  164 insertions, added 90 points, 4865 tetrahedra in queue.
-  218 insertions, added 115 points, 6680 tetrahedra in queue.
-  291 insertions, added 156 points, 9117 tetrahedra in queue.
-  388 insertions, added 219 points, 12470 tetrahedra in queue.
-  517 insertions, added 312 points, 17388 tetrahedra in queue.
-  Added 1548 (289,810,449) Steiner points.
-Refinement seconds:  0.030823
+  23 insertions, added 18 points, 141 tetrahedra in queue.
+  7 insertions, added 6 points, 256 tetrahedra in queue.
+  9 insertions, added 6 points, 349 tetrahedra in queue.
+  12 insertions, added 9 points, 445 tetrahedra in queue.
+  16 insertions, added 12 points, 584 tetrahedra in queue.
+  22 insertions, added 14 points, 832 tetrahedra in queue.
+  29 insertions, added 16 points, 1046 tetrahedra in queue.
+  39 insertions, added 23 points, 1364 tetrahedra in queue.
+  52 insertions, added 28 points, 1747 tetrahedra in queue.
+  69 insertions, added 32 points, 2179 tetrahedra in queue.
+  92 insertions, added 41 points, 2729 tetrahedra in queue.
+  123 insertions, added 61 points, 3637 tetrahedra in queue.
+  164 insertions, added 82 points, 4886 tetrahedra in queue.
+  218 insertions, added 110 points, 6706 tetrahedra in queue.
+  291 insertions, added 153 points, 9160 tetrahedra in queue.
+  388 insertions, added 216 points, 12640 tetrahedra in queue.
+  517 insertions, added 298 points, 17669 tetrahedra in queue.
+  689 insertions, added 405 points, 24457 tetrahedra in queue.
+  919 insertions, added 549 points, 33615 tetrahedra in queue.
+  1225 insertions, added 782 points, 46157 tetrahedra in queue.
+  1633 insertions, added 1069 points, 42587 tetrahedra in queue.
+  Added 4218 (548,2058,1612) Steiner points.
+  Added 1 (0,0,1) Steiner points.
+Refinement seconds:  0.074567
 Smoothing vertices...
   Smooth criterion   = 3
   Smooth iterations  = 7
   Smooth relax-alpha = 0.3
-Mesh smoothing seconds:  0.03618
+Mesh smoothing seconds:  0.125818
 Improving mesh...
   Target maximum aspect ratio = 1000.
   Target maximum dihedral angle = 177.
   Maximum flip level   = 3.
   Number of iterations = 3.
   Removed 1 edges/faces.
-Mesh improvement seconds:  0.000937
+Mesh improvement seconds:  0.002762
 
 Writing mesh.1.node.
 Writing mesh.1.ele.
@@ -97,8 +102,8 @@ Writing mesh.1.face.
 Writing mesh.1.edge.
 Writing mesh.1.neigh.
 
-Output seconds:  0.014281
-Total running seconds:  0.0829
+Output seconds:  0.039703
+Total running seconds:  0.24355
 
 Statistics:
 
@@ -108,97 +113,97 @@ Statistics:
   Input holes: 0
   Input regions: 2
 
-  Mesh points: 1572
-  Mesh tetrahedra: 5891
-  Mesh faces: 12894
-  Mesh edges: 8574
-  Mesh faces on exterior boundary: 2224
-  Mesh edges on exterior boundary: 3336
-  Mesh faces on input facets: 2254
-  Mesh edges on input segments: 322
-  Steiner points on input facets:  810
-  Steiner points on input segments:  295
-  Steiner points inside domain: 449
+  Mesh points: 4250
+  Mesh tetrahedra: 17464
+  Mesh faces: 37543
+  Mesh edges: 24328
+  Mesh faces on exterior boundary: 5230
+  Mesh edges on exterior boundary: 7845
+  Mesh faces on input facets: 5289
+  Mesh edges on input segments: 585
+  Steiner points on input facets:  2060
+  Steiner points on input segments:  558
+  Steiner points inside domain: 1614
 
 Mesh quality statistics:
 
-  Smallest volume:       3.8144e-06   |  Largest volume:       0.00021824
-  Shortest edge:           0.040964   |  Longest edge:            0.15773
-  Smallest asp.ratio:        1.2958   |  Largest asp.ratio:        42.063
-  Smallest facangle:         19.199   |  Largest facangle:       120.1992
-  Smallest dihedral:         2.0656   |  Largest dihedral:       176.7208
+  Smallest volume:       1.1903e-06   |  Largest volume:       4.9131e-05
+  Shortest edge:           0.022981   |  Longest edge:           0.092312
+  Smallest asp.ratio:         1.269   |  Largest asp.ratio:        33.649
+  Smallest facangle:         19.087   |  Largest facangle:       121.6312
+  Smallest dihedral:         2.6013   |  Largest dihedral:       175.9296
 
   Aspect ratio histogram:
-         < 1.5       :       249      |      6 - 10         :        49
-     1.5 - 2         :      2809      |     10 - 15         :        10
-       2 - 2.5       :      1802      |     15 - 25         :         2
-     2.5 - 3         :       575      |     25 - 50         :         4
-       3 - 4         :       295      |     50 - 100        :         0
-       4 - 6         :        96      |    100 -            :         0
+         < 1.5       :       773      |      6 - 10         :       114
+     1.5 - 2         :      8894      |     10 - 15         :        32
+       2 - 2.5       :      5176      |     15 - 25         :         6
+     2.5 - 3         :      1489      |     25 - 50         :         4
+       3 - 4         :       666      |     50 - 100        :         0
+       4 - 6         :       310      |    100 -            :         0
   (A tetrahedron's aspect ratio is its longest edge length divided by its
     smallest side height)
 
   Face angle histogram:
-      0 -  10 degrees:         0      |     90 - 100 degrees:      1053
-     10 -  20 degrees:         1      |    100 - 110 degrees:       228
-     20 -  30 degrees:       129      |    110 - 120 degrees:        22
-     30 -  40 degrees:      2322      |    120 - 130 degrees:         1
-     40 -  50 degrees:      7832      |    130 - 140 degrees:         0
-     50 -  60 degrees:     10798      |    140 - 150 degrees:         0
-     60 -  70 degrees:      8492      |    150 - 160 degrees:         0
-     70 -  80 degrees:      5206      |    160 - 170 degrees:         0
-     80 -  90 degrees:      2598      |    170 - 180 degrees:         0
+      0 -  10 degrees:         0      |     90 - 100 degrees:      2830
+     10 -  20 degrees:         1      |    100 - 110 degrees:       553
+     20 -  30 degrees:       387      |    110 - 120 degrees:        57
+     30 -  40 degrees:      6216      |    120 - 130 degrees:         2
+     40 -  50 degrees:     22610      |    130 - 140 degrees:         0
+     50 -  60 degrees:     31665      |    140 - 150 degrees:         0
+     60 -  70 degrees:     25739      |    150 - 160 degrees:         0
+     70 -  80 degrees:     15332      |    160 - 170 degrees:         0
+     80 -  90 degrees:      7237      |    170 - 180 degrees:         0
 
   Dihedral angle histogram:
-       0 -  5 degrees:        17      |     80 - 110 degrees:      8088
-       5 - 10 degrees:        43      |    110 - 120 degrees:      1034
-      10 - 20 degrees:       315      |    120 - 130 degrees:       567
-      20 - 30 degrees:       677      |    130 - 140 degrees:       330
-      30 - 40 degrees:      1814      |    140 - 150 degrees:       180
-      40 - 50 degrees:      4258      |    150 - 160 degrees:       127
-      50 - 60 degrees:      6477      |    160 - 170 degrees:        53
-      60 - 70 degrees:      6399      |    170 - 175 degrees:         9
-      70 - 80 degrees:      4954      |    175 - 180 degrees:         4
+       0 -  5 degrees:        26      |     80 - 110 degrees:     24257
+       5 - 10 degrees:       140      |    110 - 120 degrees:      2715
+      10 - 20 degrees:       781      |    120 - 130 degrees:      1445
+      20 - 30 degrees:      1908      |    130 - 140 degrees:       858
+      30 - 40 degrees:      4908      |    140 - 150 degrees:       538
+      40 - 50 degrees:     12012      |    150 - 160 degrees:       330
+      50 - 60 degrees:     19012      |    160 - 170 degrees:       149
+      60 - 70 degrees:     19832      |    170 - 175 degrees:        16
+      70 - 80 degrees:     15853      |    175 - 180 degrees:         4
   Minimum input dihedral angle is 90 (degree).
 
 
 Memory usage statistics:
 
-  Maximum number of tetrahedra:  8309
-  Maximum number of tet blocks (blocksize = 8188):  2
-  Approximate memory for tetrahedral mesh (bytes):  1,685,952
-  Approximate memory for extra pointers (bytes):  187,168
-  Approximate memory for algorithms (bytes):  141,856
-  Approximate memory for working arrays (bytes):  334,772
-  Approximate total used memory (bytes):  2,349,748
+  Maximum number of tetrahedra:  23418
+  Maximum number of tet blocks (blocksize = 8188):  3
+  Approximate memory for tetrahedral mesh (bytes):  4,444,816
+  Approximate memory for extra pointers (bytes):  417,920
+  Approximate memory for algorithms (bytes):  142,536
+  Approximate memory for working arrays (bytes):  859,332
+  Approximate total used memory (bytes):  5,864,604
 
-Max nNodes_subdomain 25 nNodes_global 1572
+Max nNodes_subdomain 17 nNodes_global 4250
 Done allocating MPIAdj
-Max memory usage per core 0.183747GB
+Max memory usage per core 0.315949GB
 Done applying partition
-Max memory usage per core 0.186171GB
+Max memory usage per core 0.319357GB
 ==================out of core old2new is correct!====================
 Done with masks
-Max memory usage per core 0.186778GB
+Max memory usage per core 0.320254GB
 Done marking elements
-Max memory usage per core 0.187093GB
+Max memory usage per core 0.320532GB
 Done allocating element numbering new2old/old2new
-Max memory usage per core 0.187408GB
+Max memory usage per core 0.320786GB
 Done reading element boundaries
-Max memory usage per core 0.187847GB
+Max memory usage per core 0.321053GB
 Allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.188604GB
+Max memory usage per core 0.321876GB
 Done allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.188924GB
+Max memory usage per core 0.322449GB
 Done reading edges
-Max memory usage per core 0.189256GB
+Max memory usage per core 0.322781GB
 Setting edgeNumering old2new/new2old
-Max memory usage per core 0.189837GB
+Max memory usage per core 0.323072GB
 Done allocating edgeNumering old2new/new2old
-Max memory usage per core 0.190165GB
+Max memory usage per core 0.323453GB
 Done reading vertices
-Max memory usage per core 0.190472GB
+Max memory usage per core 0.323748GB
 Done with material types
-Max memory usage per core 0.190738GB
+Max memory usage per core 0.324026GB
 Done with partitioning!
-Max memory usage per core 0.191144GB
+Max memory usage per core 0.394559GB
