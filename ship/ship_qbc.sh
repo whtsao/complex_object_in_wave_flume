@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -N 1
-#SBATCH -n 48
-#SBATCH -t 00:10:00
+#SBATCH -N 2
+#SBATCH -n 96
+#SBATCH -t 01:00:00
 #SBATCH -p workq
 #SBATCH -A loni_ceds3d
 #SBATCH -o o.out
@@ -23,6 +23,6 @@ cp *.stl $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 
 python setup.py build_ext -i
-srun parun --TwoPhaseFlow ship_in_current.py -F -l 5 -C "he=0.1"
+srun parun --TwoPhaseFlow ship_in_current_0.py -F -l 5 -C "he=0.08"
 
 exit 0

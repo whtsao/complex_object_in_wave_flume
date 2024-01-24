@@ -13,12 +13,14 @@ opts= Context.Options([
     ("gauges", True, "Collect data for validation"),
     ("cfl",0.33,"Desired CFL restriction"),
     ("he",0.02,"Max mesh element diameter"),
-    ("mwl",1.03,"still water depth"),
-    ("Hm",0.2,"Wave height"),
+    ("mwl",0.06,"still water depth"),
+    ("Hm",0.02,"Wave height"),
     ("Tp",1.85,"Peak wave period"),
+    ("fast", False, "switch for fast cosh calculations in WaveTools"),
+    ("x0", 0.5, "Starting place of soliatry wave"),
     ("wave_type",'Monochromatic',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
-    ("embed_structure",True,"Embed structure using a signed distance function"),
+    ("embed_structure",False,"Embed structure using a signed distance function"),
     ("density",'LD',"Change density of embedded forest")
     ])
 
@@ -53,6 +55,10 @@ water_level = opts.mwl
 wave_period = opts.Tp
 wave_height = opts.Hm
 wave_direction = np.array([1., 0., 0.])
+x0 = opts.x0
+trans = np.array([x0, 0., 0.])
+fast = opts.fast
+
 
 #Monochromatic or Random
 if opts.wave_type=='Monochromatic':
@@ -76,12 +82,20 @@ elif opts.wave_type=='Time':
                          rec_direct = True,
                          window_params = None)
 
-else:
+elif opts.wave_type=='Random':
     wave = wt.RandomWaves(Tp=wave_period,
                           Hs=wave_height,
                           mwl=water_level,depth=water_level,
                           g=g,waveDir=wave_direction,
                           spectName='JONSWAP',N=300,bandFactor=2.5)
+elif opts.wave_type=='Soliton':
+    waves = wt.SolitaryWave(waveHeight=wave_height,
+			    mwl=water_level,
+                    	    depth=water_level,
+                   	    g=g,
+                   	    waveDir=wave_direction,
+                            trans = trans,
+                            fast = fast)
 
 
 wavelength = wave.wavelength
@@ -120,27 +134,29 @@ boundaryTags = {'y-' : 1,
                 'sponge':7,
                }
 
-slope1=0.35
-zmax=2.
-halfw=3.
-tank_l=10.
-top = 1.0
+zmax=0.2
+halfw = 0.15 # |x|<=+-halfw
+ymax = 5.
+
+toe = 2.
+slope = 35.
+top = (ymax-toe)/slope
 
 vertices=[[0.0, -halfw,0.0],#0
-         [2.5, -halfw,0.0],#1
-         [4.1, -halfw,0.0], #2
-         [tank_l, -halfw,0.0],#3
-         [tank_l+2., -halfw,slope1],#4
-         [tank_l+2., -halfw,zmax],#5
+         [x0, -halfw,0.0],#1
+         [1.0, -halfw,0.0], #2
+         [toe, -halfw,0.0],#3
+         [ymax, -halfw,top],#4
+         [ymax, -halfw,zmax],#5
          [0.0, -halfw,zmax],#6
          [-wavelength, -halfw,zmax],#7
          [-wavelength, -halfw,0.0],#8
          [0.0, halfw,0.0],#9
-         [2.5, halfw,0.0],#10
-         [4.1, halfw,0.0], #11
-         [tank_l, halfw,0.0],#12
-         [tank_l+2., halfw,slope1],#13
-         [tank_l+2., halfw,zmax],#14
+         [x0, halfw,0.0],#10
+         [1.0, halfw,0.0], #11
+         [toe, halfw,0.0],#12
+         [ymax, halfw,top],#13
+         [ymax, halfw,zmax],#14
          [0.0, halfw,zmax],#15
          [-wavelength, halfw,zmax],#16
          [-wavelength, halfw,0.0],]#17
@@ -237,10 +253,14 @@ tank.setGenerationZones(flags=2,
                    porosity=1.,
                    smoothing=smoothing)
 
-column_gauge_locations=[((0.01,0.,0.),(0.01,0.,zmax)),
-                        ((2.0,0.,0.),(2.0,0.,zmax)),
-			((4.0,0.,0.),(4.0,0.,zmax)),
-			((6.0,0.,0.),(6.0,0.,zmax))]
+g1x = toe+0.5
+g1z = (g1x-toe)/slope
+g2x = toe+1.0
+g2z = (g2x-toe)/slope
+column_gauge_locations=[((x0,0.,0.),(x0,0.,zmax)),
+                        ((toe,0.,0.),(toe,0.,zmax)),
+			((g1x,0.,g1z),(g1x,0.,zmax)),
+			((g2x,0.,g2z),(g2x,0.,zmax))]
 
 
 tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),),fileName='column_gauges.csv')

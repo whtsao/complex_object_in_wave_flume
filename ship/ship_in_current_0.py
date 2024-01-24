@@ -91,7 +91,7 @@ elif opts.wave_type=='Current':
     wave = wt.SteadyCurrent(U=current_velocity,
                             mwl=water_level,
                             rampTime=Tramp)
-    wavelength = 1.
+    wavelength = 5.
 
 #  ____                        _
 # |  _ \  ___  _ __ ___   __ _(_)_ __
