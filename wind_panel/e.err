@@ -41,238 +41,276 @@ Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
 Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    with open(stl_file,'r') as f: # for reading ship stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
 Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
 Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
 Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
 Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
 Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
-Traceback (most recent call last):
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
 Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
     self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
   File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
     self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
   File "panel.pyx", line 91, in panel.sdf_vectorized_stl
     self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
   File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
   File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
     self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
   File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
   File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
-    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
-  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
   File "panel.pyx", line 91, in panel.sdf_vectorized_stl
     with open(stl_file,'r') as f: # for reading ship stl
@@ -289,78 +327,30 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
     dispatch(ns.calculateSolution,
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-    with open(stl_file,'r') as f: # for reading ship stl
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
     dispatch(ns.calculateSolution,
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
 Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -368,6 +358,18 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -375,6 +377,31 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -382,6 +409,8 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
     dispatch(ns.calculateSolution,
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     with open(stl_file,'r') as f: # for reading ship stl
@@ -389,42 +418,14 @@ FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
 During handling of the above exception, another exception occurred:
 
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     dispatch(ns.calculateSolution,
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     with open(stl_file,'r') as f: # for reading ship stl
@@ -434,6 +435,18 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     dispatch(ns.calculateSolution,
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     with open(stl_file,'r') as f: # for reading ship stl
@@ -443,6 +456,18 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -450,90 +475,25 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
     with open(stl_file,'r') as f: # for reading ship stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
 Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -557,6 +517,66 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -587,6 +607,294 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -608,70 +916,13 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    with open(stl_file,'r') as f: # for reading ship stl
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
 During handling of the above exception, another exception occurred:
@@ -682,166 +933,26 @@ Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     dispatch(ns.calculateSolution,
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     dispatch(ns.calculateSolution,
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    with open(stl_file,'r') as f: # for reading ship stl
-FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
-    dispatch(ns.calculateSolution,
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    return func(*func_args, **func_kwargs)
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     with open(stl_file,'r') as f: # for reading ship stl
 FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
 
@@ -853,130 +964,19 @@ Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     return func(*func_args, **func_kwargs)
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
-    return func(*func_args, **func_kwargs)
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
+Traceback (most recent call last):
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 712, in attachModels
+    self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+  File "panel.pyx", line 91, in panel.sdf_vectorized_stl
+    with open(stl_file,'r') as f: # for reading ship stl
+FileNotFoundError: [Errno 2] No such file or directory: 'single_stand_panel.stl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/cekees/cekees/proteus/fct/bin/parun", line 583, in <module>
+    dispatch(ns.calculateSolution,
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/Profiling.py", line 198, in __call__
     return func(*func_args, **func_kwargs)
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/NumericalSolution.py", line 518, in calculateSolution
     m.attachModels(self.modelList)
@@ -1243,50 +1243,16 @@ Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
@@ -1339,24 +1305,16 @@ Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
@@ -1369,12 +1327,8 @@ Traceback (most recent call last):
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
@@ -1383,6 +1337,26 @@ Traceback (most recent call last):
   File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
@@ -1391,6 +1365,28 @@ Traceback (most recent call last):
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
@@ -1399,54 +1395,34 @@ Traceback (most recent call last):
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
-    sdf = lambda x: self.particle_sdfList[i](t, x)
-  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
@@ -1471,6 +1447,36 @@ TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf_at_node, sdNormals = sdf(self.mesh.nodeArray[j, :])
+  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py", line 723, in <lambda>
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
 TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
@@ -1483,6 +1489,18 @@ TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
@@ -1491,10 +1509,34 @@ TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
 TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
+TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     sdf = lambda x: self.particle_sdfList[i](t, x)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
@@ -1519,50 +1561,8 @@ TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
 TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
 TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-    def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
-TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
+    sdf = lambda x: self.particle_sdfList[i](t, x)
+  File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
 TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
     def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
@@ -1619,4 +1619,4 @@ TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
   File "panel.pyx", line 89, in panel.sdf_vectorized_stl
     def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
 TypeError: sdf_vectorized_stl() takes exactly 3 positional arguments (2 given)
-srun: error: mike012: tasks 0-63: Exited with exit code 1
+srun: error: mike112: tasks 0-63: Exited with exit code 1

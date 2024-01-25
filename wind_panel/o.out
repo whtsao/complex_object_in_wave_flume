@@ -1,4 +1,4 @@
-Wed Jan 24 19:06:05 CST 2024
+Wed Jan 24 21:19:12 CST 2024
 running build_ext
 cythoning panel.pyx to panel.c
 building 'panel' extension
@@ -8,7 +8,7 @@ creating build
 creating build/temp.linux-x86_64-3.10
 INFO: compile options: '-I/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include -I/project/cekees/cekees/proteus/fct/include/python3.10 -c'
 INFO: gcc: panel.c
-INFO: gcc -pthread -shared -L/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -L/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -L/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -L/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -L/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -L/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -L/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -L/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -L/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -L/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath,/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib build/temp.linux-x86_64-3.10/panel.o -L/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib -o /ddnA/work/whtsao/wind_panel.195811/panel.cpython-310-x86_64-linux-gnu.so
+INFO: gcc -pthread -shared -L/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/bzip2/bxub4egwxmki/lib -L/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/gdbm/ile5emyu5ynn/lib -L/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/launcher/nqs3636t5jqx/lib -L/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/libffi/tgz5pgvfcz6v/lib -L/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/ncurses/bo63dncyhwlb/lib -L/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/openssl/h5jbtgv2fk37/lib -L/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/patchelf/otm7ck6l2z3a/lib -L/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/readline/k3myfxc2g4rc/lib -L/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/sqlite/dovhidn2po6z/lib -L/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath=/ddnA/project/cekees/cekees/hashdist/bld/zlib/qg2mb57cgcut/lib -Wl,-rpath,/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib build/temp.linux-x86_64-3.10/panel.o -L/ddnA/project/cekees/cekees/hashdist/bld/python/7erkfjep7ml2/lib -o /ddnA/work/whtsao/panel_in_wind.195845/panel.cpython-310-x86_64-linux-gnu.so
 Opening cell.poly.
   Initializing memorypools.
   tetrahedron per block: 8188.
@@ -22,8 +22,8 @@ Delaunizing vertices...
   Permuting vertices.
   Sorting vertices.
   Incrementally inserting vertices.
-Delaunay seconds:  8.5e-05
-  Point sorting seconds:  5e-06
+Delaunay seconds:  8.3e-05
+  Point sorting seconds:  6e-06
 Creating surface mesh ...
   12 (12) subfaces (segments).
 Surface mesh seconds:  4.8e-05
@@ -34,15 +34,15 @@ Recovering boundaries...
   12 (0) segments are recovered (missing).
   Recovering facets.
   12 (0) subfaces are recovered (missing).
-Boundary recovery seconds:  0.000115
+Boundary recovery seconds:  0.000114
   Segment recovery seconds:  2.1e-05
-  Facet recovery seconds:  9.4e-05
+  Facet recovery seconds:  9.3e-05
 Removing exterior tetrahedra ...
 Spreading region attributes.
   Found 1 domain.
 Exterior tets removal seconds:  1.5e-05
 Recovering Delaunayness...
-Delaunay recovery seconds:  7.5e-05
+Delaunay recovery seconds:  7.4e-05
 Refining mesh...
   Min radius-edge ratio = 12.
   Min dihedral   angle  = 3.5.
@@ -84,19 +84,19 @@ Refining mesh...
   1583 insertions, added 1228 points, 90113 tetrahedra in queue.
   2110 insertions, added 1664 points, 67638 tetrahedra in queue.
   Added 6865 (180,1767,4918) Steiner points.
-Refinement seconds:  0.099776
+Refinement seconds:  0.09965
 Smoothing vertices...
   Smooth criterion   = 3
   Smooth iterations  = 7
   Smooth relax-alpha = 0.3
-Mesh smoothing seconds:  0.249332
+Mesh smoothing seconds:  0.245072
 Improving mesh...
   Target maximum aspect ratio = 1000.
   Target maximum dihedral angle = 177.
   Maximum flip level   = 3.
   Number of iterations = 3.
   Removed 3 edges/faces.
-Mesh improvement seconds:  0.005634
+Mesh improvement seconds:  0.005643
 
 Writing cell.1.node.
 Writing cell.1.ele.
@@ -104,8 +104,8 @@ Writing cell.1.face.
 Writing cell.1.edge.
 Writing cell.1.neigh.
 
-Output seconds:  0.072494
-Total running seconds:  0.427632
+Output seconds:  0.073018
+Total running seconds:  0.423775
 
 Statistics:
 
@@ -181,31 +181,31 @@ Memory usage statistics:
 
 Max nNodes_subdomain 108 nNodes_global 6873
 Done allocating MPIAdj
-Max memory usage per core 0.173908GB
+Max memory usage per core 0.170009GB
 Done applying partition
-Max memory usage per core 0.176185GB
+Max memory usage per core 0.172065GB
 ==================out of core old2new is correct!====================
 Done with masks
-Max memory usage per core 0.177091GB
+Max memory usage per core 0.172642GB
 Done marking elements
-Max memory usage per core 0.17741GB
+Max memory usage per core 0.172683GB
 Done allocating element numbering new2old/old2new
-Max memory usage per core 0.177848GB
+Max memory usage per core 0.172683GB
 Done reading element boundaries
-Max memory usage per core 0.178172GB
+Max memory usage per core 0.172773GB
 Allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.179802GB
+Max memory usage per core 0.173945GB
 Done allocating elementBoudnary old2new/new2old
-Max memory usage per core 0.180122GB
+Max memory usage per core 0.174256GB
 Done reading edges
-Max memory usage per core 0.180752GB
+Max memory usage per core 0.174846GB
 Setting edgeNumering old2new/new2old
-Max memory usage per core 0.18158GB
+Max memory usage per core 0.175153GB
 Done allocating edgeNumering old2new/new2old
-Max memory usage per core 0.181899GB
+Max memory usage per core 0.175469GB
 Done reading vertices
-Max memory usage per core 0.182198GB
+Max memory usage per core 0.17571GB
 Done with material types
-Max memory usage per core 0.183063GB
+Max memory usage per core 0.178164GB
 Done with partitioning!
-Max memory usage per core 0.183521GB
+Max memory usage per core 0.178663GB
