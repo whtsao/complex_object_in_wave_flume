@@ -82,7 +82,7 @@ def sdf_vectorized(double t, np.ndarray x,
                     phi[i] = min(phi[i], G)
                 
 
-stl_file = "cos_scaled_CS_2.stl"
+stl_file = "single_stand_panel.stl"
 
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function

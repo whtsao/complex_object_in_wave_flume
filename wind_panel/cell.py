@@ -18,7 +18,7 @@ opts = Context.Options([
     ("onlySaveFinalSolution",False,"Only save the final solution"),
     ("usePETSc",False,"use parallel solvers from PETSc"),
     ("cell_bottom",0.0,"the starting elevation of the flow cell"),
-    ("cell_height",0.05,"the height of the flow cell"),
+    ("cell_length",1.5,"the height of the flow cell"),
     ("stl", True, "use an stl for the structure")
 ], mutable=True)
 
@@ -29,12 +29,12 @@ usePETSc = opts.usePETSc
 boundaryTags = {'upstream' : 1, 'wall' : 2, 'downstream' : 3, 'top': 4, 'bottom': 5, 'holes': 6}
 
 nd = 3
-if opts.stl:
-    x = (-2.5, -2.5, opts.cell_bottom)
-    L = (5.0, 5.0, opts.cell_height)
-else:
-    x = (0.0, 0.0, opts.cell_bottom)
-    L = (1.0, 1.0, opts.cell_height)
+#if opts.stl:
+x = (-0.5*opts.cell_length, -0.5*opts.cell_length, opts.cell_bottom)
+L = (opts.cell_length, opts.cell_length, opts.cell_length)
+#else:
+#    x = (0.0, 0.0, opts.cell_bottom)
+#    L = (1.0, 1.0, opts.cell_height)
 
 
 vertices=[[x[0]     , x[1]     , x[2]],#0
@@ -66,7 +66,8 @@ facetFlags=[boundaryTags['bottom'],
             boundaryTags['upstream'],
             boundaryTags['top']]
 volumes=[[[0,1,2,3,4,5]]]
-regions=[[0.5*L[0],0.5*L[1],x[2]+0.5*L[2]]]
+#regions=[[0.5*L[0],0.5*L[1],x[2]+0.5*L[2]]]
+regions=[[0.,0.,x[2]+0.5*L[2]]]
 regionFlags=[0]
 
 domain = Domain.PiecewiseLinearComplexDomain(vertices=vertices,
@@ -90,8 +91,8 @@ domain.boundaryTags = boundaryTags
 domain.writePoly("cell")
 
 #cutfem structure
-from mangrove import sdf_vectorized
-from mangrove import sdf_vectorized_stl
+from panel import sdf_vectorized
+from panel import sdf_vectorized_stl
 
 # Time stepping
 T= opts.T
@@ -118,8 +119,8 @@ epsFact_consrv_dirac     = 1.5
 epsFact_consrv_diffusion = 10.0
 
 # Fluid
-rho = 998.2
-nu = 1.004e-6
+rho = 1.2 # 998.2
+nu = 1.52e-5 #1.004e-6
 
 
 # Gravity
