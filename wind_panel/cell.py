@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat May 13 05:09:10 2023
-Flow around obstacles. BR Riverdomain. 2d NS
-
-@author: linojr
-"""
 from math import *
 from proteus import (Domain,
                      Context,
@@ -16,7 +8,7 @@ opts = Context.Options([
     ("T", 100.0, "Time interval [0, T]"),
     ("he",0.05, "maximum size of edges"),
     ("onlySaveFinalSolution",False,"Only save the final solution"),
-    ("usePETSc",False,"use parallel solvers from PETSc"),
+    ("usePETSc", True,"use parallel solvers from PETSc"),
     ("cell_bottom",0.0,"the starting elevation of the flow cell"),
     ("cell_length",1.5,"the height of the flow cell"),
     ("stl", True, "use an stl for the structure")
@@ -91,7 +83,7 @@ domain.boundaryTags = boundaryTags
 domain.writePoly("cell")
 
 #cutfem structure
-from panel import sdf_vectorized
+#from panel import sdf_vectorized
 from panel import sdf_vectorized_stl
 
 # Time stepping
