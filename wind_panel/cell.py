@@ -10,7 +10,7 @@ opts = Context.Options([
     ("onlySaveFinalSolution",False,"Only save the final solution"),
     ("usePETSc", True,"use parallel solvers from PETSc"),
     ("cell_bottom",0.0,"the starting elevation of the flow cell"),
-    ("cell_length",1.5,"the height of the flow cell"),
+    ("cell_length",5.,"the height of the flow cell"),
     ("stl", True, "use an stl for the structure")
 ], mutable=True)
 
@@ -83,7 +83,7 @@ domain.boundaryTags = boundaryTags
 domain.writePoly("cell")
 
 #cutfem structure
-#from panel import sdf_vectorized
+from panel import sdf_vectorized
 from panel import sdf_vectorized_stl
 
 # Time stepping
@@ -110,7 +110,7 @@ epsFact_consrv_heaviside = 1.5
 epsFact_consrv_dirac     = 1.5
 epsFact_consrv_diffusion = 10.0
 
-# Fluid
+# Fluid, air in wind-panel example
 rho = 1.2 # 998.2
 nu = 1.52e-5 #1.004e-6
 

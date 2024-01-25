@@ -15,8 +15,277 @@ In file included from /project/cekees/cekees/proteus/fct/lib/python3.10/site-pac
       |  ^~~~~~~
 mangrove.c: In function '__pyx_pf_8mangrove_2sdf_vectorized_stl.constprop':
 mangrove.c:9207:17: warning: '__pyx_v_se' may be used uninitialized in this function [-Wmaybe-uninitialized]
- 9207 |     __pyx_t_4 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
+ 9207 |     __pyx_t_4 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 244, __pyx_L1_error)
       |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-WARNING: Error in initializing MVAPICH2 ptmalloc library.Continuing without InfiniBand registration cache support.
 USER WARNING: In order to avoid a segmentation fault, you need to have supplied the 'f' flag to the triangleOptions input.
 USER WARNING: In order to avoid an edge assertion error, you need to have supplied the 'ee' flag to the triangleOptions input.
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:712: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.mesh.nodeArray, (self.mesh.nodeArray.size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:714: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.q['x'], (self.model.q['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
+/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/mprans/RANS2P.py:716: RuntimeWarning: invalid value encountered in divide
+  self.particle_sdfList[0](t, np.reshape(self.model.ebqe['x'], (self.model.ebqe['x'].size//3,3)),
