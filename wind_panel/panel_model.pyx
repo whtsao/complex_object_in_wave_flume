@@ -81,7 +81,6 @@ def sdf_vectorized(double t, np.ndarray x,
                     G = sqrt((R*dir_x - X_0)**2 + (R*dir_y - Y_0)**2 + (A*R**2 + B - Z_0)**2) - Dr/ratio;
                     phi[i] = min(phi[i], G)
                 
-#stl_file = "lidar_tree_2.stl"
 stl_file = "single_stand_panel.stl"
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
