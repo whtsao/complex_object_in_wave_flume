@@ -111,8 +111,8 @@ epsFact_consrv_dirac     = 1.5
 epsFact_consrv_diffusion = 10.0
 
 # Fluid, air in wind-panel example
-rho = 1.2 # 998.2
-nu = 1.52e-5 #1.004e-6
+rho = 1.205 # 998.2
+nu = 1.5e-5 #1.004e-6
 
 
 # Gravity
