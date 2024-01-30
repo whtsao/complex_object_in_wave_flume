@@ -2,7 +2,7 @@
 import numpy as np
 #from libc.math cimport csqrtf
 #from libc.math cimport cos, sin, sqrt, fmin, fabs, csqrt, cabs
-from math import cos, sin, sqrt, sqrt
+from math import cos, sin, sqrt, sqrt, pi
 from cmath import sqrt as csqrt
 cimport numpy as np
 cimport cython
@@ -16,8 +16,8 @@ def sdf_vectorized(double t, np.ndarray x, np.ndarray phi):
     cdef double length = 1.7 # Example length of the plate
     cdef double width = 1.0  # Example width of the plate
     cdef double thickness = 0.08  # Example thickness of the plate
-    cdef double theta1 = 30. # angle between z-axis and normal of panel
-    cdef double theta2 =0. # rotate angle from x-axis
+    cdef double theta1 = 30. *pi/180 # angle between z-axis and normal of panel
+    cdef double theta2 = 0. *pi/180. # rotate angle from x-axis
     cdef np.ndarray [np.float64_t, ndim=1] xc = np.array([0., 0., 0.5*length*sin(theta1)+jack]) # the center of the plate
     cdef np.ndarray [np.float64_t, ndim=1] normal = np.array([sin(theta1)*cos(theta2), sin(theta2), cos(theta1)*cos(theta2)])  # normal direction
     cdef np.ndarray [np.float64_t, ndim=1] s1 = np.array([sin(theta2), cos(theta2), 0.]) # width direction
