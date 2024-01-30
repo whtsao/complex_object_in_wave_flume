@@ -12,26 +12,53 @@ np.import_array()
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
 def sdf_vectorized(double t, np.ndarray x, np.ndarray phi):
-    cdef double panel_thickness = 0.1 # thickness of the panel
-    cdef double panel_length = 1.2 # length of the panel
-    cdef double panel_width = 0.8 # width of the panel
-    cdef np.ndarray [np.float64_t, ndim=1] panel_origin = np.array([0., 0., 1.]) # the origin of the plate (3D)
-    cdef np.ndarray [np.float64_t, ndim=1] panel_normal = np.array([0.5, 0., 0.5*sqrt(3.)]) # the normal vector of the plate (3D)
-    cdef np.ndarray [np.float64_t, ndim=1] R = np.array([0., 0., 0.]) # vector to x
+    cdef double jack = 0.2 # jack-up elevation of the panel
+    cdef double length = 1.7 # Example length of the plate
+    cdef double width = 1.0  # Example width of the plate
+    cdef double thickness = 0.08  # Example thickness of the plate
+    cdef double theta1 = 30. # angle between z-axis and normal of panel
+    cdef double theta2 =0. # rotate angle from x-axis
+    cdef np.ndarray [np.float64_t, ndim=1] xc = np.array([0., 0., 0.5*length*sin(theta1)+jack]) # the center of the plate
+    cdef np.ndarray [np.float64_t, ndim=1] normal = np.array([sin(theta1)*cos(theta2), sin(theta2), cos(theta1)*cos(theta2)])  # normal direction
+    cdef np.ndarray [np.float64_t, ndim=1] s1 = np.array([sin(theta2), cos(theta2), 0.]) # width direction
+    cdef np.ndarray [np.float64_t, ndim=1] s2 = np.cross(normal, s1) # length direction
     cdef int n = phi.shape[0]
 
     for i in range(n):
-        R[0] = x[i,0] - panel_origin[0]
-        R[1] = x[i,1] - panel_origin[1]
-        R[2] = x[i,2] - panel_origin[2]
-        distance = np.dot(R, panel_normal) / np.linalg.norm(panel_normal)
-        projection_on_plane = R - np.dot(R, panel_normal) * panel_normal
-        distance_along_length = np.linalg.norm(projection_on_plane - 0.5 * panel_length * panel_normal)
-        distance_along_width = np.linalg.norm(projection_on_plane - 0.5 * panel_width * np.cross(panel_normal, [0, 0, 1]))
-        phi[i] -= 0.5 * panel_thickness
-        phi[i] = max(distance_along_length - 0.5 * panel_length, distance_along_width - 0.5 * panel_width, phi[i])
+        phi[i] = sdf_panel(x[i,:], xc, normal, s1, s2, length, width, thickness)
+        # sdf of a sphere for testing 
+        #phi[i] = sqrt((x[i,0]-panel_origin[0])**2+(x[i,1]-panel_origin[1])**2+(x[i,2]-panel_origin[2])**2) - 0.5
 
-                
+def sdf_panel(x, xc, normal, s1, s2, length, width, thickness):
+    R = x - xc # location vector to the panel center
+    x2 = ([abs(np.dot(R,s1)), abs(np.dot(R,s2)), abs(np.dot(R,normal))])
+    phi_x = x2[0] - 0.5*width
+    phi_y = x2[1] - 0.5*length
+    phi_z = x2[2] - 0.5*thickness
+    if phi_x < 0.0:
+        if phi_y < 0.0:
+            if phi_z < 0.0:
+                phi = max(phi_x, phi_y, phi_z)
+            else:
+                phi = phi_z
+        else:
+            if phi_z < 0.0:
+                phi = phi_y
+            else:
+                phi = (phi_y ** 2 + phi_z ** 2)**0.5
+    else:
+        if phi_y < 0.0:
+            if phi_z < 0.0:
+                phi = phi_x
+            else:
+                phi = (phi_x ** 2 + phi_z ** 2)**0.5
+        else:
+            if phi_z < 0.0:
+                phi = (phi_x ** 2 + phi_y ** 2)**0.5
+            else:
+                phi = (phi_x ** 2 + phi_y ** 2 + phi_z ** 2)**0.5      
+    return phi
+
 stl_file = "single_stand_panel.stl"
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function

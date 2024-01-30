@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -N 1
-#SBATCH -n 64
+#SBATCH -N 4
+#SBATCH -n 256
 #SBATCH -t 00:10:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
@@ -25,7 +25,7 @@ cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 
 python setup.py build_ext -i
 #he = .05 for 1 core, .025 8 core, .0125 64 core
-srun parun nse_p.py nse_n.py -F -l 5 -C "he=0.1" -O petsc.options.asm -D pcube
+srun parun nse_p.py nse_n.py -F -l 5 -C "he=0.025" -O petsc.options.asm -D pcube
 
 exit 0
 
