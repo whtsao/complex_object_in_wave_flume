@@ -6,1060 +6,531 @@ to access a backward compatible API, but this module is provisional
 and might be removed in the future.
 
   warnings.warn(dedent(msg), SetuptoolsDeprecationWarning)
-
-Error compiling Cython file:
-------------------------------------------------------------
-...
-        distance = np.dot(R, panel_normal) / np.linalg.norm(panel_normal)
-        projection_on_plane = R - np.dot(R, panel_normal) * panel_normal
-        distance_along_length = np.linalg.norm(projection_on_plane - 0.5 * panel_length * panel_normal)
-        distance_along_width = np.linalg.norm(projection_on_plane - 0.5 * panel_width * np.cross(panel_normal, [0, 0, 1]))
-        phi[i] -= 0.5 * panel_thickness
-        phi[i] = max(distance_along_length - 0.5 * panel_length, distance_along_width - 0.5 * panel_w+idth, distance[i])
-                                                                                             ^
-------------------------------------------------------------
-
-panel.pyx:32:94: undeclared name not builtin: panel_w
-
-Error compiling Cython file:
-------------------------------------------------------------
-...
-        distance = np.dot(R, panel_normal) / np.linalg.norm(panel_normal)
-        projection_on_plane = R - np.dot(R, panel_normal) * panel_normal
-        distance_along_length = np.linalg.norm(projection_on_plane - 0.5 * panel_length * panel_normal)
-        distance_along_width = np.linalg.norm(projection_on_plane - 0.5 * panel_width * np.cross(panel_normal, [0, 0, 1]))
-        phi[i] -= 0.5 * panel_thickness
-        phi[i] = max(distance_along_length - 0.5 * panel_length, distance_along_width - 0.5 * panel_w+idth, distance[i])
-                                                                                                     ^
-------------------------------------------------------------
-
-panel.pyx:32:102: undeclared name not builtin: idth
-panel.c:1:2: error: #error Do not use this file, it is the result of a failed Cython compilation.
-    1 | #error Do not use this file, it is the result of a failed Cython compilation.
-      |  ^~~~~
-error: Command "gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -fPIC -I/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include -I/project/cekees/cekees/proteus/fct/include/python3.10 -c panel.c -o build/temp.linux-x86_64-3.10/panel.o" failed with exit status 1
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "./nse_p.py", line 11, in <module>
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "./nse_p.py", line 11, in <module>
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-  File "./nse_p.py", line 11, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-Traceback (most recent call last):
-  File "/project/cekees/cekees/proteus/fct/bin/parun", line 441, in <module>
-    pList.append(proteus.defaults.load_physics(args[0][:-3]))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/proteus/defaults.py", line 105, in load_physics
-    p = imp.load_source(pModule, os.path.join(path, pModule+".py"))
-  File "/ddnA/project/cekees/cekees/proteus/fct/lib/python3.10/imp.py", line 172, in load_source
-    module = _load(spec)
-  File "<frozen importlib._bootstrap>", line 719, in _load
-  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
-  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
-  File "./nse_p.py", line 11, in <module>
-    import cell
-  File "/ddnA/work/whtsao/panel_in_wind.197148/./cell.py", line 86, in <module>
-    from panel import sdf_vectorized
-ModuleNotFoundError: No module named 'panel'
-srun: error: mike002: tasks 0-63: Exited with exit code 1
+In file included from /project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/ndarraytypes.h:1948,
+                 from /project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/arrayobject.h:5,
+                 from panel.c:698:
+/project/cekees/cekees/proteus/fct/lib/python3.10/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+panel.c: In function '__pyx_pf_5panel_2sdf_vectorized_stl.constprop':
+panel.c:7942:17: warning: '__pyx_v_se' may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 7942 |     __pyx_t_4 = PyFloat_FromDouble(__pyx_v_s); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+USER WARNING: In order to avoid a segmentation fault, you need to have supplied the 'f' flag to the triangleOptions input.
+USER WARNING: In order to avoid an edge assertion error, you need to have supplied the 'ee' flag to the triangleOptions input.
+slurmstepd: error: *** STEP 197161.0 ON mike138 CANCELLED AT 2024-01-29T19:33:33 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+slurmstepd: error: *** JOB 197161 ON mike138 CANCELLED AT 2024-01-29T19:33:33 DUE TO TIME LIMIT ***
+[1]PETSC ERROR: ------------------------------------------------------------------------
+[2]PETSC ERROR: ------------------------------------------------------------------------
+[3]PETSC ERROR: ------------------------------------------------------------------------
+[4]PETSC ERROR: ------------------------------------------------------------------------
+[5]PETSC ERROR: ------------------------------------------------------------------------
+[6]PETSC ERROR: ------------------------------------------------------------------------
+[7]PETSC ERROR: ------------------------------------------------------------------------
+[8]PETSC ERROR: ------------------------------------------------------------------------
+[9]PETSC ERROR: ------------------------------------------------------------------------
+[10]PETSC ERROR: ------------------------------------------------------------------------
+[11]PETSC ERROR: ------------------------------------------------------------------------
+[12]PETSC ERROR: ------------------------------------------------------------------------
+[13]PETSC ERROR: ------------------------------------------------------------------------
+[14]PETSC ERROR: ------------------------------------------------------------------------
+[15]PETSC ERROR: ------------------------------------------------------------------------
+[16]PETSC ERROR: ------------------------------------------------------------------------
+[17]PETSC ERROR: ------------------------------------------------------------------------
+[18]PETSC ERROR: ------------------------------------------------------------------------
+[19]PETSC ERROR: ------------------------------------------------------------------------
+[20]PETSC ERROR: ------------------------------------------------------------------------
+[21]PETSC ERROR: ------------------------------------------------------------------------
+[22]PETSC ERROR: ------------------------------------------------------------------------
+[24]PETSC ERROR: ------------------------------------------------------------------------
+[25]PETSC ERROR: ------------------------------------------------------------------------
+[26]PETSC ERROR: ------------------------------------------------------------------------
+[27]PETSC ERROR: ------------------------------------------------------------------------
+[28]PETSC ERROR: ------------------------------------------------------------------------
+[29]PETSC ERROR: ------------------------------------------------------------------------
+[30]PETSC ERROR: ------------------------------------------------------------------------
+[31]PETSC ERROR: ------------------------------------------------------------------------
+[32]PETSC ERROR: ------------------------------------------------------------------------
+[33]PETSC ERROR: ------------------------------------------------------------------------
+[34]PETSC ERROR: ------------------------------------------------------------------------
+[35]PETSC ERROR: ------------------------------------------------------------------------
+[36]PETSC ERROR: ------------------------------------------------------------------------
+[37]PETSC ERROR: ------------------------------------------------------------------------
+[38]PETSC ERROR: ------------------------------------------------------------------------
+[39]PETSC ERROR: ------------------------------------------------------------------------
+[40]PETSC ERROR: ------------------------------------------------------------------------
+[41]PETSC ERROR: ------------------------------------------------------------------------
+[42]PETSC ERROR: ------------------------------------------------------------------------
+[43]PETSC ERROR: ------------------------------------------------------------------------
+[44]PETSC ERROR: ------------------------------------------------------------------------
+[45]PETSC ERROR: ------------------------------------------------------------------------
+[46]PETSC ERROR: ------------------------------------------------------------------------
+[47]PETSC ERROR: ------------------------------------------------------------------------
+[48]PETSC ERROR: ------------------------------------------------------------------------
+[49]PETSC ERROR: ------------------------------------------------------------------------
+[50]PETSC ERROR: ------------------------------------------------------------------------
+[51]PETSC ERROR: ------------------------------------------------------------------------
+[52]PETSC ERROR: ------------------------------------------------------------------------
+[53]PETSC ERROR: ------------------------------------------------------------------------
+[54]PETSC ERROR: ------------------------------------------------------------------------
+[55]PETSC ERROR: ------------------------------------------------------------------------
+[56]PETSC ERROR: ------------------------------------------------------------------------
+[57]PETSC ERROR: ------------------------------------------------------------------------
+[58]PETSC ERROR: ------------------------------------------------------------------------
+[59]PETSC ERROR: ------------------------------------------------------------------------
+[60]PETSC ERROR: ------------------------------------------------------------------------
+[61]PETSC ERROR: ------------------------------------------------------------------------
+[62]PETSC ERROR: ------------------------------------------------------------------------
+[63]PETSC ERROR: ------------------------------------------------------------------------
+[23]PETSC ERROR: ------------------------------------------------------------------------
+[1]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[1]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[1]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[1]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[1]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[1]PETSC ERROR: to get more information on the crash.
+[3]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[3]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[3]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[3]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[3]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[3]PETSC ERROR: to get more information on the crash.
+[5]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[5]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[5]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[5]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[5]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[5]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 5
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 1
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 3
+[4]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[4]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[4]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[4]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[4]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[4]PETSC ERROR: to get more information on the crash.
+[6]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[6]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[6]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[6]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[6]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[6]PETSC ERROR: to get more information on the crash.
+[7]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[7]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[7]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[7]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[7]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[7]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 4
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 6
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 7
+[8]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[8]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[8]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[8]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[9]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[9]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[9]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[9]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[9]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[9]PETSC ERROR: to get more information on the crash.
+[8]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[8]PETSC ERROR: to get more information on the crash.
+[10]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[10]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[10]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[10]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[10]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[10]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 8
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 9
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 10
+[21]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[21]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[21]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[21]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[21]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[21]PETSC ERROR: to get more information on the crash.
+[12]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[12]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[12]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[12]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[12]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[12]PETSC ERROR: to get more information on the crash.
+[13]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[13]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[13]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[13]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[13]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[13]PETSC ERROR: to get more information on the crash.
+[22]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[22]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[22]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[22]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[22]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[22]PETSC ERROR: to get more information on the crash.
+[26]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[26]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[26]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[26]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[26]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[26]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 26
+[11]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[11]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[11]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[11]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[11]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[11]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 12
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 13
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 21
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 22
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 11
+[14]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[14]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[14]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[18]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[18]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[18]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[18]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[18]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[18]PETSC ERROR: to get more information on the crash.
+[25]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[25]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[25]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[25]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[25]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[25]PETSC ERROR: to get more information on the crash.
+[32]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[32]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[32]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[32]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[32]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[32]PETSC ERROR: to get more information on the crash.
+[36]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[36]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[36]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[36]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[36]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[36]PETSC ERROR: to get more information on the crash.
+[14]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[14]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[14]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 14
+[15]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[15]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[15]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[15]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[15]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[15]PETSC ERROR: to get more information on the crash.
+[16]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[16]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[16]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[16]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[16]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[16]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 16
+[17]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[17]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[17]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[17]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[17]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[17]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 18
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 25
+[38]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[38]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[38]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[38]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[38]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[38]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 38
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 15
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 17
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 32
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 36
+[43]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[43]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[43]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[43]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[43]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[43]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 43
+[47]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[47]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[47]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[47]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[47]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[47]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 47
+[52]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[52]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[52]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[52]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[52]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[52]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 52
+[2]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[2]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[2]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[2]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[2]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[2]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 2
+[19]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[19]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[19]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[19]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[19]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[19]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 19
+[20]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[20]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[20]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[20]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[20]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[20]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 20
+[23]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[23]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[23]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[23]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[23]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[23]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 23
+[24]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[24]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[24]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[24]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[24]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[24]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 24
+[27]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[27]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[27]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[27]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[27]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[27]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 27
+[28]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[28]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[28]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[28]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[28]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[28]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 28
+[29]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[29]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[29]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[29]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[29]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[29]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 29
+[30]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[30]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[30]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[30]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[30]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[30]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 30
+[31]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[31]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[31]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[31]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[31]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[31]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 31
+[33]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[33]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[33]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[33]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[33]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[33]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 33
+[34]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[34]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[34]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[34]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[34]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[34]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 34
+[35]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[35]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[35]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[35]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[35]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[35]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 35
+[37]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[37]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[37]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[37]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[37]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[37]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 37
+[40]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[40]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[40]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[40]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[40]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[40]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 40
+[41]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[41]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[41]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[41]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[41]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[41]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 41
+[42]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[42]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[42]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[42]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[42]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[42]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 42
+[45]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[45]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[45]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[45]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[45]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[45]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 45
+[49]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[49]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[49]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[49]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[49]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[49]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 49
+[51]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[51]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[51]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[51]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[51]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[51]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 51
+[54]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[54]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[54]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[54]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[54]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[54]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 54
+[55]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[55]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[55]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[55]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[55]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[55]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 55
+[58]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[58]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[58]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[58]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[58]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[58]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 58
+[62]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[62]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[62]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[62]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[62]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[62]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 62
+[39]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[39]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[39]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[39]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[39]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[39]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 39
+[44]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[44]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[44]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[44]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[44]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[44]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 44
+[46]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[46]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[46]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[46]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[46]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[46]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 46
+[48]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[48]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[48]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[48]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[48]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[48]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 48
+[50]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[50]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[50]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[50]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[50]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[50]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 50
+[53]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[53]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[53]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[53]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[53]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[53]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 53
+[56]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[56]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[56]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[56]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[56]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[56]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 56
+[57]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[57]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[57]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[57]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[57]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[57]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 57
+[59]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[59]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[59]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[59]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[59]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[59]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 59
+[60]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[60]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[60]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[60]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[60]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[60]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 60
+[61]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[61]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[61]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[61]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[61]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[61]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 61
+[63]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[63]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[63]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[63]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[63]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[63]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 63
+[0]PETSC ERROR: ------------------------------------------------------------------------
+[0]PETSC ERROR: Caught signal number 15 Terminate: Some process (or the batch system) has told this process to end
+[0]PETSC ERROR: Try option -start_in_debugger or -on_error_attach_debugger
+[0]PETSC ERROR: or see https://petsc.org/release/faq/#valgrind
+[0]PETSC ERROR: or try http://valgrind.org on GNU/linux and Apple MacOS to find memory corruption errors
+[0]PETSC ERROR: configure using --with-debugging=yes, recompile, link, and run 
+[0]PETSC ERROR: to get more information on the crash.
+application called MPI_Abort(MPI_COMM_WORLD, 59) - process 0

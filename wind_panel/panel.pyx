@@ -29,7 +29,7 @@ def sdf_vectorized(double t, np.ndarray x, np.ndarray phi):
         distance_along_length = np.linalg.norm(projection_on_plane - 0.5 * panel_length * panel_normal)
         distance_along_width = np.linalg.norm(projection_on_plane - 0.5 * panel_width * np.cross(panel_normal, [0, 0, 1]))
         phi[i] -= 0.5 * panel_thickness
-        phi[i] = max(distance_along_length - 0.5 * panel_length, distance_along_width - 0.5 * panel_w+idth, distance[i])
+        phi[i] = max(distance_along_length - 0.5 * panel_length, distance_along_width - 0.5 * panel_width, phi[i])
 
                 
 stl_file = "single_stand_panel.stl"
