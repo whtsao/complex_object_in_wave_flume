@@ -10,7 +10,8 @@ opts = Context.Options([
     ("onlySaveFinalSolution",False,"Only save the final solution"),
     ("usePETSc", True,"use parallel solvers from PETSc"),
     ("cell_bottom",0.0,"the starting elevation of the flow cell"),
-    ("cell_length",2.,"the height of the flow cell"),
+    ("cell_length",3.,"the length (=width) of the flow cell"),
+    ("cell_height",2.,"the height of the flow cell"),
     ("stl", False, "use an stl for the structure")
 ], mutable=True)
 
@@ -23,7 +24,7 @@ boundaryTags = {'upstream' : 1, 'wall' : 2, 'downstream' : 3, 'top': 4, 'bottom'
 nd = 3
 #if opts.stl:
 x = (-0.5*opts.cell_length, -0.5*opts.cell_length, opts.cell_bottom)
-L = (opts.cell_length, opts.cell_length, opts.cell_length)
+L = (opts.cell_length, opts.cell_length, opts.cell_height)
 #else:
 #    x = (0.0, 0.0, opts.cell_bottom)
 #    L = (1.0, 1.0, opts.cell_height)

@@ -42,7 +42,7 @@ coefficients.projection_direction=np.array([1.0,0.0,0.0])
 
 
 def vel(x,t):
-    return t*0.1
+    return t*2.
 
 def getDBC_p(x,flag):
     if flag == cell.boundaryTags['downstream']:

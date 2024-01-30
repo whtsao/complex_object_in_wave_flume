@@ -18,14 +18,21 @@ def sdf_vectorized(double t, np.ndarray x, np.ndarray phi):
     cdef double thickness = 0.08  # Example thickness of the plate
     cdef double theta1 = 30. *pi/180 # angle between z-axis and normal of panel
     cdef double theta2 = 0. *pi/180. # rotate angle from x-axis
+    cdef np.ndarray [np.float64_t, ndim=1] tx = np.array([0., 0.])
+    cdef np.ndarray [np.float64_t, ndim=1] ty = np.array([-0.7, 0.7])
     cdef np.ndarray [np.float64_t, ndim=1] xc = np.array([0., 0., 0.5*length*sin(theta1)+jack]) # the center of the plate
     cdef np.ndarray [np.float64_t, ndim=1] normal = np.array([sin(theta1)*cos(theta2), sin(theta2), cos(theta1)*cos(theta2)])  # normal direction
     cdef np.ndarray [np.float64_t, ndim=1] s1 = np.array([sin(theta2), cos(theta2), 0.]) # width direction
     cdef np.ndarray [np.float64_t, ndim=1] s2 = np.cross(normal, s1) # length direction
+    cdef np.ndarray [np.float64_t, ndim=1] phi_i = np.zeros(len(tx)) # local sdf for each panel
     cdef int n = phi.shape[0]
 
     for i in range(n):
-        phi[i] = sdf_panel(x[i,:], xc, normal, s1, s2, length, width, thickness)
+        for ti in range(len(tx)):
+            xc[0] = tx[ti] # the center of each panel in a panel array
+            xc[1] = ty[ti]
+            phi_i[ti] = sdf_panel(x[i,:], xc, normal, s1, s2, length, width, thickness)
+        phi[i] = min(phi_i)
         # sdf of a sphere for testing 
         #phi[i] = sqrt((x[i,0]-panel_origin[0])**2+(x[i,1]-panel_origin[1])**2+(x[i,2]-panel_origin[2])**2) - 0.5
 
