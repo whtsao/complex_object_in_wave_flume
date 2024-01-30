@@ -8,6 +8,6 @@ import numpy
 setup(
     cmdclass = {'build_ext':build_ext},
     ext_modules = [Extension("panel",
-                             sources=['panel_model.pyx'],
+                             sources=['panel.pyx'],
                              include_dirs = [numpy.get_include()])]
 )

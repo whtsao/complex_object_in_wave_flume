@@ -11,7 +11,7 @@ opts = Context.Options([
     ("usePETSc", True,"use parallel solvers from PETSc"),
     ("cell_bottom",0.0,"the starting elevation of the flow cell"),
     ("cell_length",2.,"the height of the flow cell"),
-    ("stl", True, "use an stl for the structure")
+    ("stl", False, "use an stl for the structure")
 ], mutable=True)
 
 

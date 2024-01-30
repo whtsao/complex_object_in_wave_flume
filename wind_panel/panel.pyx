@@ -11,75 +11,26 @@ np.import_array()
 
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
-def sdf_vectorized(double t, np.ndarray x,
-                   np.ndarray phi):
-    cdef double ratio = 1.83 # length ratio of physical model and numerical model
-    cdef double Db = 0.1143 # diameter of PVC trunk
-    cdef double Dr = 0.0286 # diameter of PVC root
-    cdef np.ndarray [np.float64_t, ndim=1] L = np.array([1.83/ratio,1.83/ratio,1.83/ratio])
-    cdef np.ndarray[np.float64_t, ndim=1] theta=np.array(
-        [0.0, 0.7853981633974483, 1.5707963267948966, 2.356194490192345, 3.141592653589793, 3.9269908169872414, 4.71238898038469]) 
-#    cdef np.ndarray[np.float64_t, ndim=1] X_r=np.array(
-#        [0.1595238095238095, 0.21666666666666667, 0.2714285714285714, 0.3285714285714285, 0.38571428571428573, 0.44285714285714284, 0.5])
-    cdef np.ndarray[np.float64_t, ndim=1] X_r=np.array(
-        [0.67/ratio, 0.91/ratio, 1.14/ratio, 1.38/ratio, 1.62/ratio, 1.86/ratio, 2.1/ratio])
-#    cdef np.ndarray[np.float64_t, ndim=1] H_r=np.array(
-#        [0.13809523809523808, 0.16904761904761903, 0.19999999999999998, 0.23095238095238094, 0.25952380952380955, 0.29047619047619044, 0.32142857142857145])
-    cdef np.ndarray[np.float64_t, ndim=1] H_r=np.array(
-        [0.58/ratio, 0.71/ratio, 0.84/ratio, 0.97/ratio, 1.09/ratio, 1.22/ratio, 1.35/ratio])
+def sdf_vectorized(double t, np.ndarray x, np.ndarray phi):
+    cdef double panel_thickness = 0.1 # thickness of the panel
+    cdef double panel_length = 1.2 # length of the panel
+    cdef double panel_width = 0.8 # width of the panel
+    cdef np.ndarray [np.float64_t, ndim=1] panel_origin = np.array([0., 0., 1.]) # the origin of the plate (3D)
+    cdef np.ndarray [np.float64_t, ndim=1] panel_normal = np.array([0.5, 0., 0.5*sqrt(3.)]) # the normal vector of the plate (3D)
+    cdef np.ndarray [np.float64_t, ndim=1] R = np.array([0., 0., 0.]) # vector to x
     cdef int n = phi.shape[0]
-    cdef int nr = theta.shape[0]
-    cdef int ti, i, ri, gri
-    cdef double R,X_0,Y_0,Z_0,A,B,dir_x, dir_y
-    cdef double G
-#    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([L[0], L[0], L[0]/2.0,  0.0     , 0.0])
-#    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.0 , L[1], L[1]/2.0 , 0.0     , L[1]])
-#    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([0.46/ratio, 1.37/ratio, 0.46/ratio])
-#    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.46/ratio, 1.15/ratio, 1.83/ratio])
-    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([0.46/ratio+1.5, 1.37/ratio+1.5, 0.46/ratio+1.5])
-    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.46/ratio, 1.15/ratio, 1.83/ratio])
-    cdef np.ndarray[np.complex128_t, ndim=1] G_root = np.zeros((3,), dtype=np.complex128)
-    cdef double complex num, denom
+
     for i in range(n):
-        phi[i] = 1.0e16
-        for ti in range(3):
-#        for ti in range(1):
-#            ti = 2
-            X_0 = x[i,0] - tx[ti]
-            Y_0 = x[i,1] - ty[ti]
-            Z_0 = x[i,2]
-            phi[i] = min(phi[i], sqrt(X_0**2 + Y_0**2) - Db/ratio)
-            for ri in range(nr):
-                dir_x  = cos(theta[ri]+(ti+1)*2.0943951023931953)#perturb by 2pi/3 so the middle tree has the referene orientation
-                dir_y  = sin(theta[ri]+(ti+1)*2.0943951023931953)
-                A = -H_r[ri]/X_r[ri]**2
-                B = H_r[ri]
-                num = 2**(1/3)*3**(2/3)*(3**(2/3)*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(2/3)*(1 + csqrt(3)*1.0j)**2 + 12*2**(1/3)*(-2*A*B + 2*A*Z_0 - dir_x**2 - dir_y**2))
-                denom = 36*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(1/3)*(1 + csqrt(3)*1.0j)
-                if abs(denom) > abs(num)*1.0e-16 + 1.0e-16:
-                    G_root[0] = num/denom
-                else:
-                    G_root[0] = num
-                num = 2**(1/3)*3**(2/3)*(3**(2/3)*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(2/3)*(1 - csqrt(3)*1.0j)**2 + 12*2**(1/3)*(-2*A*B + 2*A*Z_0 - dir_x**2 - dir_y**2))
-                denom = 36*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(1/3)*(1 - csqrt(3)*1.0j)
-                if abs(denom) > abs(num)*1.0e-16 + 1.0e-16:
-                    G_root[1] = num/denom
-                else:
-                    G_root[1] = num
-                num = 2**(1/3)*3**(2/3)*(-3**(2/3)*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(2/3) + 3*2**(1/3)*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2))
-                denom = 18*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(1/3)
-                if abs(denom) > abs(num)*1.0e-16 + 1.0e-16:
-                    G_root[2] = num/denom
-                else:
-                    G_root[2] = num
-                for gri in range(3):
-                    R = G_root[gri].real
-                    if R < -X_r[ri]:
-                        R = -X_r[ri]
-                    if R > X_r[ri]:
-                        R = X_r[ri]
-                    G = sqrt((R*dir_x - X_0)**2 + (R*dir_y - Y_0)**2 + (A*R**2 + B - Z_0)**2) - Dr/ratio;
-                    phi[i] = min(phi[i], G)
+        R[0] = x[i,0] - panel_origin[0]
+        R[1] = x[i,1] - panel_origin[1]
+        R[2] = x[i,2] - panel_origin[2]
+        distance = np.dot(R, panel_normal) / np.linalg.norm(panel_normal)
+        projection_on_plane = R - np.dot(R, panel_normal) * panel_normal
+        distance_along_length = np.linalg.norm(projection_on_plane - 0.5 * panel_length * panel_normal)
+        distance_along_width = np.linalg.norm(projection_on_plane - 0.5 * panel_width * np.cross(panel_normal, [0, 0, 1]))
+        phi[i] -= 0.5 * panel_thickness
+        phi[i] = max(distance_along_length - 0.5 * panel_length, distance_along_width - 0.5 * panel_w+idth, distance[i])
+
                 
 stl_file = "single_stand_panel.stl"
 @cython.boundscheck(False) # turn off bounds-checking for entire function
@@ -244,3 +195,77 @@ def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
 
     for i in range(nphi):
         phi[i] = -phi[i]
+
+
+@cython.boundscheck(False) # turn off bounds-checking for entire function
+@cython.wraparound(False)  # turn off negative index wrapping for entire function
+def sdf_vectorized_tree(double t, np.ndarray x, np.ndarray phi):
+    cdef double ratio = 1.83 # length ratio of physical model and numerical model
+    cdef double Db = 0.1143 # diameter of PVC trunk
+    cdef double Dr = 0.0286 # diameter of PVC root
+    cdef np.ndarray [np.float64_t, ndim=1] L = np.array([1.83/ratio,1.83/ratio,1.83/ratio])
+    cdef np.ndarray[np.float64_t, ndim=1] theta=np.array(
+        [0.0, 0.7853981633974483, 1.5707963267948966, 2.356194490192345, 3.141592653589793, 3.9269908169872414, 4.71238898038469]) 
+#    cdef np.ndarray[np.float64_t, ndim=1] X_r=np.array(
+#        [0.1595238095238095, 0.21666666666666667, 0.2714285714285714, 0.3285714285714285, 0.38571428571428573, 0.44285714285714284, 0.5])
+    cdef np.ndarray[np.float64_t, ndim=1] X_r=np.array(
+        [0.67/ratio, 0.91/ratio, 1.14/ratio, 1.38/ratio, 1.62/ratio, 1.86/ratio, 2.1/ratio])
+#    cdef np.ndarray[np.float64_t, ndim=1] H_r=np.array(
+#        [0.13809523809523808, 0.16904761904761903, 0.19999999999999998, 0.23095238095238094, 0.25952380952380955, 0.29047619047619044, 0.32142857142857145])
+    cdef np.ndarray[np.float64_t, ndim=1] H_r=np.array(
+        [0.58/ratio, 0.71/ratio, 0.84/ratio, 0.97/ratio, 1.09/ratio, 1.22/ratio, 1.35/ratio])
+    cdef int n = phi.shape[0]
+    cdef int nr = theta.shape[0]
+    cdef int ti, i, ri, gri
+    cdef double R,X_0,Y_0,Z_0,A,B,dir_x, dir_y
+    cdef double G
+#    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([L[0], L[0], L[0]/2.0,  0.0     , 0.0])
+#    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.0 , L[1], L[1]/2.0 , 0.0     , L[1]])
+#    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([0.46/ratio, 1.37/ratio, 0.46/ratio])
+#    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.46/ratio, 1.15/ratio, 1.83/ratio])
+    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([0.46/ratio+1.5, 1.37/ratio+1.5, 0.46/ratio+1.5])
+    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.46/ratio, 1.15/ratio, 1.83/ratio])
+    cdef np.ndarray[np.complex128_t, ndim=1] G_root = np.zeros((3,), dtype=np.complex128)
+    cdef double complex num, denom
+    for i in range(n):
+        phi[i] = 1.0e16
+        for ti in range(3):
+#        for ti in range(1):
+#            ti = 2
+            X_0 = x[i,0] - tx[ti]
+            Y_0 = x[i,1] - ty[ti]
+            Z_0 = x[i,2]
+            phi[i] = min(phi[i], sqrt(X_0**2 + Y_0**2) - Db/ratio)
+            for ri in range(nr):
+                dir_x  = cos(theta[ri]+(ti+1)*2.0943951023931953)#perturb by 2pi/3 so the middle tree has the referene orientation
+                dir_y  = sin(theta[ri]+(ti+1)*2.0943951023931953)
+                A = -H_r[ri]/X_r[ri]**2
+                B = H_r[ri]
+                num = 2**(1/3)*3**(2/3)*(3**(2/3)*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(2/3)*(1 + csqrt(3)*1.0j)**2 + 12*2**(1/3)*(-2*A*B + 2*A*Z_0 - dir_x**2 - dir_y**2))
+                denom = 36*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(1/3)*(1 + csqrt(3)*1.0j)
+                if abs(denom) > abs(num)*1.0e-16 + 1.0e-16:
+                    G_root[0] = num/denom
+                else:
+                    G_root[0] = num
+                num = 2**(1/3)*3**(2/3)*(3**(2/3)*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(2/3)*(1 - csqrt(3)*1.0j)**2 + 12*2**(1/3)*(-2*A*B + 2*A*Z_0 - dir_x**2 - dir_y**2))
+                denom = 36*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(1/3)*(1 - csqrt(3)*1.0j)
+                if abs(denom) > abs(num)*1.0e-16 + 1.0e-16:
+                    G_root[1] = num/denom
+                else:
+                    G_root[1] = num
+                num = 2**(1/3)*3**(2/3)*(-3**(2/3)*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(2/3) + 3*2**(1/3)*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2))
+                denom = 18*A**2*((csqrt(3)*A**2*csqrt((27*A**2*(X_0*dir_x + Y_0*dir_y)**2 + 2*(2*A*B - 2*A*Z_0 + dir_x**2 + dir_y**2)**3)/A**6) - 9*X_0*dir_x - 9*Y_0*dir_y)/A**2)**(1/3)
+                if abs(denom) > abs(num)*1.0e-16 + 1.0e-16:
+                    G_root[2] = num/denom
+                else:
+                    G_root[2] = num
+                for gri in range(3):
+                    R = G_root[gri].real
+                    if R < -X_r[ri]:
+                        R = -X_r[ri]
+                    if R > X_r[ri]:
+                        R = X_r[ri]
+                    G = sqrt((R*dir_x - X_0)**2 + (R*dir_y - Y_0)**2 + (A*R**2 + B - Z_0)**2) - Dr/ratio;
+                    phi[i] = min(phi[i], G)
+                
+
