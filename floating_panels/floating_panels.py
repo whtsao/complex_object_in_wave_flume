@@ -48,11 +48,10 @@ opts= Context.Options([
     ("dt_output",0.1,"Time interval to output solution"),
     ("cfl",0.5,"Desired CFL restriction"),
     ("he",0.05,"he relative to Length of domain in x"),
-    ("wave_height",0.1,"Wave height"),
-    ("fr",1.0,"Forcing frequency ratio"),
-    ("fnx",0.6104,"Natural frequency of sway motion of the main structure"),
-    ("fny",0.6104,"Natural frequency of heave motion of the main structure"),
-    ("fnz",0.6104,"Natural frequency of roll motion of the main structure"),
+    ("wave_height",0.05,"Wave height"),
+    ("wave_period",2.,"Wave height"),
+    ("mwl", 1., "still water line"),
+    ("tank_length", 10., "tank length"),
     ("mooring",True,"True if the mooring lines are attached"),
     ("collision",False,"True if the mooring lines is collision body"),
     ("ic_angle",0.,"Initial pitch angle of the floating platform (deg)"),
@@ -73,8 +72,6 @@ he = opts.he
 # rate at which values are recorded
 sampleRate = 0.05
 
-# physical configurations
-mooring = opts.mooring
 
 # for ALE formulation
 movingDomain = True
@@ -96,26 +93,16 @@ g = np.array([0., -9.81, 0.])
 # body options
 fixed = False
 
-# forcing frequency (aim at roll motion)
-fnx = opts.fnx
-fny = opts.fny
-fnz = opts.fnz
-
-fr = opts.fr
-fn = opts.fnz
-fc = fr*fn
-
 # wave channel
-water_level = 2.
-water_length = 20.
+water_level = opts.mwl
+tank_length = opts.tank_length
 
 # wave options
-wave_period = 1./fc
+wave_period = opts.wave_period
 wave_height = opts.wave_height
 wave_direction = np.array([1., 0., 0.])
 wave_type = 'Fenton'  #'Linear'
-# number of Fourier coefficients
-Nf = 8
+Nf = 8 # number of Fourier coefficients
 wave = wt.MonochromaticWaves(period=wave_period,
                              waveHeight=wave_height,
                              mwl=water_level,
@@ -138,18 +125,22 @@ domain = Domain.PlanarStraightLineGraphDomain()
 
 # ----- SHAPES ----- #
 
-# Space between TLD and main structure
-spacing = 1.
+# TANK
+tank = st.Tank2D(domain, dim=(tank_length, 1.5*water_level))
 
+# SPONGE LAYERS
+# generation zone: 1 wavelength
+# absorption zone: 2 wavelengths
+tank.setSponge(x_n=wavelength, x_p=wavelength)
 
-# Panel dimensions
-body_w1 = 5.
-body_h1 = 0.5
+# Panel dimensions and mass
+body_w1 = 1.
+body_h1 = 0.1
 
-body_w2 = 5.
-body_h2 = 0.5
+body_w2 = 1.
+body_h2 = 0.1
 
-gap = 0.5
+gap = 0.1
 
 #  --------w1--------       ---------w2------
 #  |                |       |               |
@@ -158,32 +149,21 @@ gap = 0.5
 
 thob = 400.
 mb1 = thob*body_w1*body_h1
+ib1 = mb1*(body_w1**2+body_h1**2)/12.
 mb2 = thob*body_w2*body_h2
+ib2 = mb2*(body_w2**2+body_h2**2)/12.
 
-#by = rho_0*0.5*(body_w1+body_w2)*body_h2
-#if mb1 < by:
-#    w_temp = (2.*mb1/rho_0/body_h2*(body_w1-body_w2)+body_w2**2)**0.5
-#    yst = 2.*mb1/rho_0/(w_temp+body_w2)
-#else:
-#    yst = (mb1-by)/rho_0/body_w1+body_h2
-
-yst1 = mb1/body_h1/body_w1/rho_0
-yst2 = mb2/body_h2/body_w2/rho_0
+# initial displacement and angle
+yst1 = mb1/body_w1/rho_0
+yst2 = mb2/body_w2/rho_0
 ic_angle = (opts.ic_angle/180.)*math.pi
+d_front = 1.
 
 
-# Set the link between panels
-
-ki = 10000.
+# stiffness and damping coefficient of the link between panels
+ki = 1000.
 ci = 0.
 
-# TANK
-tank = st.Tank2D(domain, dim=(water_length, 2.*water_level))
-
-# SPONGE LAYERS
-# generation zone: 1 wavelength
-# absorption zone: 2 wavelengths
-tank.setSponge(x_n=wavelength, x_p=wavelength)
 
 if opts.bodybool1:
     # PANEL 1
@@ -196,8 +176,8 @@ if opts.bodybool1:
     caisson1.holes_ind = np.array([0])
     tank.setChildShape(caisson1, 0)
     # translate caisson to middle of the tank
-    caisson1.translate(np.array([wavelength, water_level])) # initial motion is getting down
-    #caisson1.rotate(rot = ic_angle)
+    caisson1.translate(np.array([d_front+0.5*body_w1, water_level-(yst1-0.5*body_h1)]))
+    caisson1.rotate(rot = ic_angle)
 
 if opts.bodybool2:
     # PANEL 2
@@ -210,8 +190,8 @@ if opts.bodybool2:
     caisson2.holes_ind = np.array([0])
     tank.setChildShape(caisson2, 0)
     # translate caisson to middle of the tank
-    caisson2.translate(np.array([wavelength+0.5*body_w1+gap+0.5*body_w2, water_level]))
-    #caisson2.rotate(rot = ic_angle)
+    caisson2.translate(np.array([d_front+body_w1+gap+0.5*body_w2, water_level-(yst2-0.5*body_h2)]))
+    caisson2.rotate(rot = ic_angle)
 
 
 #   ____ _
@@ -260,7 +240,6 @@ if opts.bodybool1:
     body.setMass(mb1)
     # set inertia
     # body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
-    ib1 = mb1*(body_w1**2+body_h1**2)/12. 
     body.setInertiaXX(np.array([1., 1., ib1]))
     # record values
     body.setRecordValues(all_values=True)
@@ -288,7 +267,6 @@ if opts.bodybool2:
     body.setMass(mb2)
     # set inertia
     # body.ChBody.setInertiaXX(pychrono.ChVectorD(1., 1., 0.35))
-    ib2 = mb2*(body_w2**2+body_h2**2)/12.
     body.setInertiaXX(np.array([1., 1., ib2]))
     # record values
     body.setRecordValues(all_values=True)
@@ -296,8 +274,8 @@ if opts.bodybool2:
 # LINK (connect two panels)
 if opts.linkbool:
     TSDA1 = pychrono.ChLinkTSDA()
-    body1_point = pychrono.ChVectorD(wavelength+0.5*body_w1,water_level,0.0)
-    body2_point = pychrono.ChVectorD(wavelength+0.5*body_w1+gap,water_level,0.0)
+    body1_point = pychrono.ChVectorD(d_front+body_w1,water_level-(yst1-0.5*body_h1),0.0)
+    body2_point = pychrono.ChVectorD(d_front+body_w1+gap,water_level-(yst2-0.5*body_h2),0.0)
     TSDA1.Initialize(system.subcomponents[0].ChBody,
                                     system.subcomponents[1].ChBody,
                                     False, body1_point, body2_point, auto_rest_length=True)
@@ -311,7 +289,7 @@ if opts.linkbool:
 # MOORING
 if opts.mooring:
     # length
-    L = (water_level**2+(wavelength-0.5*body_w1)**2)**0.5 # m
+    L = (water_level**2+d_front**2)**0.5 # m
     # submerged weight
     w = 0.0778  # kg/m
     # equivalent diameter (chain -> cylinder)
@@ -328,9 +306,9 @@ if opts.mooring:
     #E = 1.e8 #5.44e10
 
     # fairleads coordinates
-    fairlead = np.array([wavelength-0.5*body_w1, water_level, 0.])
-    #fairlead1 = np.array([0.5*water_length-0.5*body_w1, y0+body_h2, 0.])
-    #fairlead2 = np.array([0.5*water_length+0.5*body_w1, y0+body_h2, 0.])
+    fairlead = np.array([d_front, water_level-(yst1-0.5*body_h1), 0.])
+    #fairlead1 = np.array([0.5*tank_length-0.5*body_w1, y0+body_h2, 0.])
+    #fairlead2 = np.array([0.5*tank_length+0.5*body_w1, y0+body_h2, 0.])
 
     # anchors coordinates
     anchor = np.array([0.1, 0., 0.])
