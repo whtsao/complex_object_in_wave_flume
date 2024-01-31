@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH -N 1
-#SBATCH -n 64
-#SBATCH -t 00:05:00
+#SBATCH -N 2
+#SBATCH -n 128
+#SBATCH -t 00:30:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
 #SBATCH -o o.out
 #SBATCH -e e.err
-#SBATCH -J floating_panels
+#SBATCH -J floating_panels_6
 #load proteus module and ensure proteus's python is in path
 
 date
@@ -25,8 +25,22 @@ cp $SLURM_SUBMIT_DIR/petsc.options.superlu_dist .
 cp $SLURM_SUBMIT_DIR/*.py .
 cp $SLURM_SUBMIT_DIR/*.sh .
 
-srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.2" # all on
-#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.2 bodybool2=False linkbool=False" # only one panel
-#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.2 linkbool=False" # two panels unconnected
+# 1: one panel
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=False linkbool=False mooring=False"
+
+# 2: two panels
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=False mooring=False"
+
+# 3: one panel moored
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=False linkbool=False mooring=True"
+
+# 4: two panel moored without link
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=False mooring=True"
+
+# 5: two panel linked without mooring
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=True mooring=False"
+
+# 6: two panel linked without mooring
+srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=True mooring=True"
 
 exit 0
