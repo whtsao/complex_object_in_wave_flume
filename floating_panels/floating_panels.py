@@ -293,7 +293,7 @@ if opts.mooring:
     # submerged weight
     w = 0.0778  # kg/m
     # equivalent diameter (chain -> cylinder)
-    d = 2.5e-3 # m
+    d = 2.5e-2 # m
     # unstretched cross-sectional area
     A0 = (np.pi*d**2/4.)
     # density
@@ -301,9 +301,9 @@ if opts.mooring:
     # number of elements for cable
     nb_elems = 50
     # Young's modulus
-    E = (1.e10)/50**3/A0
+    #E = (1.e10)/50**3/A0
     #E = (753.6e6)/50**3/A0
-    #E = 1.e8 #5.44e10
+    E = 200.e9 # A36 steel has 200 GPa
 
     # fairleads coordinates
     fairlead = np.array([d_front, water_level-(yst1-0.5*body_h1), 0.])
@@ -312,8 +312,6 @@ if opts.mooring:
 
     # anchors coordinates
     anchor = np.array([0.1, 0., 0.])
-    #anchor1 = np.array([fairlead[0]-lx, 0., 0.])
-    #anchor2 = np.array([fairlead[0]+lx, 0., 0.])
     #anchor1 = np.array([fairlead1[0]-lx, 0., 0.])
     #anchor2 = np.array([fairlead2[0]+lx, 0., 0.])
 

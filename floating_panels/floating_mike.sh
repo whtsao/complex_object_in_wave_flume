@@ -6,7 +6,7 @@
 #SBATCH -A hpc_ceds3d
 #SBATCH -o o.out
 #SBATCH -e e.err
-#SBATCH -J floating_panels_6
+#SBATCH -J floating_panels
 #load proteus module and ensure proteus's python is in path
 
 date
@@ -35,12 +35,12 @@ cp $SLURM_SUBMIT_DIR/*.sh .
 #srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=False linkbool=False mooring=True"
 
 # 4: two panel moored without link
-#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=False mooring=True"
+srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=False mooring=True"
 
 # 5: two panel linked without mooring
 #srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=True mooring=False"
 
 # 6: two panel linked without mooring
-srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=True mooring=True"
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=True mooring=True"
 
 exit 0
