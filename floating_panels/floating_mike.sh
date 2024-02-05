@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -N 2
-#SBATCH -n 128
+#SBATCH -N 4
+#SBATCH -n 256
 #SBATCH -t 00:30:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
