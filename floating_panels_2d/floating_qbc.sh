@@ -6,7 +6,7 @@
 #SBATCH -A loni_ceds3d
 #SBATCH -o o.out
 #SBATCH -e e.err
-#SBATCH -J floating_panels
+#SBATCH -J floating_panels_2d
 #load proteus module and ensure proteus's python is in path
 
 date
