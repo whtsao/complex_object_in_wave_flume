@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH -N 1
-#SBATCH -n 64
+#SBATCH -N 4
+#SBATCH -n 256
 #SBATCH -t 00:10:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
-#SBATCH -J lidar_mangrove
+#SBATCH -J a_unit_pvc_mangrove
 #SBATCH -o o.out
 #SBATCH -e e.err
 #load proteus module and ensure proteus's python is in path
@@ -27,6 +27,6 @@ cp *.stl $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 
 python setup.py build_ext -i
-srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.1"
+srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.05"
 
 exit 0

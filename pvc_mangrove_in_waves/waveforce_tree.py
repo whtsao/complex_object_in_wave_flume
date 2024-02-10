@@ -13,8 +13,8 @@ opts= Context.Options([
     ("gauges", True, "Collect data for validation"),
     ("cfl",0.33,"Desired CFL restriction"),
     ("he",0.02,"Max mesh element diameter"),
-    ("mwl",0.06,"still water depth"),
-    ("Hm",0.02,"Wave height"),
+    ("mwl",1.03,"still water depth"),
+    ("Hm",0.2,"Wave height"),
     ("Tp",1.85,"Peak wave period"),
     ("fast", False, "switch for fast cosh calculations in WaveTools"),
     ("x0", 0.5, "Starting place of soliatry wave"),
@@ -141,15 +141,15 @@ xmax = 2.*1.83
 vertices=[[0.0, -halfw,0.0], #0
          [xmax, -halfw,0.0], #1
          [xmax+wavelength, -halfw,0.0], #2
-         [xmax+wavelength, -halfw,0.0], #3
-         [xmax, -halfw,top], #4
+         [xmax+wavelength, -halfw,zmax], #3
+         [xmax, -halfw,zmax], #4
          [0.0, -halfw,zmax], #5
          [-wavelength, -halfw,zmax], #6
          [-wavelength, -halfw,0.0], #7
          [0.0, halfw,0.0], #8
          [xmax, halfw,0.0], #9
          [xmax+wavelength, halfw,0.0], #10
-         [xmax+wavelength, halfw,0.0], #11
+         [xmax+wavelength, halfw,zmax], #11
          [xmax, halfw,zmax], #12
          [0.0, halfw,zmax], #13
          [-wavelength, halfw,zmax], #14
@@ -254,37 +254,36 @@ tank.setGenerationZones(flags=2,
 tank.setAbsorptionZones(flags=3,
                    epsFact_porous=wavelength*0.5,
                    center=[xmax+0.5*wavelength,0.,zmax*0.5],
-                   orientation=[1,0,0],
-                   waves=wave,
+                   orientation=[-1,0,0],
                    dragAlpha=dragAlpha,
                    vert_axis=2,
-                   porosity=1.,
-                   smoothing=smoothing)
+                   porosity=1.)
 
 front_x = 0.25*1.83
 back_x = 0.75*1.83
 column_gauge_locations=[((0.01,0.,0.),(0.01,0.,zmax)),
                         ((front_x,0.,0.),(front_x,0.,zmax)),
 			((back_x,0.,0.),(back_x,0.,zmax)),
-			((xmax-0.01,0.,0.0),(x_max-0.01,0.,zmax))]
+			((xmax-0.01,0.,0.0),(xmax-0.01,0.,zmax))]
 
 tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),),fileName='column_gauges.csv')
 
 #pressure_gauge_locations= ((1.43, 0.15, 0.07), (1.75, 0.15, 0.07),(2.07,0.15,0.07),(2.39,0.15,0.07))
 #tank.attachPointGauges('twp', gauges=((('p',), pressure_gauge_locations),), fileName='pressure_gaugeArray.csv')
 
-velocity_gauge_locations=np.zeros((125,3))
-x_local = linspace(0.25*1.83,0.75*1.83,num=5)
-y_local = linspace(-halfw,halfw,num=5)
-z_local = linspace(0.,water_level,num=5)
-
+temp=np.zeros((125,3))
+x_local = np.linspace(0.25*1.83,0.75*1.83,num=5)
+y_local = np.linspace(-halfw+0.01,halfw-0.01,num=5)
+z_local = np.linspace(0.01,water_level-0.01,num=5)
 c=0
 for i in range(5):
     for j in range(5):
         for k in range(5):
-            velocity_gauge_locations[c,0] = xlocal[i]
-            velocity_gauge_locations[c,1] = ylocal[j]
-            velocity_gauge_locations[c,2] = zlocal[k]
+            temp[c,0] = x_local[i]
+            temp[c,1] = y_local[j]
+            temp[c,2] = z_local[k]
+            c += 1
+velocity_gauge_locations = tuple(map(tuple, temp))
 tank.attachPointGauges('twp', gauges=((('u','v','w'), velocity_gauge_locations),), fileName='velocity_gaugeArray.csv')
 
 
@@ -407,15 +406,15 @@ pyximport.install(setup_args={"include_dirs":np.get_include()})
 #,
 #                  reload_support=True)
 
-#from mangrove import sdf_vectorized
+from mangrove import sdf_vectorized
 from mangrove import sdf_vectorized_stl
 
 def particle_vel(t, x):
     return (0.0,0.0,0.0)
 
 if opts.embed_structure:
-#    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
-    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
+    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized]
+#    m['flow'].p.coefficients.particle_sdfList = [sdf_vectorized_stl]
     m['flow'].p.coefficients.particle_velocityList = [particle_vel]
     m['flow'].p.coefficients.use_ball_as_particle=0
     m['flow'].p.coefficients.nParticles=1
