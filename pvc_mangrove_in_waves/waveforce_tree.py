@@ -136,67 +136,65 @@ boundaryTags = {'y-' : 1,
 
 zmax=1.5
 halfw = 0.5*1.83 # |x|<=+-halfw
-ymax = 3.
+xmax = 2.*1.83
 
-toe = 1.
-slope = 35.
-top = (ymax-toe)/slope
+vertices=[[0.0, -halfw,0.0], #0
+         [xmax, -halfw,0.0], #1
+         [xmax+wavelength, -halfw,0.0], #2
+         [xmax+wavelength, -halfw,0.0], #3
+         [xmax, -halfw,top], #4
+         [0.0, -halfw,zmax], #5
+         [-wavelength, -halfw,zmax], #6
+         [-wavelength, -halfw,0.0], #7
+         [0.0, halfw,0.0], #8
+         [xmax, halfw,0.0], #9
+         [xmax+wavelength, halfw,0.0], #10
+         [xmax+wavelength, halfw,0.0], #11
+         [xmax, halfw,zmax], #12
+         [0.0, halfw,zmax], #13
+         [-wavelength, halfw,zmax], #14
+         [-wavelength, halfw,0.0],] #15
 
-vertices=[[0.0, -halfw,0.0],#0
-         [x0, -halfw,0.0],#1
-         [1.0, -halfw,0.0], #2
-         [toe, -halfw,0.0],#3
-         [ymax, -halfw,top],#4
-         [ymax, -halfw,zmax],#5
-         [0.0, -halfw,zmax],#6
-         [-wavelength, -halfw,zmax],#7
-         [-wavelength, -halfw,0.0],#8
-         [0.0, halfw,0.0],#9
-         [x0, halfw,0.0],#10
-         [1.0, halfw,0.0], #11
-         [toe, halfw,0.0],#12
-         [ymax, halfw,top],#13
-         [ymax, halfw,zmax],#14
-         [0.0, halfw,zmax],#15
-         [-wavelength, halfw,zmax],#16
-         [-wavelength, halfw,0.0],]#17
-
-vertexFlags=np.array([6, 6, 6, 6, 6, 6,
-                      5,
+vertexFlags=np.array([6, 6, 
+                      2, 2,
+                      5, 5,
                       4, 4,
-                      6, 6, 6, 6, 6, 6,
-                      5,
+                      6, 6,
+                      2, 2,
+                      5, 5,
                       4, 4,])
 
+facets=[[[0,1,4,5]], #left
+        [[8,9,12,13]], #right
+        [[5,4,12,13]],#top
+        [[0,1,9,8]], #bottom
+        [[3,2,10,11]],#out
+        [[6,7,15,14]],#in
+        [[0,5,13,8]], #sponge-in
+        [[0,5,6,7]], #y-
+        [[5,6,14,13]], #z+
+        [[13,14,15,8]], #y+
+        [[0,8,15,7]], #z-
+        [[1,4,12,9]], #sponge-out
+        [[1,2,3,4]], #y-
+        [[3,4,12,11]],#z+
+        [[9,10,11,12]],#y+
+        [[1,2,10,9]],] #z-
 
-facets=[[[0,1,2,3,4,5,6]],#right
-        [[9,10,11,12,13,14,15]],#left
-        [[6,5,14,15]],#top
-        [[0,1,10,9]],#bottom
-        [[1,2,11,10]],
-        [[2,3,12,11]],
-        [[3,4,13,12]],
-        [[4,5,14,13]],#back
-        [[7,8,17,16]],#inflow--internal if sponge layer, switched to zero for internal
-        [[0,9,15,6]], #sponge
-        [[8,0,6,7]],
-        [[8,0,9,17]],
-        [[9,17,16,15]],
-        [[6,15,16,7]],]
-
-facetFlags=np.array([6,6,# right and left
-                     5,#top
-                     6,6,6,6,#bottom
-                     6,#back
-                     0,#inflow/internal
-                     7,#sponge
-                     6,6,6,5,])
+facetFlags=np.array([1, 3, #left and right
+                     5, 6, #top and bottom
+                     2, 4, #out and in
+                     7, #sponge-in
+                     1,5,3,6,
+                     7, #sponge-out
+                     1,5,3,6,])
 
 
 regions = [[ 0.1, 0.,0.1],
-           [-0.1, 0.,0.1],]
+           [-0.1, 0.,0.1],
+           [xmax+0.1,0.,0.1],]
 
-regionFlags=np.array([1,2])
+regionFlags=np.array([1,2,3])
 
 # TANK
 
@@ -253,22 +251,43 @@ tank.setGenerationZones(flags=2,
                    porosity=1.,
                    smoothing=smoothing)
 
-g1x = toe+0.5
-g1z = (g1x-toe)/slope
-g2x = toe+1.0
-g2z = (g2x-toe)/slope
-column_gauge_locations=[((x0,0.,0.),(x0,0.,zmax)),
-                        ((toe,0.,0.),(toe,0.,zmax)),
-			((g1x,0.,g1z),(g1x,0.,zmax)),
-			((g2x,0.,g2z),(g2x,0.,zmax))]
+tank.setAbsorptionZones(flags=3,
+                   epsFact_porous=wavelength*0.5,
+                   center=[xmax+0.5*wavelength,0.,zmax*0.5],
+                   orientation=[1,0,0],
+                   waves=wave,
+                   dragAlpha=dragAlpha,
+                   vert_axis=2,
+                   porosity=1.,
+                   smoothing=smoothing)
 
+front_x = 0.25*1.83
+back_x = 0.75*1.83
+column_gauge_locations=[((0.01,0.,0.),(0.01,0.,zmax)),
+                        ((front_x,0.,0.),(front_x,0.,zmax)),
+			((back_x,0.,0.),(back_x,0.,zmax)),
+			((xmax-0.01,0.,0.0),(x_max-0.01,0.,zmax))]
 
 tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),),fileName='column_gauges.csv')
+
 #pressure_gauge_locations= ((1.43, 0.15, 0.07), (1.75, 0.15, 0.07),(2.07,0.15,0.07),(2.39,0.15,0.07))
 #tank.attachPointGauges('twp', gauges=((('p',), pressure_gauge_locations),), fileName='pressure_gaugeArray.csv')
 
-#velocity_gauge_locations=((32.24, -1.4,1.25), (43.09, -1.43, 1.40),(43.09,-1.43,1.55),(43.09,-1.43,1.72),(43.09,-1.43,1.86),(57.83,-1.41,1.38))
-#tank.attachPointGauges('twp', gauges=((('u','v','w'), velocity_gauge_locations),), fileName='velocity_gaugeArray.csv')
+velocity_gauge_locations=np.zeros((125,3))
+x_local = linspace(0.25*1.83,0.75*1.83,num=5)
+y_local = linspace(-halfw,halfw,num=5)
+z_local = linspace(0.,water_level,num=5)
+
+c=0
+for i in range(5):
+    for j in range(5):
+        for k in range(5):
+            velocity_gauge_locations[c,0] = xlocal[i]
+            velocity_gauge_locations[c,1] = ylocal[j]
+            velocity_gauge_locations[c,2] = zlocal[k]
+tank.attachPointGauges('twp', gauges=((('u','v','w'), velocity_gauge_locations),), fileName='velocity_gaugeArray.csv')
+
+
 
 #  ___       _ _   _       _    ____                _ _ _   _
 # |_ _|_ __ (_) |_(_) __ _| |  / ___|___  _ __   __| (_) |_(_) ___  _ __  ___
