@@ -32,12 +32,14 @@ def sdf_vectorized(double t, np.ndarray x,
     cdef int ti, i, ri, gri
     cdef double R,X_0,Y_0,Z_0,A,B,dir_x, dir_y
     cdef double G
+    cdef double x_shift = 0.5*1.83
+    cdef double y_shoft = 0.5*1.83
 #    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([L[0], L[0], L[0]/2.0,  0.0     , 0.0])
 #    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.0 , L[1], L[1]/2.0 , 0.0     , L[1]])
 #    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([0.46/ratio, 1.37/ratio, 0.46/ratio])
 #    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.46/ratio, 1.15/ratio, 1.83/ratio])
-    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([0.46/ratio+1.5, 1.37/ratio+1.5, 0.46/ratio+1.5])
-    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.46/ratio, 1.15/ratio, 1.83/ratio])
+    cdef np.ndarray[np.float64_t, ndim=1] tx = np.array([0.46+x_shift, 1.37+x_shift, 0.46+x_shift])
+    cdef np.ndarray[np.float64_t, ndim=1] ty = np.array([0.46-y_shift, 1.15-y_shift, 1.83-y_shift])
     cdef np.ndarray[np.complex128_t, ndim=1] G_root = np.zeros((3,), dtype=np.complex128)
     cdef double complex num, denom
     for i in range(n):
@@ -82,6 +84,7 @@ def sdf_vectorized(double t, np.ndarray x,
                     phi[i] = min(phi[i], G)
                 
 stl_file = "lidar_tree_2.stl"
+#stl_file = "single_stand_panel.stl"
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
 def sdf_vectorized_stl(double t, np.ndarray x, np.ndarray phi):
