@@ -25,6 +25,8 @@ cp $SLURM_SUBMIT_DIR/petsc.options.superlu_dist .
 cp $SLURM_SUBMIT_DIR/*.py .
 cp $SLURM_SUBMIT_DIR/*.sh .
 
+srun parun TN_with_box_so.py -F -l 5 -C "he=1. T=3."
+
 # 1: one panel
 #srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=False linkbool=False mooring=False"
 
@@ -35,7 +37,7 @@ cp $SLURM_SUBMIT_DIR/*.sh .
 #srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=False linkbool=False mooring=True"
 
 # 4: two panel moored without link
-srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=False mooring=True"
+#srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=False mooring=True"
 
 # 5: two panel linked without mooring
 #srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=True linkbool=True mooring=False"
