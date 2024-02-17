@@ -9,7 +9,7 @@ from proteus import WaveTools as wt
 opts= Context.Options([
     ('ns_model',1,"ns_model={0,1} for {rans2p,rans3p}"),
     ("final_time",60.0,"Final time for simulation"),
-    ("sampleRate",0.05,"Time interval to output solution"),
+    ("sampleRate",0.025,"Time interval to output solution"),
     ("gauges", True, "Collect data for validation"),
     ("cfl",0.33,"Desired CFL restriction"),
     ("he",0.02,"Max mesh element diameter"),
@@ -101,7 +101,6 @@ elif opts.wave_type=='Soliton':
 wavelength = wave.wavelength
 
 
-
 #  ____                        _
 # |  _ \  ___  _ __ ___   __ _(_)_ __
 # | | | |/ _ \| '_ ` _ \ / _` | | '_ \
@@ -134,9 +133,10 @@ boundaryTags = {'y-' : 1,
                 'sponge':7,
                }
 
-zmax=1.5
+# domain dimensions
+zmax=2.
 halfw = 0.5*1.83 # |x|<=+-halfw
-xmax = 2.*1.83
+xmax = 5.
 
 vertices=[[0.0, -halfw,0.0], #0
          [xmax, -halfw,0.0], #1
@@ -233,6 +233,7 @@ tank.BC['y+'].setFreeSlip()
 # non material boundaries for sponge interface
 tank.BC['sponge'].setNonMaterial()
 
+
 # WAVE AND RELAXATION ZONES
 
 smoothing = he*1.5
@@ -259,11 +260,14 @@ tank.setAbsorptionZones(flags=3,
                    vert_axis=2,
                    porosity=1.)
 
-front_x = 0.25*1.83
-back_x = 0.75*1.83
+
+# add gauges
+
 column_gauge_locations=[((0.01,0.,0.),(0.01,0.,zmax)),
-                        ((front_x,0.,0.),(front_x,0.,zmax)),
-			((back_x,0.,0.),(back_x,0.,zmax)),
+                        ((1.,0.,0.),(1.,0.,zmax)),
+			((2.,0.,0.),(2.,0.,zmax)),
+                        ((3.,0.,0.),(3.,0.,zmax)),
+                        ((4.,0.,0.),(4.,0.,zmax)),
 			((xmax-0.01,0.,0.0),(xmax-0.01,0.,zmax))]
 
 tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),),fileName='column_gauges.csv')
@@ -271,14 +275,14 @@ tank.attachLineIntegralGauges('vof',gauges=((('vof',), column_gauge_locations),)
 #pressure_gauge_locations= ((1.43, 0.15, 0.07), (1.75, 0.15, 0.07),(2.07,0.15,0.07),(2.39,0.15,0.07))
 #tank.attachPointGauges('twp', gauges=((('p',), pressure_gauge_locations),), fileName='pressure_gaugeArray.csv')
 
-temp=np.zeros((125,3))
-x_local = np.linspace(0.25*1.83,0.75*1.83,num=5)
-y_local = np.linspace(-halfw+0.01,halfw-0.01,num=5)
-z_local = np.linspace(0.01,water_level-0.01,num=5)
+temp=np.zeros((100,3))
+x_local = np.array([0.01]) #np.linspace(0.01,xmax-0.01,num=5)
+y_local = np.linspace(-halfw+0.01,halfw-0.01,num=10)
+z_local = np.linspace(0.01,water_level+wave_height+0.01,num=10)
 c=0
-for i in range(5):
-    for j in range(5):
-        for k in range(5):
+for i in range(1):
+    for j in range(10):
+        for k in range(10):
             temp[c,0] = x_local[i]
             temp[c,1] = y_local[j]
             temp[c,2] = z_local[k]

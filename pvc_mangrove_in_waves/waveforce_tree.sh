@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 24
 #SBATCH -n 1536
-#SBATCH -t 72:00:00
+#SBATCH -t 01:00:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
 #SBATCH -J a_unit_pvc_mangrove
