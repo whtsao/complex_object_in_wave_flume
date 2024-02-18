@@ -183,7 +183,7 @@ facets=[[[0,1,4,5]], #left
 
 facetFlags=np.array([1, 3, #left and right
                      5, 6, #top and bottom
-                     2, 4, #out and in
+                     0, 0, #out and in
                      7, #sponge-in
                      1,5,3,6,
                      7, #sponge-out

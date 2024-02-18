@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -N 24
-#SBATCH -n 1536
-#SBATCH -t 01:00:00
+#SBATCH -N 36
+#SBATCH -n 2304
+#SBATCH -t 72:00:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
 #SBATCH -J a_unit_pvc_mangrove
@@ -11,14 +11,14 @@
 date
 
 module purge
-module load intel/2021.5.0 
-module load mvapich2/2.3.7/intel-2021.5.0   
+module load intel/2021.5.0
+module load mvapich2/2.3.7/intel-2021.5.0 ?
 module load gcc/11.2.0
 module load proteus/fct
 export LD_LIBRARY_PATH=/home/packages/compilers/intel/compiler/2022.0.2/linux/compiler/lib/intel64_lin:${LD_LIBRARY_PATH}
 export MV2_HOMOGENEOUS_CLUSTER=1
 
-mkdir -p $WORK/$SLURM_JOB_NAME.$SLURM_JOBID 
+mkdir -p $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd "$SLURM_SUBMIT_DIR"
 cp *.pyx $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cp *.py $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
