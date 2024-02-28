@@ -97,3 +97,132 @@ Refining mesh...
   109838 insertions, added 103908 points, 8667708 tetrahedra in queue.
   146414 insertions, added 138154 points, 11533061 tetrahedra in queue.
   195170 insertions, added 182378 points, 15170763 tetrahedra in queue.
+  260162 insertions, added 239635 points, 19447941 tetrahedra in queue.
+  346796 insertions, added 315836 points, 22306136 tetrahedra in queue.
+  Added 1482385 (2573,114601,1365211) Steiner points.
+  Added 7 (0,0,7) Steiner points.
+Refinement seconds:  32.3734
+Smoothing vertices...
+  Smooth criterion   = 3
+  Smooth iterations  = 7
+  Smooth relax-alpha = 0.3
+Mesh smoothing seconds:  138.562
+Improving mesh...
+  Target maximum aspect ratio = 1000.
+  Target maximum dihedral angle = 177.
+  Maximum flip level   = 3.
+  Number of iterations = 3.
+  Removed 481 edges/faces.
+Mesh improvement seconds:  2.55939
+
+Writing mesh.1.node.
+Writing mesh.1.ele.
+Writing mesh.1.face.
+Writing mesh.1.edge.
+Writing mesh.1.neigh.
+
+Output seconds:  29.6002
+Total running seconds:  203.096
+
+Statistics:
+
+  Input points: 16
+  Input facets: 16
+  Input segments: 28
+  Input holes: 0
+  Input regions: 3
+
+  Mesh points: 1482502
+  Mesh tetrahedra: 8858332
+  Mesh faces: 17826545
+  Mesh edges: 10450714
+  Mesh faces on exterior boundary: 219762
+  Mesh edges on exterior boundary: 329643
+  Mesh faces on input facets: 234922
+  Mesh edges on input segments: 2601
+  Steiner points on input facets:  114624
+  Steiner points on input segments:  2573
+  Steiner points inside domain: 1365289
+
+Mesh quality statistics:
+
+  Smallest volume:       1.0508e-07   |  Largest volume:       1.6145e-05
+  Shortest edge:           0.013737   |  Longest edge:           0.073481
+  Smallest asp.ratio:        1.2345   |  Largest asp.ratio:        65.204
+  Smallest facangle:         17.141   |  Largest facangle:       132.9915
+  Smallest dihedral:         1.4954   |  Largest dihedral:       176.9940
+
+  Aspect ratio histogram:
+         < 1.5       :    643593      |      6 - 10         :     35983
+     1.5 - 2         :   5412909      |     10 - 15         :      7729
+       2 - 2.5       :   1942523      |     15 - 25         :      3081
+     2.5 - 3         :    452714      |     25 - 50         :      1104
+       3 - 4         :    248960      |     50 - 100        :        29
+       4 - 6         :    109707      |    100 -            :         0
+  (A tetrahedron's aspect ratio is its longest edge length divided by its
+    smallest side height)
+
+  Face angle histogram:
+      0 -  10 degrees:         0      |     90 - 100 degrees:    881030
+     10 -  20 degrees:        43      |    100 - 110 degrees:    149929
+     20 -  30 degrees:     50740      |    110 - 120 degrees:     11213
+     30 -  40 degrees:   2010277      |    120 - 130 degrees:       289
+     40 -  50 degrees:  10505178      |    130 - 140 degrees:         1
+     50 -  60 degrees:  16304488      |    140 - 150 degrees:         0
+     60 -  70 degrees:  13118431      |    150 - 160 degrees:         0
+     70 -  80 degrees:   7385002      |    160 - 170 degrees:         0
+     80 -  90 degrees:   3063014      |    170 - 180 degrees:         0
+
+  Dihedral angle histogram:
+       0 -  5 degrees:      8498      |     80 - 110 degrees:  11870988
+       5 - 10 degrees:     40205      |    110 - 120 degrees:   1242283
+      10 - 20 degrees:    275801      |    120 - 130 degrees:    693124
+      20 - 30 degrees:    778938      |    130 - 140 degrees:    396425
+      30 - 40 degrees:   2101480      |    140 - 150 degrees:    224719
+      40 - 50 degrees:   5630840      |    150 - 160 degrees:    116611
+      50 - 60 degrees:  10024638      |    160 - 170 degrees:     46830
+      60 - 70 degrees:  10931395      |    170 - 175 degrees:      7757
+      70 - 80 degrees:   8757943      |    175 - 180 degrees:      1517
+  Minimum input dihedral angle is 90 (degree).
+
+
+Memory usage statistics:
+
+  Maximum number of tetrahedra:  9467356
+  Maximum number of tet blocks (blocksize = 8188):  1157
+  Approximate memory for tetrahedral mesh (bytes):  1,333,189,976
+  Approximate memory for extra pointers (bytes):  15,407,104
+  Approximate memory for algorithms (bytes):  148,656
+  Approximate memory for working arrays (bytes):  358,893,572
+  Approximate total used memory (bytes):  1,707,639,308
+
+Max nNodes_subdomain 644 nNodes_global 1482502
+Done allocating MPIAdj
+Max memory usage per core 0.350261GB
+Done applying partition
+Max memory usage per core 0.41653GB
+==================out of core old2new is correct!====================
+Done with masks
+Max memory usage per core 0.428364GB
+Done marking elements
+Max memory usage per core 0.428741GB
+Done allocating element numbering new2old/old2new
+Max memory usage per core 0.500208GB
+Done reading element boundaries
+Max memory usage per core 0.5021GB
+Allocating elementBoudnary old2new/new2old
+Max memory usage per core 0.647057GB
+Done allocating elementBoudnary old2new/new2old
+Max memory usage per core 0.576217GB
+Done reading edges
+Max memory usage per core 0.577929GB
+Setting edgeNumering old2new/new2old
+Max memory usage per core 0.663953GB
+Done allocating edgeNumering old2new/new2old
+Max memory usage per core 0.622322GB
+Done reading vertices
+Max memory usage per core 0.587178GB
+Done with material types
+Max memory usage per core 0.438931GB
+Done with partitioning!
+Max memory usage per core 0.439443GB

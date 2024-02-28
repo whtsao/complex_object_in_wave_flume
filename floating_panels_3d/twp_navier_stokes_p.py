@@ -71,6 +71,7 @@ coefficients = RANS2P.Coefficients(epsFact=ct.epsFact_viscosity,
                                    dragBetaTypes=dragBetaTypes,
                                    epsFact_porous=epsFact_porous,
                                    barycenters=ct.domain.barycenters)
+                                  # projection_direction = np.array([1.0, 0.0, 0.0]))
 
 
 dirichletConditions = {0: lambda x, flag: domain.bc[flag].p_dirichlet.init_cython(),

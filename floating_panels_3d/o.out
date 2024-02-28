@@ -1,0 +1,167 @@
+Wed Feb 28 08:34:33 CST 2024
+Autoloading gcc/11.2.0
+
+Loading proteus/fct/gcc-11.2.0
+  Loading requirement: gcc/11.2.0
+# Wave
+
+# Printing input data here to check
+
+# Height/Depth: 0.187
+# Dimensionless Period T*sqrt(g/d):   4.76
+# Current criterion: Euler,  Dimensionless value: 0.000
+
+# Solution by 15-term Fourier series
+
+
+Height step  1 of  1
+
+Iteration  1: Mean of corrections to free surface:  1.4e-02
+Iteration  2: Mean of corrections to free surface:  5.4e-04
+Iteration  3: Mean of corrections to free surface:  5.6e-07
+Iteration  4: Mean of corrections to free surface:  5.6e-10
+Iteration  5: Mean of corrections to free surface:  3.0e-12
+
+# Solution summary:
+
+# Wave
+
+# Solution by 15-term Fourier series
+
+# Height/Depth: 0.187,  41% of the maximum of H/d = 0.459 for this length:
+# Length/Depth:   3.52
+# Dimensionless Period T*sqrt(g/d):   4.76
+# Current criterion: Euler,  Dimensionless value: 0.000
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+
+Touch key to continue
+
+
+Finished
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED
+CREATED

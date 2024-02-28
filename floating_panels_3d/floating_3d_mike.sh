@@ -24,6 +24,7 @@ cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cp $SLURM_SUBMIT_DIR/petsc.options.superlu_dist .
 cp $SLURM_SUBMIT_DIR/*.py .
 cp $SLURM_SUBMIT_DIR/*.sh .
+cp $SLURM_SUBMIT_DIR/*.stl .
 
 srun parun TN_with_box_so.py -F -l 5 -C "he=1. T=3."
 
