@@ -64,7 +64,7 @@ opts= Context.Options([
 
     #Domain length options
     ("box_number", 3, "number of boxes"),
-    ("width_multiplier", 3, "width of the domain is the width_multiplier*box_width"),
+    ("width_multiplier", 2, "width of the domain is the width_multiplier*box_width"),
     ("Lz", 13.058, "Height of domain [m]"),
 
     #Mooring information
@@ -78,12 +78,19 @@ opts= Context.Options([
 ####################### and STL translation input      #######################
 ##############################################################################
 
-box_L = 21.2                 # Length of box, meters
-box_W = 9                    # Width of box, meters
-box_H = 1.5                  # Height of box, meters
+# this one section for box_with_box.stl
+#box_L = 21.2                 # Length of box, meters
+#box_W = 9                    # Width of box, meters
+#box_H = 1.5                  # Height of box, meters
+#box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
+#box_Spacing = 1.4            # Spacing between the boxes, meters
 
+# this one section for floating_platform_1row.stl
+box_L = 1.                 # Length of box, meters
+box_W = 9.                    # Width of box, meters
+box_H = 0.9                  # Height of box, meters
 box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
-box_Spacing = 1.4            # Spacing between the boxes, meters
+box_Spacing = 0.5            # Spacing between the boxes, meters
 
 
 box_water_level = box_shift+opts.water_level+2.0 #location of water level in the box
@@ -106,7 +113,7 @@ d_min_mesh_size = he/d_interface_he     # smallest mesh size
 ##############################################################################
 
 # water density
-rho_0 = 1025.
+rho_0 = 998.2 #1025.
 # water kinematic viscosity
 nu_0 = 1.004e-6
 # air density
@@ -154,7 +161,7 @@ if opts.waves is True:
 ## Setup the tank face metadata ##
 domain = Domain.PiecewiseLinearComplexDomain()
 
-Lx = wavelength*4.0+opts.box_number*box_L+(opts.box_number-1)*box_Spacing
+Lx = wavelength*3.0+opts.box_number*box_L+(opts.box_number-1)*box_Spacing
 Ly = box_W*opts.width_multiplier
 tank = st.Tank3D(domain, dim=[Lx,Ly,opts.Lz])
 
@@ -176,7 +183,8 @@ boundaryTags = {'y-' : 1,
 
 ### Barge Setup ###
 # Specify the input CAD files
-s_geom_filename_section = 'box_with_box.stl'
+s_geom_filename_section = 'floating_platform_1row.stl' # floating solar panel module
+#s_geom_filename_section = 'box_with_box.stl' # original model
 ## Set the tank physical properties ##
 free_x = np.array([1., 1., 1.])  # Translational DOFs
 free_r = np.array([1., 1., 1.])  # Rotational DOFs
