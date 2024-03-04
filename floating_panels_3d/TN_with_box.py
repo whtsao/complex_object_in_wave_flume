@@ -79,18 +79,18 @@ opts= Context.Options([
 ##############################################################################
 
 # this section is for the original stl file box_with_box.stl
-#box_L = 21.2                 # Length of box, meters
-#box_W = 9                    # Width of box, meters
-#box_H = 1.5                  # Height of box, meters
-#box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
-#box_Spacing = 1.4            # Spacing between the boxes, meters
+box_L = 21.2                 # Length of box, meters
+box_W = 9                    # Width of box, meters
+box_H = 1.5                  # Height of box, meters
+box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
+box_Spacing = 1.4            # Spacing between the boxes, meters
 
 # this section is for the new stl file floating_platform_1row.stl
-box_L = 2.                 # Length of box, meters
-box_W = 9.                    # Width of box, meters
-box_H = 0.9                  # Height of box, meters
-box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
-box_Spacing = 0.5            # Spacing between the boxes, meters
+#box_L = 2.                 # Length of box, meters
+#box_W = 9.                    # Width of box, meters
+#box_H = 0.9                  # Height of box, meters
+#box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
+#box_Spacing = 0.5            # Spacing between the boxes, meters
 
 
 box_water_level = box_shift+opts.water_level+2.0 #location of water level in the box
@@ -183,8 +183,9 @@ boundaryTags = {'y-' : 1,
 
 ### Barge Setup ###
 # Specify the input CAD files
-s_geom_filename_section = 'floating_platform_1row_2.stl' # floating solar panel module
-#s_geom_filename_section = 'box_with_box.stl' # original model
+#s_geom_filename_section = 'floating_platform_1row_2.stl' # floating solar panel module
+s_geom_filename_section = 'box_with_box.stl' # original model
+
 ## Set the tank physical properties ##
 free_x = np.array([1., 1., 1.])  # Translational DOFs
 free_r = np.array([1., 1., 1.])  # Rotational DOFs
