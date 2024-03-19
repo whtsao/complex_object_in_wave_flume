@@ -3,6 +3,7 @@ from __future__ import division
 from past.utils import old_div
 
 import numpy as np
+import math
 from proteus import Domain, Context
 from proteus.mprans import SpatialTools as st
 import proteus.TwoPhaseFlow.TwoPhaseFlowProblem as TpFlow
@@ -40,11 +41,10 @@ opts= Context.Options([
     ("timeIntegration", "backwardEuler", "Time integration scheme (backwardEuler/VBDF)"),
 
     ("cfl",0.25,"Desired CFL restriction"),
-    ("he",1.0,"he relative to Length of domain in x"),
+    ("he",0.8,"he relative to Length of domain in x"),
     ("d_interface_he", 4.5, "refinement factore for a-w interface"),
     ("free_slip", True, "set boundaries to free slip"),
-    ("Lz", 13.058, "Dimensions in Z direction [m]"),
-    ("water_level", 6.096, "water level [m]"),
+    ("water_level", 2., "water level [m]"),
     ("wave_length", 15.02, "wavelength [m]"),
     ("chrono_dt", 0.0001, "water level [m]"),
     #Wave informations
@@ -63,9 +63,9 @@ opts= Context.Options([
     ("deform_y", 0.0, "Intial deformation of the springin the y-direction"),
 
     #Domain length options
-    ("box_number", 3, "number of boxes"),
+    ("box_number", 2, "number of boxes"),
     ("width_multiplier", 2, "width of the domain is the width_multiplier*box_width"),
-    ("Lz", 13.058, "Height of domain [m]"),
+    ("Lz", 4., "Height of domain [m]"),
 
     #Mooring information
     ("moorings", False, "Option to enable moorings")
@@ -79,21 +79,21 @@ opts= Context.Options([
 ##############################################################################
 
 # this section is for the original stl file box_with_box.stl
-box_L = 21.2                 # Length of box, meters
-box_W = 9                    # Width of box, meters
-box_H = 1.5                  # Height of box, meters
-box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
-box_Spacing = 1.4            # Spacing between the boxes, meters
+#box_L = 21.2                 # Length of box, meters
+#box_W = 9                    # Width of box, meters
+#box_H = 1.5                  # Height of box, meters
+#box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
+#box_Spacing = 1.4            # Spacing between the boxes, meters
 
 # this section is for the new stl file floating_platform_1row.stl
-#box_L = 2.                 # Length of box, meters
-#box_W = 9.                    # Width of box, meters
-#box_H = 0.9                  # Height of box, meters
-#box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
-#box_Spacing = 0.5            # Spacing between the boxes, meters
+box_L = 2.                 # Length of box, meters NOTTE THAT BOX MEANS THE PLATFORM
+box_W = 9.                    # Width of box, meters
+box_H = 0.3                  # Height of box, meters
+box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
+box_Spacing = 0.5            # Spacing between the boxes, meters
 
-
-box_water_level = box_shift+opts.water_level+2.0 #location of water level in the box
+# In my case, I don't need it
+#box_water_level = box_shift+opts.water_level+2.0 #location of water level in the box
 
 ##############################################################################
 #######################    MESH SIZING PARAMETERS      #######################
@@ -133,7 +133,7 @@ g = np.array([0., 0., -9.81])
 wave_period = opts.period
 wave_height = opts.wave_height
 water_level = opts.water_level
-omega = 2.*3.14/wave_period
+omega = 2.*math.pi/wave_period
 # wave options
 if opts.waves is True:
     wave_direction = np.array([1., 0., 0.])
@@ -161,7 +161,7 @@ if opts.waves is True:
 ## Setup the tank face metadata ##
 domain = Domain.PiecewiseLinearComplexDomain()
 
-Lx = wavelength*3.0+opts.box_number*box_L+(opts.box_number-1)*box_Spacing
+Lx = wavelength*2.0+opts.box_number*box_L+(opts.box_number-1)*box_Spacing
 Ly = box_W*opts.width_multiplier
 tank = st.Tank3D(domain, dim=[Lx,Ly,opts.Lz])
 
@@ -183,8 +183,8 @@ boundaryTags = {'y-' : 1,
 
 ### Barge Setup ###
 # Specify the input CAD files
-#s_geom_filename_section = 'floating_platform_1row_2.stl' # floating solar panel module
-s_geom_filename_section = 'box_with_box.stl' # original model
+s_geom_filename_section = 'floating_platform_1row_3.stl' # floating solar panel module
+#s_geom_filename_section = 'box_with_box.stl' # original model
 
 ## Set the tank physical properties ##
 free_x = np.array([1., 1., 1.])  # Translational DOFs
@@ -211,10 +211,10 @@ for i in range(opts.box_number):
     #Set the barycenter for the object
     caisson1.setBarycenter([0.0,0.0,0.0])
     # Translate the section to be internal to the tank
-    caisson1.translate([2*wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing,box_W*opts.width_multiplier/2.0 , water_level+box_shift])
+    caisson1.translate([wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing,box_W*opts.width_multiplier/2.0 , water_level+box_shift])
     # create list for box locations
-    box_start.append((2*wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing-0.9,box_W*opts.width_multiplier/2.0-0.9, water_level+box_shift+0.85))
-    box_end.append((2*wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing+0.9,box_W*opts.width_multiplier/2.0+0.9, water_level+box_shift+2.65))
+    box_start.append((wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing-0.9,box_W*opts.width_multiplier/2.0-0.9, water_level+box_shift))
+    box_end.append((wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing+0.9,box_W*opts.width_multiplier/2.0+0.9, water_level+box_shift))
     # Set the section into the tank as a child object
     tank.setChildShape(caisson1)
     # Set boundary condition for pier section
@@ -247,7 +247,13 @@ solver = pychrono.ChSolverSparseLU()
 chsystem.SetSolver(solver)
 o_chrono_system.ChSystem.SetTimestepperType(pychrono.ChTimestepper.Type_EULER_IMPLICIT_LINEARIZED)
 
+# this is for Daniel's model
+#d_section_single_mass = box_H*box_W*box_L*rho_0/4.0     # [kg]
+#d_section_single_Ixx = 508787.601      # [kg/m^2]
+#d_section_single_Iyy = 2760531.792       # [kg/m^2]
+#d_section_single_Izz = 3241817.361      # [kg/m^2]
 
+# this is for my model
 d_section_single_mass = box_H*box_W*box_L*rho_0/4.0     # [kg]
 d_section_single_Ixx = 508787.601      # [kg/m^2]
 d_section_single_Iyy = 2760531.792       # [kg/m^2]

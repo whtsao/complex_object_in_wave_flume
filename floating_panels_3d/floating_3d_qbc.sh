@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -N 8
 #SBATCH -n 384
-#SBATCH -t 00:10:00
+#SBATCH -t 00:20:00
 #SBATCH -p workq
 #SBATCH -A loni_ceds3d
 #SBATCH -o o.out
@@ -21,7 +21,7 @@ cp $SLURM_SUBMIT_DIR/*.py .
 cp $SLURM_SUBMIT_DIR/*.sh .
 cp $SLURM_SUBMIT_DIR/*.stl .
 
-srun parun TN_with_box_so.py -F -l 5 -C "he=2. T=3."
+srun parun TN_with_box_so.py -F -l 5 -C "he=2. T=5."
 
 # 1: one panel
 #srun parun --TwoPhaseFlow floating_panels.py -F -l 5 -C "he=0.1 bodybool2=False linkbool=False mooring=False"
