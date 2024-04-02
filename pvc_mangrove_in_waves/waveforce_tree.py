@@ -8,8 +8,8 @@ from proteus import WaveTools as wt
 
 opts= Context.Options([
     ('ns_model',1,"ns_model={0,1} for {rans2p,rans3p}"),
-    ("final_time",60.0,"Final time for simulation"),
-    ("sampleRate",0.025,"Time interval to output solution"),
+    ("final_time",100.0,"Final time for simulation"),
+    ("sampleRate",0.05,"Time interval to output solution"),
     ("gauges", True, "Collect data for validation"),
     ("cfl",0.33,"Desired CFL restriction"),
     ("he",0.02,"Max mesh element diameter"),
@@ -18,7 +18,7 @@ opts= Context.Options([
     ("Tp",1.85,"Peak wave period"),
     ("fast", False, "switch for fast cosh calculations in WaveTools"),
     ("x0", 0.5, "Starting place of soliatry wave"),
-    ("wave_type",'Monochromatic',"runs simulation with time series waves"),
+    ("wave_type",'Random',"runs simulation with time series waves"),
     ("filename",'test.csv',"name for csv file"),
     ("embed_structure",True,"Embed structure using a signed distance function"),
     ("density",'LD',"Change density of embedded forest")

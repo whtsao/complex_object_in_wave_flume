@@ -4,7 +4,7 @@
 #SBATCH -t 72:00:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
-#SBATCH -J a_unit_pvc_mangrove
+#SBATCH -J parametric_pvc_mangrove_jonswap
 #SBATCH -o o.out
 #SBATCH -e e.err
 #load proteus module and ensure proteus's python is in path
@@ -27,6 +27,6 @@ cp *.stl $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 cd $WORK/$SLURM_JOB_NAME.$SLURM_JOBID
 
 python setup.py build_ext -i
-srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.04"
+srun parun --TwoPhaseFlow waveforce_tree.py -F -l 5 -C "he=0.04 Hm=0.2 Tp=1.85"
 
 exit 0
