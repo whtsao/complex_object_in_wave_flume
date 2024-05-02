@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -N 2
-#SBATCH -n 128
-#SBATCH -t 01:00:00
+#SBATCH -N 8
+#SBATCH -n 512
+#SBATCH -t 00:10:00
 #SBATCH -p workq
 #SBATCH -A hpc_ceds3d
 #SBATCH -J ship_in_current
