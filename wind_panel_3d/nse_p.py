@@ -7,6 +7,8 @@ from builtins import object
 from proteus import *
 from proteus.default_p import *
 import sys
+import numpy as np
+import scipy.interpolate as interp
 
 import cell
 from cell import *
@@ -42,7 +44,9 @@ coefficients.projection_direction=np.array([1.0,0.0,0.0])
 
 
 def vel(x,t):
-    return t*2.
+    a = np.loadtxt("wind.csv",delimiter=",")
+    cs = interp.CubicSpline(a[:,0],a[:,1])
+    return cs(t) #t*2.
 
 def getDBC_p(x,flag):
     if flag == cell.boundaryTags['downstream']:

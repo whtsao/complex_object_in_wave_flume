@@ -5,7 +5,7 @@ from proteus import (Domain,
 from proteus.default_n import *                     
 
 opts = Context.Options([
-    ("T", 100.0, "Time interval [0, T]"),
+    ("T", 390.0, "Time interval [0, T]"),
     ("he",0.05, "maximum size of edges"),
     ("onlySaveFinalSolution",False,"Only save the final solution"),
     ("usePETSc", True,"use parallel solvers from PETSc"),
