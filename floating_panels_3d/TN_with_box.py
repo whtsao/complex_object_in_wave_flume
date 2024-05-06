@@ -86,9 +86,9 @@ opts= Context.Options([
 #box_Spacing = 1.4            # Spacing between the boxes, meters
 
 # this section is for the new stl file floating_platform_1row.stl
-box_L = 2.                 # Length of box, meters NOTTE THAT BOX MEANS THE PLATFORM
-box_W = 9.                    # Width of box, meters
-box_H = 0.3                  # Height of box, meters
+box_L = 2.                 # Length of box (x, longitudinal direction), meters NOTTE THAT BOX MEANS THE PLATFORM, DISREGARDING THE UPPER STRUCTURE (PANEL)
+box_W = 9.                    # Width of box (y, transverse direction), meters
+box_H = 0.3                  # Height of box (z, vertical direction), meters
 box_shift = box_H/4.0       # Shift of box to get it at the right water level, meters
 box_Spacing = 0.5            # Spacing between the boxes, meters
 
@@ -122,7 +122,12 @@ rho_1 = 1.205
 nu_1 = 1.5e-5
 # gravitational acceleration
 g = np.array([0., 0., -9.81])
-
+# solar panel density
+rho_2 = 0.25*rho_0
+mb = rho_2*box_L*box_W*box_H # only the platform, neglect the thin panel
+Ix = mb*(box_H**2+box_W**2)/12.
+Iy = mb*(box_L**2+box_H**2)/12.
+Iz = mb*(box_L**2+box_W**2)/12.
 
 ##############################################################################
 #######################                                #######################
@@ -183,7 +188,7 @@ boundaryTags = {'y-' : 1,
 
 ### Barge Setup ###
 # Specify the input CAD files
-s_geom_filename_section = 'floating_platform_1row_3.stl' # floating solar panel module
+s_geom_filename_section = 'floating_platform_1row.stl' # floating solar panel module
 #s_geom_filename_section = 'box_with_box.stl' # original model
 
 ## Set the tank physical properties ##
@@ -211,10 +216,10 @@ for i in range(opts.box_number):
     #Set the barycenter for the object
     caisson1.setBarycenter([0.0,0.0,0.0])
     # Translate the section to be internal to the tank
-    caisson1.translate([wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing,box_W*opts.width_multiplier/2.0 , water_level+box_shift])
+    caisson1.translate([wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing, box_W*opts.width_multiplier/2.0 , water_level+box_shift])
     # create list for box locations
-    box_start.append((wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing-0.9,box_W*opts.width_multiplier/2.0-0.9, water_level+box_shift))
-    box_end.append((wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing+0.9,box_W*opts.width_multiplier/2.0+0.9, water_level+box_shift))
+    box_start.append((wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing-0.9, box_W*opts.width_multiplier/2.0-0.9, water_level+box_shift))
+    box_end.append((wavelength+box_L/2.0+i*box_L+(i-1)*box_Spacing+0.9, box_W*opts.width_multiplier/2.0+0.9, water_level+box_shift))
     # Set the section into the tank as a child object
     tank.setChildShape(caisson1)
     # Set boundary condition for pier section
@@ -254,10 +259,10 @@ o_chrono_system.ChSystem.SetTimestepperType(pychrono.ChTimestepper.Type_EULER_IM
 #d_section_single_Izz = 3241817.361      # [kg/m^2]
 
 # this is for my model
-d_section_single_mass = box_H*box_W*box_L*rho_0/4.0     # [kg]
-d_section_single_Ixx = 508787.601      # [kg/m^2]
-d_section_single_Iyy = 2760531.792       # [kg/m^2]
-d_section_single_Izz = 3241817.361      # [kg/m^2]
+d_section_single_mass = mb     # [kg]
+d_section_single_Ixx = Ix      # [kg/m^2]
+d_section_single_Iyy = Iy       # [kg/m^2]
+d_section_single_Izz = Iz      # [kg/m^2]
 
 
 

@@ -1,10 +1,10 @@
-Mon Mar 18 22:29:42 CDT 2024
+Tue Mar 19 17:23:36 CDT 2024
 # Wave
 
 # Printing input data here to check
 
-# Height/Depth: 0.187
-# Dimensionless Period T*sqrt(g/d):   4.76
+# Height/Depth: 0.570
+# Dimensionless Period T*sqrt(g/d):   8.31
 # Current criterion: Euler,  Dimensionless value: 0.000
 
 # Solution by 15-term Fourier series
@@ -12,11 +12,48 @@ Mon Mar 18 22:29:42 CDT 2024
 
 Height step  1 of  1
 
-Iteration  1: Mean of corrections to free surface:  1.4e-02
-Iteration  2: Mean of corrections to free surface:  5.4e-04
-Iteration  3: Mean of corrections to free surface:  5.6e-07
-Iteration  4: Mean of corrections to free surface:  5.6e-10
-Iteration  5: Mean of corrections to free surface:  3.0e-12
+Iteration  1: Mean of corrections to free surface:  1.3e-01
+Iteration  2: Mean of corrections to free surface:  1.4e-01
+Iteration  3: Mean of corrections to free surface:  6.2e-02
+Iteration  4: Mean of corrections to free surface:  2.7e-01
+Iteration  5: Mean of corrections to free surface:  3.0e-01
+Iteration  6: Mean of corrections to free surface:  1.4e-02
+Iteration  7: Mean of corrections to free surface:  3.4e-02
+Iteration  8: Mean of corrections to free surface:  4.1e-02
+Iteration  9: Mean of corrections to free surface:  2.1e-02
+Iteration 10: Mean of corrections to free surface:  3.1e-02
+Iteration 11: Mean of corrections to free surface:  2.9e-02
+Iteration 12: Mean of corrections to free surface:  1.6e-01
+Iteration 13: Mean of corrections to free surface:  7.7e-02
+Iteration 14: Mean of corrections to free surface:  2.3e-01
+Iteration 15: Mean of corrections to free surface:  8.6e-02
+Iteration 16: Mean of corrections to free surface:  4.8e-02
+Iteration 17: Mean of corrections to free surface:  6.3e-03
+Iteration 18: Mean of corrections to free surface:  5.3e-02
+Iteration 19: Mean of corrections to free surface:  1.3e-03
+Iteration 20: Mean of corrections to free surface:  1.3e-03
+Iteration 21: Mean of corrections to free surface:  1.2e-03
+Iteration 22: Mean of corrections to free surface:  1.2e-03
+Iteration 23: Mean of corrections to free surface:  1.1e-03
+Iteration 24: Mean of corrections to free surface:  1.0e-03
+Iteration 25: Mean of corrections to free surface:  3.1e-03
+Iteration 26: Mean of corrections to free surface:  2.9e-03
+Iteration 27: Mean of corrections to free surface:  9.8e-04
+Iteration 28: Mean of corrections to free surface:  3.0e-03
+Iteration 29: Mean of corrections to free surface:  2.8e-03
+Iteration 30: Mean of corrections to free surface:  2.5e-03
+Iteration 31: Mean of corrections to free surface:  2.2e-03
+Iteration 32: Mean of corrections to free surface:  1.8e-03
+Iteration 33: Mean of corrections to free surface:  1.6e-03
+Iteration 34: Mean of corrections to free surface:  1.5e-03
+Iteration 35: Mean of corrections to free surface:  1.4e-03
+Iteration 36: Mean of corrections to free surface:  1.5e-03
+Iteration 37: Mean of corrections to free surface:  1.5e-03
+Iteration 38: Mean of corrections to free surface:  1.5e-03
+Iteration 39: Mean of corrections to free surface:  1.2e-03
+Iteration 40: Mean of corrections to free surface:  4.2e-03
+Note that the program still had not converged to the degree specified
+
 
 # Solution summary:
 
@@ -24,12 +61,12 @@ Iteration  5: Mean of corrections to free surface:  3.0e-12
 
 # Solution by 15-term Fourier series
 
-# Height/Depth: 0.187,  41% of the maximum of H/d = 0.459 for this length:
-# Length/Depth:   3.52
-# Dimensionless Period T*sqrt(g/d):   4.76
+# Height/Depth: 0.570, 137% of the maximum of H/d = 0.416 for this length:
+# Length/Depth:   3.09
+# Dimensionless Period T*sqrt(g/d):   8.53
 # Current criterion: Euler,  Dimensionless value: 0.000
 Info    : Running 'gmsh mesh_test.geo -v 10 -3 -o mesh_test.msh -format msh2' [Gmsh 4.10.4, 1 node, max. 1 thread]
-Info    : Started on Mon Mar 18 22:29:59 2024
+Info    : Started on Tue Mar 19 17:24:21 2024
 Info    : Reading 'mesh_test.geo'...
 Info    : Done reading 'mesh_test.geo'
 Info    : Meshing 1D...
@@ -553,7 +590,7 @@ Info    : [100%] Meshing curve 517 (Line)
 Info    : [100%] Meshing curve 518 (Line)
 Info    : [100%] Meshing curve 519 (Line)
 Info    : [100%] Meshing curve 520 (Line)
-Info    : Done meshing 1D (Wall 0.127998s, CPU 0.079321s)
+Info    : Done meshing 1D (Wall 0.166046s, CPU 0.112977s)
 Info    : Meshing 2D...
 Info    : [  0%] Meshing surface 1 (Plane, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 2 (Plane, Frontal-Delaunay)
@@ -899,30 +936,346 @@ Info    : [100%] Meshing surface 341 (Plane, Frontal-Delaunay)
 Info    : [100%] Meshing surface 342 (Plane, Frontal-Delaunay)
 Info    : [100%] Meshing surface 343 (Plane, Frontal-Delaunay)
 Info    : [100%] Meshing surface 344 (Plane, Frontal-Delaunay)
-Info    : Done meshing 2D (Wall 0.423884s, CPU 0.386821s)
+Info    : Done meshing 2D (Wall 0.398992s, CPU 0.364503s)
 Info    : Meshing 3D...
 Info    : 3D Meshing 3 volumes with 1 connected component
-Info    : Tetrahedrizing 13237 nodes...
-Info    : Done tetrahedrizing 13245 nodes (Wall 0.187697s, CPU 0.17833s)
+Info    : Tetrahedrizing 12795 nodes...
+Info    : Done tetrahedrizing 12803 nodes (Wall 0.181075s, CPU 0.168646s)
 Info    : Reconstructing mesh...
 Info    :  - Creating surface mesh
 Info    :  - Identifying boundary edges
 Info    :  - Recovering boundary
-Info    :  (45.6569,18,6.321).
-Info    :   Segment: [49,1087] #-1 (0)
-Info    :   Facet:   [8840,8839,8845] #10
-Info    : Done meshing 3D (Wall 0.472892s, CPU 0.415297s)
-Info    : 13237 nodes 29072 elements
+Info    :  - Added 5 Steiner points
+Info    : Done reconstructing mesh (Wall 0.448744s, CPU 0.409786s)
+Info    : Found volume 1
+Info    : Found void region
+Info    : Found void region
+Info    : Found volume 3
+Info    : Found volume 2
+Info    : It. 0 - 0 nodes created - worst tet radius 22.6398 (nodes removed 0 0)
+Info    : It. 500 - 377 nodes created - worst tet radius 4.66076 (nodes removed 0 123)
+Info    : It. 1000 - 825 nodes created - worst tet radius 4.04593 (nodes removed 0 175)
+Info    : It. 1500 - 1263 nodes created - worst tet radius 3.28427 (nodes removed 0 237)
+Info    : It. 2000 - 1751 nodes created - worst tet radius 3.02725 (nodes removed 0 249)
+Info    : It. 2500 - 2251 nodes created - worst tet radius 2.828 (nodes removed 0 249)
+Info    : It. 3000 - 2737 nodes created - worst tet radius 2.64786 (nodes removed 0 263)
+Info    : It. 3500 - 3212 nodes created - worst tet radius 2.52231 (nodes removed 0 288)
+Info    : It. 4000 - 3685 nodes created - worst tet radius 2.3903 (nodes removed 0 315)
+Info    : It. 4500 - 4160 nodes created - worst tet radius 2.3106 (nodes removed 0 340)
+Info    : It. 5000 - 4655 nodes created - worst tet radius 2.23194 (nodes removed 1 344)
+Info    : It. 5500 - 5153 nodes created - worst tet radius 2.15872 (nodes removed 1 346)
+Info    : It. 6000 - 5636 nodes created - worst tet radius 2.09921 (nodes removed 1 363)
+Info    : It. 6500 - 6126 nodes created - worst tet radius 2.04615 (nodes removed 1 373)
+Info    : It. 7000 - 6619 nodes created - worst tet radius 1.99826 (nodes removed 1 380)
+Info    : It. 7500 - 7091 nodes created - worst tet radius 2.04541 (nodes removed 1 408)
+Info    : It. 8000 - 7578 nodes created - worst tet radius 1.91359 (nodes removed 1 421)
+Info    : It. 8500 - 8072 nodes created - worst tet radius 1.87926 (nodes removed 1 427)
+Info    : It. 9000 - 8568 nodes created - worst tet radius 1.873 (nodes removed 1 431)
+Info    : It. 9500 - 9049 nodes created - worst tet radius 1.83163 (nodes removed 1 450)
+Info    : It. 10000 - 9543 nodes created - worst tet radius 1.78182 (nodes removed 1 456)
+Info    : It. 10500 - 10025 nodes created - worst tet radius 1.75073 (nodes removed 1 474)
+Info    : It. 11000 - 10524 nodes created - worst tet radius 1.7212 (nodes removed 1 475)
+Info    : It. 11500 - 11018 nodes created - worst tet radius 1.69597 (nodes removed 1 481)
+Info    : It. 12000 - 11507 nodes created - worst tet radius 1.67172 (nodes removed 1 492)
+Info    : It. 12500 - 11997 nodes created - worst tet radius 1.6483 (nodes removed 1 502)
+Info    : It. 13000 - 12480 nodes created - worst tet radius 1.6279 (nodes removed 1 519)
+Info    : It. 13500 - 12978 nodes created - worst tet radius 1.60797 (nodes removed 1 521)
+Info    : It. 14000 - 13464 nodes created - worst tet radius 1.61196 (nodes removed 1 535)
+Info    : It. 14500 - 13957 nodes created - worst tet radius 1.56926 (nodes removed 1 542)
+Info    : It. 15000 - 14450 nodes created - worst tet radius 1.54835 (nodes removed 1 549)
+Info    : It. 15500 - 14949 nodes created - worst tet radius 1.53121 (nodes removed 1 550)
+Info    : It. 16000 - 15447 nodes created - worst tet radius 1.51468 (nodes removed 1 552)
+Info    : It. 16500 - 15943 nodes created - worst tet radius 1.49973 (nodes removed 1 556)
+Info    : It. 17000 - 16442 nodes created - worst tet radius 1.48395 (nodes removed 1 557)
+Info    : It. 17500 - 16934 nodes created - worst tet radius 1.46865 (nodes removed 1 565)
+Info    : It. 18000 - 17404 nodes created - worst tet radius 1.45519 (nodes removed 2 594)
+Info    : It. 18500 - 17903 nodes created - worst tet radius 1.44064 (nodes removed 2 595)
+Info    : It. 19000 - 18403 nodes created - worst tet radius 1.42691 (nodes removed 2 595)
+Info    : It. 19500 - 18898 nodes created - worst tet radius 4.25003 (nodes removed 2 600)
+Info    : It. 20000 - 19389 nodes created - worst tet radius 1.40226 (nodes removed 2 609)
+Info    : It. 20500 - 19884 nodes created - worst tet radius 1.39108 (nodes removed 2 614)
+Info    : It. 21000 - 20383 nodes created - worst tet radius 1.3802 (nodes removed 2 615)
+Info    : It. 21500 - 20873 nodes created - worst tet radius 1.36949 (nodes removed 2 625)
+Info    : It. 22000 - 21373 nodes created - worst tet radius 1.44306 (nodes removed 2 625)
+Info    : It. 22500 - 21859 nodes created - worst tet radius 1.34918 (nodes removed 2 639)
+Info    : It. 23000 - 22356 nodes created - worst tet radius 1.33863 (nodes removed 2 642)
+Info    : It. 23500 - 22853 nodes created - worst tet radius 1.3283 (nodes removed 3 644)
+Info    : It. 24000 - 23353 nodes created - worst tet radius 1.31871 (nodes removed 3 644)
+Info    : It. 24500 - 23850 nodes created - worst tet radius 1.3097 (nodes removed 3 647)
+Info    : It. 25000 - 24350 nodes created - worst tet radius 1.32798 (nodes removed 3 647)
+Info    : It. 25500 - 24850 nodes created - worst tet radius 1.29257 (nodes removed 3 647)
+Info    : It. 26000 - 25348 nodes created - worst tet radius 1.28383 (nodes removed 3 649)
+Info    : It. 26500 - 25847 nodes created - worst tet radius 1.27485 (nodes removed 3 650)
+Info    : It. 27000 - 26336 nodes created - worst tet radius 1.2673 (nodes removed 3 661)
+Info    : It. 27500 - 26825 nodes created - worst tet radius 1.25961 (nodes removed 3 672)
+Info    : It. 28000 - 27325 nodes created - worst tet radius 1.25165 (nodes removed 3 672)
+Info    : It. 28500 - 27820 nodes created - worst tet radius 1.42558 (nodes removed 4 676)
+Info    : It. 29000 - 28310 nodes created - worst tet radius 1.2378 (nodes removed 4 686)
+Info    : It. 29500 - 28780 nodes created - worst tet radius 1.23072 (nodes removed 4 716)
+Info    : It. 30000 - 29278 nodes created - worst tet radius 1.22336 (nodes removed 4 718)
+Info    : It. 30500 - 29771 nodes created - worst tet radius 1.21728 (nodes removed 4 725)
+Info    : It. 31000 - 30266 nodes created - worst tet radius 1.2107 (nodes removed 4 730)
+Info    : It. 31500 - 30766 nodes created - worst tet radius 1.20419 (nodes removed 4 730)
+Info    : It. 32000 - 31263 nodes created - worst tet radius 1.198 (nodes removed 4 733)
+Info    : It. 32500 - 31763 nodes created - worst tet radius 1.19149 (nodes removed 4 733)
+Info    : It. 33000 - 32261 nodes created - worst tet radius 1.18523 (nodes removed 4 735)
+Info    : It. 33500 - 32761 nodes created - worst tet radius 1.17932 (nodes removed 4 735)
+Info    : It. 34000 - 33260 nodes created - worst tet radius 1.17336 (nodes removed 4 736)
+Info    : It. 34500 - 33757 nodes created - worst tet radius 1.16736 (nodes removed 4 739)
+Info    : It. 35000 - 34252 nodes created - worst tet radius 1.16178 (nodes removed 4 744)
+Info    : It. 35500 - 34747 nodes created - worst tet radius 1.15648 (nodes removed 4 749)
+Info    : It. 36000 - 35242 nodes created - worst tet radius 1.15086 (nodes removed 4 754)
+Info    : It. 36500 - 35740 nodes created - worst tet radius 1.14555 (nodes removed 4 756)
+Info    : It. 37000 - 36226 nodes created - worst tet radius 1.14055 (nodes removed 4 770)
+Info    : It. 37500 - 36720 nodes created - worst tet radius 1.13548 (nodes removed 4 776)
+Info    : It. 38000 - 37218 nodes created - worst tet radius 1.13028 (nodes removed 4 778)
+Info    : It. 38500 - 37717 nodes created - worst tet radius 1.12503 (nodes removed 4 779)
+Info    : It. 39000 - 38215 nodes created - worst tet radius 1.12016 (nodes removed 4 781)
+Info    : It. 39500 - 38715 nodes created - worst tet radius 1.11504 (nodes removed 4 781)
+Info    : It. 40000 - 39214 nodes created - worst tet radius 1.11045 (nodes removed 4 782)
+Info    : It. 40500 - 39700 nodes created - worst tet radius 1.10627 (nodes removed 4 796)
+Info    : It. 41000 - 40185 nodes created - worst tet radius 1.10192 (nodes removed 4 811)
+Info    : It. 41500 - 40685 nodes created - worst tet radius 1.09773 (nodes removed 4 811)
+Info    : It. 42000 - 41179 nodes created - worst tet radius 1.09316 (nodes removed 4 817)
+Info    : It. 42500 - 41667 nodes created - worst tet radius 1.08904 (nodes removed 4 829)
+Info    : It. 43000 - 42142 nodes created - worst tet radius 1.08487 (nodes removed 4 854)
+Info    : It. 43500 - 42637 nodes created - worst tet radius 1.08049 (nodes removed 4 859)
+Info    : It. 44000 - 43132 nodes created - worst tet radius 1.07595 (nodes removed 4 864)
+Info    : It. 44500 - 43631 nodes created - worst tet radius 1.07181 (nodes removed 4 865)
+Info    : It. 45000 - 44117 nodes created - worst tet radius 1.06752 (nodes removed 4 879)
+Info    : It. 45500 - 44616 nodes created - worst tet radius 1.06363 (nodes removed 4 880)
+Info    : It. 46000 - 45114 nodes created - worst tet radius 1.05963 (nodes removed 4 882)
+Info    : It. 46500 - 45613 nodes created - worst tet radius 1.05552 (nodes removed 4 883)
+Info    : It. 47000 - 46100 nodes created - worst tet radius 1.05184 (nodes removed 4 896)
+Info    : It. 47500 - 46581 nodes created - worst tet radius 1.04838 (nodes removed 4 915)
+Info    : It. 48000 - 47071 nodes created - worst tet radius 1.06446 (nodes removed 4 925)
+Info    : It. 48500 - 47564 nodes created - worst tet radius 1.04136 (nodes removed 8 928)
+Info    : It. 49000 - 48063 nodes created - worst tet radius 1.03758 (nodes removed 8 929)
+Info    : It. 49500 - 48554 nodes created - worst tet radius 1.03398 (nodes removed 8 938)
+Info    : It. 50000 - 49047 nodes created - worst tet radius 1.03051 (nodes removed 8 945)
+Info    : It. 50500 - 49545 nodes created - worst tet radius 1.02704 (nodes removed 8 947)
+Info    : It. 51000 - 50039 nodes created - worst tet radius 1.02385 (nodes removed 9 952)
+Info    : It. 51500 - 50527 nodes created - worst tet radius 1.02074 (nodes removed 9 964)
+Info    : It. 52000 - 51023 nodes created - worst tet radius 1.01755 (nodes removed 9 968)
+Info    : It. 52500 - 51518 nodes created - worst tet radius 1.01444 (nodes removed 9 973)
+Info    : It. 53000 - 52015 nodes created - worst tet radius 1.01113 (nodes removed 9 976)
+Info    : It. 53500 - 52506 nodes created - worst tet radius 1.00769 (nodes removed 9 985)
+Info    : It. 54000 - 52993 nodes created - worst tet radius 1.00447 (nodes removed 9 998)
+Info    : It. 54500 - 53477 nodes created - worst tet radius 1.00157 (nodes removed 9 1014)
+Info    : 3D refinement terminated (66527 nodes total):
+Info    :  - 460 Delaunay cavities modified for star shapeness
+Info    :  - 1025 nodes could not be inserted
+Info    :  - 386382 tetrahedra created in 3.88135 sec. (99548 tets/s)
+Info    : Done meshing 3D (Wall 5.40903s, CPU 5.29817s)
+Info    : Optimizing mesh...
+Info    : Optimizing volume 1
+Info    : Optimization starts (volume = 1205.45) with worst = 3.5551e-06 / average = 0.754404:
+Info    : 0.00 < quality < 0.10 :      1130 elements
+Info    : 0.10 < quality < 0.20 :      1873 elements
+Info    : 0.20 < quality < 0.30 :      2950 elements
+Info    : 0.30 < quality < 0.40 :      4405 elements
+Info    : 0.40 < quality < 0.50 :      6641 elements
+Info    : 0.50 < quality < 0.60 :     11817 elements
+Info    : 0.60 < quality < 0.70 :     22350 elements
+Info    : 0.70 < quality < 0.80 :     42181 elements
+Info    : 0.80 < quality < 0.90 :     60767 elements
+Info    : 0.90 < quality < 1.00 :     32419 elements
+Info    : 4254 edge swaps, 607 node relocations (volume = 1205.45): worst = 0.000307236 / average = 0.767275 (Wall 0.198791s, CPU 0.197266s)
+Info    : 4442 edge swaps, 835 node relocations (volume = 1205.45): worst = 0.000310125 / average = 0.767542 (Wall 0.287749s, CPU 0.285774s)
+Info    : 4484 edge swaps, 972 node relocations (volume = 1205.45): worst = 0.000315906 / average = 0.767613 (Wall 0.402881s, CPU 0.400416s)
+Info    : 4501 edge swaps, 1064 node relocations (volume = 1205.45): worst = 0.000315906 / average = 0.767636 (Wall 0.568459s, CPU 0.565356s)
+Info    : 0.00 < quality < 0.10 :       541 elements
+Info    : 0.10 < quality < 0.20 :       559 elements
+Info    : 0.20 < quality < 0.30 :       589 elements
+Info    : 0.30 < quality < 0.40 :      4438 elements
+Info    : 0.40 < quality < 0.50 :      6546 elements
+Info    : 0.50 < quality < 0.60 :     11689 elements
+Info    : 0.60 < quality < 0.70 :     22276 elements
+Info    : 0.70 < quality < 0.80 :     42737 elements
+Info    : 0.80 < quality < 0.90 :     61125 elements
+Info    : 0.90 < quality < 1.00 :     32391 elements
+Info    : Optimizing volume 2
+Info    : Optimization starts (volume = 891.187) with worst = 0.00431142 / average = 0.773337:
+Info    : 0.00 < quality < 0.10 :       260 elements
+Info    : 0.10 < quality < 0.20 :       898 elements
+Info    : 0.20 < quality < 0.30 :      1518 elements
+Info    : 0.30 < quality < 0.40 :      2466 elements
+Info    : 0.40 < quality < 0.50 :      3871 elements
+Info    : 0.50 < quality < 0.60 :      7182 elements
+Info    : 0.60 < quality < 0.70 :     14550 elements
+Info    : 0.70 < quality < 0.80 :     30756 elements
+Info    : 0.80 < quality < 0.90 :     46386 elements
+Info    : 0.90 < quality < 1.00 :     24892 elements
+Info    : 2630 edge swaps, 80 node relocations (volume = 891.187): worst = 0.204629 / average = 0.78553 (Wall 0.0946086s, CPU 0.093332s)
+Info    : 2649 edge swaps, 82 node relocations (volume = 891.187): worst = 0.266927 / average = 0.785612 (Wall 0.117506s, CPU 0.115957s)
+Info    : 2650 edge swaps, 82 node relocations (volume = 891.187): worst = 0.266927 / average = 0.785618 (Wall 0.13867s, CPU 0.13686s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         2 elements
+Info    : 0.30 < quality < 0.40 :      2452 elements
+Info    : 0.40 < quality < 0.50 :      3740 elements
+Info    : 0.50 < quality < 0.60 :      7011 elements
+Info    : 0.60 < quality < 0.70 :     14478 elements
+Info    : 0.70 < quality < 0.80 :     31286 elements
+Info    : 0.80 < quality < 0.90 :     46781 elements
+Info    : 0.90 < quality < 1.00 :     24671 elements
+Info    : Optimizing volume 3
+Info    : Optimization starts (volume = 445.594) with worst = 0.0103846 / average = 0.772444:
+Info    : 0.00 < quality < 0.10 :       144 elements
+Info    : 0.10 < quality < 0.20 :       420 elements
+Info    : 0.20 < quality < 0.30 :       791 elements
+Info    : 0.30 < quality < 0.40 :      1241 elements
+Info    : 0.40 < quality < 0.50 :      1933 elements
+Info    : 0.50 < quality < 0.60 :      3679 elements
+Info    : 0.60 < quality < 0.70 :      7498 elements
+Info    : 0.70 < quality < 0.80 :     15654 elements
+Info    : 0.80 < quality < 0.90 :     23392 elements
+Info    : 0.90 < quality < 1.00 :     12318 elements
+Info    : 1334 edge swaps, 46 node relocations (volume = 445.594): worst = 0.190705 / average = 0.784366 (Wall 0.0461484s, CPU 0.044033s)
+Info    : 1342 edge swaps, 48 node relocations (volume = 445.594): worst = 0.300057 / average = 0.784426 (Wall 0.0551472s, CPU 0.052801s)
+Info    : No ill-shaped tets in the mesh :-)
+Info    : 0.00 < quality < 0.10 :         0 elements
+Info    : 0.10 < quality < 0.20 :         0 elements
+Info    : 0.20 < quality < 0.30 :         0 elements
+Info    : 0.30 < quality < 0.40 :      1230 elements
+Info    : 0.40 < quality < 0.50 :      1882 elements
+Info    : 0.50 < quality < 0.60 :      3618 elements
+Info    : 0.60 < quality < 0.70 :      7498 elements
+Info    : 0.70 < quality < 0.80 :     15922 elements
+Info    : 0.80 < quality < 0.90 :     23550 elements
+Info    : 0.90 < quality < 1.00 :     12203 elements
+Info    : Done optimizing mesh (Wall 1.52325s, CPU 1.48618s)
+Info    : 66522 nodes 408757 elements
 Info    : Writing 'mesh_test.msh'...
 Info    : Done writing 'mesh_test.msh'
-Info    : Stopped on Mon Mar 18 22:30:00 2024 (From start: Wall 1.12207s, CPU 0.963535s)
+Info    : Stopped on Tue Mar 19 17:24:29 2024 (From start: Wall 8.43256s, CPU 8.1739s)
 Opening mesh_test.node.
 Opening mesh_test.ele.
-Error:  Invalid number of tetrahedra.
-An input error was detected. Program stopped.
-CREATED
+Opening mesh_test.face.
+Opening mesh_test.edge.
+  Initializing memorypools.
+  tetrahedron per block: 8188.
+  Size of a point: 136 bytes.
+  Size of a tetrahedron: 104 (112) bytes.
+  Size of a shellface: 200 (200) bytes.
+  Initializing robust predicates.
+  sizeof(double) =  8
+  machine epsilon =   2.22045e-16 [IEEE 754 64-bit macheps]
+Reconstructing mesh ...
+Mesh reconstruction seconds:  0.6
+
+Writing mesh_test.1.node.
+Writing mesh_test.1.ele.
+Writing mesh_test.1.face.
+Writing mesh_test.1.edge.
+Writing mesh_test.1.neigh.
+
+Output seconds:  1.27
+Total running seconds:  1.88
+
+Statistics:
+
+  Input points: 66522
+  Input tetrahedra: 379257
+  Input triangles: 25738
+  Input edges: 38541
+
+  Mesh points: 66522
+  Mesh tetrahedra: 379257
+  Mesh faces: 769799
+  Mesh edges: 457069
+  Mesh faces on exterior boundary: 22570
+  Mesh edges on exterior boundary: 33855
+  Mesh faces on input facets: 25738
+  Mesh edges on input segments: 1572
+  Steiner points on input facets:  11311
+  Steiner points on input segments:  1316
+  Steiner points inside domain: 53727
+
+Mesh quality statistics:
+
+  Smallest volume:       1.5959e-06   |  Largest volume:          0.10608
+  Shortest edge:           0.003125   |  Longest edge:             1.2428
+  Smallest asp.ratio:        1.2316   |  Largest asp.ratio:        1533.9
+  Smallest facangle:       0.076853   |  Largest facangle:       174.5888
+  Smallest dihedral:       0.076396   |  Largest dihedral:       176.9507
+
+  Aspect ratio histogram:
+         < 1.5       :      8954      |      6 - 10         :      1369
+     1.5 - 2         :    135421      |     10 - 15         :       421
+       2 - 2.5       :    138170      |     15 - 25         :       329
+     2.5 - 3         :     53028      |     25 - 50         :       267
+       3 - 4         :     28873      |     50 - 100        :       128
+       4 - 6         :     12177      |    100 -            :       120
+  (A tetrahedron's aspect ratio is its longest edge length divided by its
+    smallest side height)
+
+  Face angle histogram:
+      0 -  10 degrees:      2116      |     90 - 100 degrees:     82155
+     10 -  20 degrees:      2202      |    100 - 110 degrees:     24457
+     20 -  30 degrees:     15550      |    110 - 120 degrees:      4794
+     30 -  40 degrees:    178358      |    120 - 130 degrees:       634
+     40 -  50 degrees:    492626      |    130 - 140 degrees:       186
+     50 -  60 degrees:    585695      |    140 - 150 degrees:       177
+     60 -  70 degrees:    441880      |    150 - 160 degrees:        14
+     70 -  80 degrees:    297852      |    160 - 170 degrees:         0
+     80 -  90 degrees:    180577      |    170 - 180 degrees:       124
+
+  Dihedral angle histogram:
+       0 -  5 degrees:       691      |     80 - 110 degrees:    508999
+       5 - 10 degrees:       790      |    110 - 120 degrees:     72457
+      10 - 20 degrees:     12976      |    120 - 130 degrees:     44003
+      20 - 30 degrees:     62443      |    130 - 140 degrees:     28496
+      30 - 40 degrees:    134954      |    140 - 150 degrees:     18793
+      40 - 50 degrees:    276662      |    150 - 160 degrees:      6057
+      50 - 60 degrees:    408978      |    160 - 170 degrees:        56
+      60 - 70 degrees:    395505      |    170 - 175 degrees:       134
+      70 - 80 degrees:    303541      |    175 - 180 degrees:         7
+
+
+Memory usage statistics:
+
+  Maximum number of tetrahedra:  401827
+  Maximum number of tet blocks (blocksize = 8188):  50
+  Approximate memory for tetrahedral mesh (bytes):  59,513,616
+  Approximate memory for extra pointers (bytes):  1,971,280
+  Approximate memory for algorithms (bytes):  17,408
+  Approximate memory for working arrays (bytes):  0
+  Approximate total used memory (bytes):  61,502,304
+
 
 Touch key to continue
 
 
 Finished
+Max nNodes_subdomain 174 nNodes_global 66522
+Done allocating MPIAdj
+Max memory usage per core 0.269013GB
+Done applying partition
+Max memory usage per core 0.269935GB
+==================out of core old2new is correct!====================
+Done with masks
+Max memory usage per core 0.270332GB
+Done marking elements
+Max memory usage per core 0.270553GB
+Done allocating element numbering new2old/old2new
+Max memory usage per core 0.270598GB
+Done reading element boundaries
+Max memory usage per core 0.270598GB
+Allocating elementBoudnary old2new/new2old
+Max memory usage per core 0.270823GB
+Done allocating elementBoudnary old2new/new2old
+Max memory usage per core 0.270828GB
+Done reading edges
+Max memory usage per core 0.270828GB
+Setting edgeNumering old2new/new2old
+Max memory usage per core 0.270828GB
+Done allocating edgeNumering old2new/new2old
+Max memory usage per core 0.270885GB
+Done reading vertices
+Max memory usage per core 0.270885GB
+Done with material types
+Max memory usage per core 0.270909GB
+Done with partitioning!
+Max memory usage per core 0.323494GB
