@@ -46,7 +46,7 @@ coefficients.projection_direction=np.array([1.0,0.0,0.0])
 def vel(x,t):
     a = np.loadtxt("wind.csv",delimiter=",")
     cs = interp.CubicSpline(a[:,0],a[:,1])
-    return cs(t) #t*2.
+    return 1. #cs(t) #t*2.
 
 def getDBC_p(x,flag):
     if flag == cell.boundaryTags['downstream']:
